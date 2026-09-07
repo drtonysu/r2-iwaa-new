@@ -351,6 +351,47 @@ p { margin: 0; }
 .row img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
 .row h3 { font-size: var(--text-xl); margin-bottom: 0.55rem; }
 .row p { font-size: var(--text-sm); color: var(--muted); line-height: 1.7; }
+.row__what { margin-bottom: 0.9rem; }
+.row__who {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1.1rem;
+  padding-left: 0.9rem;
+  border-left: 1px solid rgba(201, 162, 74, 0.35);
+}
+.row__who-tag {
+  display: block;
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(201, 162, 74, 0.85);
+  margin-bottom: 0.2rem;
+}
+.row__meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem 1.6rem;
+  margin-top: 0.4rem;
+  padding-top: 1rem;
+  border-top: 1px dashed rgba(201, 162, 74, 0.22);
+}
+.row__meta-item { display: flex; flex-direction: column; gap: 0.15rem; }
+.row__meta-key {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(201, 162, 74, 0.75);
+}
+.row__meta-val {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  line-height: 1.55;
+}
+.band--ivory .row__who { border-left-color: rgba(133, 101, 32, 0.45); }
+.band--ivory .row__who-tag,
+.band--ivory .row__meta-key { color: var(--gold-ink); }
+.band--ivory .row__meta { border-top-color: rgba(133, 101, 32, 0.3); }
 .row__note {
   display: block;
   font-size: var(--text-xs);
@@ -706,6 +747,7 @@ p { margin: 0; }
   .portrait { max-width: 420px; }
   .row { grid-template-columns: 118px minmax(0, 1fr); gap: 1.4rem; align-items: start; }
   .row__note { grid-column: 2; text-align: left; margin-top: -0.6rem; }
+  .row__meta { grid-template-columns: 1fr; gap: 0.5rem; }
   .hero { min-height: 88vh; }
 }
 
@@ -713,5 +755,6 @@ p { margin: 0; }
   .row { grid-template-columns: 1fr; }
   .row__note { grid-column: 1; margin-top: 0; }
   .row img { aspect-ratio: 16 / 9; }
+  .row__meta { grid-template-columns: 1fr; }
   .hero__cta .btn { width: 100%; justify-content: center; }
 }

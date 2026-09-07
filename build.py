@@ -348,22 +348,93 @@ iv = f"""    <section class="hero hero--page">
 # ---------------------------------------------------------------- advanced care
 
 adv_rows = [
-    ("Apheresis", "Therapeutic Plasma Exchange", "Blood purification by cyclic apheresis, performed in Taipei under continuous medical supervision. Considered for selected inflammatory and metabolic profiles.", "adv-blood-purification.webp", "Golden and emerald plasma swirling through a translucent membrane"),
-    ("Regenerative", "Mesenchymal Cell Therapy", "A cell-based regenerative option prepared under laboratory conditions. Offered only where clinically appropriate, and only where it is permitted.", "adv-stem-cells.webp", "A luminous cluster of translucent cellular spheres with warm golden cores"),
-    ("Regenerative", "Exosome Intravenous Therapy", "Vesicle-based intravenous therapy, given as a short physician-directed course after assessment.", "adv-exosomes.webp", "Golden microscopic vesicles suspended in navy fluid with soft rays of light"),
-    ("Orthopaedic", "Exosome Knee Programme", "A targeted intra-articular course for knee osteoarthritis, combined with a rehabilitation plan.", "abstract-joint.webp", "Abstract translucent knee joint forms glowing with warm golden light"),
-    ("Photomedicine", "Intravenous Laser Therapy", "Low-level intravascular light therapy, used alongside intravenous protocols rather than on its own.", "adv-iv-laser.webp", "A slender gold-emerald laser beam refracting through a translucent IV chamber"),
+    (
+        "Apheresis",
+        "Therapeutic Plasma Exchange",
+        "A medical procedure that separates and replaces a portion of your blood plasma with a sterile albumin and saline solution, while your own blood cells are returned to circulation. Used to reduce circulating inflammatory factors and metabolic load.",
+        "May be considered for adults with chronic inflammatory burden, elevated cardiometabolic markers, or long-COVID related fatigue &mdash; where laboratory workup supports the indication.",
+        [
+            ("Setting", "Taipei clinic only, under continuous physician supervision"),
+            ("Session", "About 2 to 3 hours per procedure, cyclic apheresis system"),
+            ("Course", "Typically a short assessed course, spaced weekly or monthly"),
+            ("Before", "Full blood panel, cardiac and coagulation screen required"),
+        ],
+        "adv-blood-purification.webp",
+        "Golden and emerald plasma swirling through a translucent membrane",
+    ),
+    (
+        "Regenerative",
+        "Mesenchymal Cell Therapy",
+        "A cell-based intravenous therapy using mesenchymal cells prepared under controlled laboratory conditions. Studied for its immunomodulatory and tissue-support properties.",
+        "Discussed only for selected regenerative and inflammatory profiles, and only where local regulation permits treatment. Not offered as a routine service in every location.",
+        [
+            ("Setting", "Delivered at partner clinics where locally permitted"),
+            ("Session", "Slow intravenous infusion, 1 to 2 hours"),
+            ("Course", "Single infusion or short course, defined after assessment"),
+            ("Before", "Cell product traceability documentation provided to the patient"),
+        ],
+        "adv-stem-cells.webp",
+        "A luminous cluster of translucent cellular spheres with warm golden cores",
+    ),
+    (
+        "Regenerative",
+        "Exosome Intravenous Therapy",
+        "An intravenous therapy using extracellular vesicles (exosomes) derived from mesenchymal cells. Given as a short, physician-directed course, typically layered on an IV hydration protocol.",
+        "Discussed for adults seeking regenerative support alongside a broader wellness plan. Availability depends on your assessment and on the local regulatory status where you are treated.",
+        [
+            ("Setting", "Delivered at partner clinics where locally permitted"),
+            ("Session", "Intravenous infusion, approximately 60 to 90 minutes"),
+            ("Course", "Typically 3 to 6 sessions, planned individually"),
+            ("Pairs with", "Precision IV hydration and recovery protocols"),
+        ],
+        "adv-exosomes.webp",
+        "Golden microscopic vesicles suspended in navy fluid with soft rays of light",
+    ),
+    (
+        "Orthopaedic",
+        "Exosome Knee Programme",
+        "An intra-articular (in-joint) course of exosome injections directed at knee osteoarthritis. Combined with a structured rehabilitation and load-management plan to support recovery.",
+        "Considered for adults with radiographically confirmed knee osteoarthritis, aiming to reduce symptomatic burden and support joint function. Not a substitute for surgical care where indicated.",
+        [
+            ("Setting", "Delivered at partner clinics where locally permitted"),
+            ("Session", "Guided intra-articular injection under aseptic conditions"),
+            ("Course", "Typically a short series over several weeks"),
+            ("Includes", "Rehabilitation guidance and follow-up review"),
+        ],
+        "abstract-joint.webp",
+        "Abstract translucent knee joint forms glowing with warm golden light",
+    ),
+    (
+        "Photomedicine",
+        "Intravenous Laser Therapy",
+        "Low-level intravascular light delivered through a fine intravenous line, using specific wavelengths. Used as an adjunct to intravenous protocols &mdash; not as a stand-alone treatment.",
+        "May be layered onto Precision IV or recovery protocols for adults seeking additional support alongside their planned course.",
+        [
+            ("Setting", "Available at Taipei and selected partner clinics"),
+            ("Session", "Approximately 30 to 60 minutes, alongside IV therapy"),
+            ("Course", "Short series, aligned with your IV plan"),
+            ("Pairs with", "Precision IV hydration, recovery, neuro-support protocols"),
+        ],
+        "adv-iv-laser.webp",
+        "A slender gold-emerald laser beam refracting through a translucent IV chamber",
+    ),
 ]
 
 rows_html = ""
-for label, name, text, img, alt in adv_rows:
+for label, name, what, who, meta, img, alt in adv_rows:
+    meta_items = "".join(
+        f'<div class="row__meta-item"><span class="row__meta-key">{k}</span><span class="row__meta-val">{v}</span></div>'
+        for k, v in meta
+    )
     rows_html += f"""
           <article class="row">
             <img src="img/{img}" alt="{alt}">
             <div>
               <span class="card__label">{label}</span>
               <h3>{name}</h3>
-              <p>{text}</p>
+              <p class="row__what">{what}</p>
+              <p class="row__who"><span class="row__who-tag">Who it may suit</span> {who}</p>
+              <div class="row__meta">{meta_items}</div>
             </div>
             <span class="row__note">Availability confirmed<br>at consultation</span>
           </article>"""
