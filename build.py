@@ -100,7 +100,7 @@ def page(slug, title, desc, body, current=None):
         f.write(html)
 
 
-INVITE = """    <section class="band band--jade">
+INVITE = """    <section class="band band--emerald">
       <div class="wrap invite reveal">
         <p class="eyebrow">One to one</p>
         <h2>Every plan begins with a conversation.</h2>
@@ -112,7 +112,7 @@ INVITE = """    <section class="band band--jade">
 # ---------------------------------------------------------------- home
 
 home = f"""    <section class="hero">
-      <img class="hero__bg" src="img/hero-suite.webp" alt="A private IV therapy suite in deep navy and jade with warm golden light">
+      <img class="hero__bg" src="img/hero-suite.webp" alt="A private IV therapy suite in deep navy and emerald with warm golden light">
       <div class="hero__inner">
         <p class="eyebrow reveal">R2 International Wellness &amp; Anti-Aging</p>
         <h1 class="reveal">Medicine, calibrated to you.</h1>
@@ -124,7 +124,7 @@ home = f"""    <section class="hero">
       </div>
     </section>
 
-    <section class="band band--pearl">
+    <section class="band band--ivory">
       <div class="wrap">
         <div class="pillars reveal">
           <div class="pillar">
@@ -159,7 +159,7 @@ home = f"""    <section class="hero">
       </div>
     </section>
 
-    <section class="band band--hair band--pearl">
+    <section class="band band--hair band--ivory">
       <div class="wrap">
         <div class="band__head reveal">
           <p class="eyebrow">The difference</p>
@@ -235,7 +235,7 @@ home = f"""    <section class="hero">
       </div>
     </section>
 
-    <section class="band band--hair band--pearl">
+    <section class="band band--hair band--ivory">
       <div class="wrap">
         <div class="band__head reveal">
           <p class="eyebrow">Where to find us</p>
@@ -269,14 +269,14 @@ home = f"""    <section class="hero">
 
 iv_cards = [
     ("01 &middot; Foundation", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-vials.webp", "Three amber ampoules on a brushed gold tray"),
-    ("02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-glow.webp", "A luminous pearl-white vial with a gold cap on jade stone"),
+    ("02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-glow.webp", "A luminous pearl-white vial with a gold cap on emerald stone"),
     ("03 &middot; Clearance", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "abstract-purify.webp", "Abstract golden fluid separating from dark fluid through a translucent membrane"),
     ("04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-plan.webp", "A physician's desk with a hand-drawn chart, pen and clear vials"),
-    ("05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "reception.webp", "A jade marble counter with a white orchid in a matte black vase"),
+    ("05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "reception.webp", "A emerald marble counter with a white orchid in a matte black vase"),
     ("06 &middot; Foundation", "Myers&rsquo; Cocktail", "The classic B-vitamin, vitamin C, magnesium and zinc infusion.", "iv-myers.webp", "A single amber ampoule with a gold foil band on dark navy velvet"),
-    ("07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-neuro.webp", "Golden light refracting through an intravenous fluid bag against dark jade"),
+    ("07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-neuro.webp", "Golden light refracting through an intravenous fluid bag against dark emerald"),
     ("08 &middot; Recovery", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-rest.webp", "An ivory cashmere throw over a dark leather treatment chair"),
-    ("09 &middot; Recovery", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-recovery2.webp", "A lemon slice and a small glass dropper bottle on dark jade marble"),
+    ("09 &middot; Recovery", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-recovery2.webp", "A lemon slice and a small glass dropper bottle on dark emerald marble"),
     ("10 &middot; Foundation", "Omega Drip", "An omega-3 emulsion with vitamin C and B-complex, for cerebral and cardiac support.", "iv-omega.webp", "Golden droplets suspended in dark navy fluid"),
 ]
 
@@ -301,7 +301,7 @@ iv = f"""    <section class="hero hero--page">
       </div>
     </section>
 
-    <section class="band band--pearl">
+    <section class="band band--ivory">
       <div class="wrap">
         <div class="band__head reveal">
           <p class="eyebrow">Programmes</p>
@@ -352,7 +352,7 @@ adv_rows = [
     ("Regenerative", "Mesenchymal Cell Therapy", "A cell-based regenerative option prepared under laboratory conditions. Offered only where clinically appropriate, and only where it is permitted.", "abstract-cells.webp", "Abstract luminous cells joined by fine golden filaments"),
     ("Regenerative", "Exosome Intravenous Therapy", "Vesicle-based intravenous therapy, given as a short physician-directed course after assessment.", "abstract-vesicles.webp", "Abstract golden mist of microscopic luminous spheres"),
     ("Orthopaedic", "Exosome Knee Programme", "A targeted intra-articular course for knee osteoarthritis, combined with a rehabilitation plan.", "abstract-joint.webp", "Abstract translucent knee joint forms glowing with warm golden light"),
-    ("Photomedicine", "Intravenous Laser Therapy", "Low-level intravascular light therapy, used alongside intravenous protocols rather than on its own.", "abstract-laser.webp", "A fine golden laser beam refracting through dark jade fluid"),
+    ("Photomedicine", "Intravenous Laser Therapy", "Low-level intravascular light therapy, used alongside intravenous protocols rather than on its own.", "abstract-laser.webp", "A fine golden laser beam refracting through dark emerald fluid"),
 ]
 
 rows_html = ""
@@ -369,7 +369,7 @@ for label, name, text, img, alt in adv_rows:
           </article>"""
 
 adv = f"""    <section class="hero hero--page">
-      <img class="hero__bg" src="img/abstract-purify.webp" alt="Abstract golden and jade fluid separating through a translucent membrane">
+      <img class="hero__bg" src="img/abstract-purify.webp" alt="Abstract golden and emerald fluid separating through a translucent membrane">
       <div class="hero__inner">
         <p class="eyebrow reveal">Advanced regenerative care</p>
         <h1 class="reveal">Discussed individually.</h1>
@@ -377,7 +377,7 @@ adv = f"""    <section class="hero hero--page">
       </div>
     </section>
 
-    <section class="band band--pearl">
+    <section class="band band--ivory">
       <div class="wrap">
         <div class="band__head narrow reveal">
           <p class="eyebrow">What we may discuss</p>
@@ -412,7 +412,7 @@ founder = f"""    <section class="hero hero--page">
       </div>
     </section>
 
-    <section class="band band--pearl">
+    <section class="band band--ivory">
       <div class="wrap founder reveal">
         <div class="portrait"><img src="img/founder-portrait.webp" alt="Dr. Tony Su, founder and medical director of R2-IWAA"></div>
         <div>
@@ -442,7 +442,7 @@ founder = f"""    <section class="hero hero--page">
       </div>
     </section>
 
-    <section class="band band--pearl band--hair">
+    <section class="band band--ivory band--hair">
       <div class="wrap">
         <div class="facts reveal">
           <div><p class="fact__k">Taipei</p><p class="fact__v">Base of practice and clinical training for the network.</p></div>
@@ -454,7 +454,7 @@ founder = f"""    <section class="hero hero--page">
 
     <section class="band">
       <div class="wrap split reveal">
-        <div class="split__media"><img src="img/consultation.webp" alt="A private consultation room with two jade green armchairs and warm lamp light">
+        <div class="split__media"><img src="img/consultation.webp" alt="A private consultation room with two emerald green armchairs and warm lamp light">
         </div>
         <div class="split__body">
           <p class="eyebrow">VIP service</p>
@@ -478,7 +478,7 @@ locations = f"""    <section class="hero hero--page">
       </div>
     </section>
 
-    <section class="band band--pearl">
+    <section class="band band--ivory">
       <div class="wrap split reveal">
         <div class="split__media"><img src="img/taipei-lab.webp" alt="Sterile preparation bench with laminar flow cabinet and cryogenic vessel"></div>
         <div class="split__body">
@@ -518,7 +518,7 @@ locations = f"""    <section class="hero hero--page">
     </section>
 
     <section class="statement">
-      <img src="img/texture.webp" alt="Deep navy and jade silk folds traced by a single thin line of gold light">
+      <img src="img/texture.webp" alt="Deep navy and emerald silk folds traced by a single thin line of gold light">
       <div class="statement__inner reveal">
         <p class="eyebrow">The network</p>
         <h2>Trained in Taipei. Delivered where you live.</h2>
@@ -532,7 +532,7 @@ locations = f"""    <section class="hero hero--page">
 # ---------------------------------------------------------------- consultation
 
 consult = f"""    <section class="hero hero--page">
-      <img class="hero__bg" src="img/consultation.webp" alt="A private consultation room with two jade green armchairs facing a walnut table">
+      <img class="hero__bg" src="img/consultation.webp" alt="A private consultation room with two emerald green armchairs facing a walnut table">
       <div class="hero__inner">
         <p class="eyebrow reveal">VIP consultation</p>
         <h1 class="reveal">One to one, before anything else.</h1>
@@ -540,7 +540,7 @@ consult = f"""    <section class="hero hero--page">
       </div>
     </section>
 
-    <section class="band band--pearl">
+    <section class="band band--ivory">
       <div class="wrap split reveal">
         <div class="split__body">
           <p class="eyebrow">Request</p>
