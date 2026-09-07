@@ -247,7 +247,6 @@ home = f"""    <section class="hero">
             <span class="loc__tag">Main centre</span>
             <h3>Taipei &mdash; R2-IWAA</h3>
             <p>Shilin District, Taipei. Full-service medical centre, clinical training and materials preparation.</p>
-            <p class="loc__meta">By appointment only</p>
           </div>
           <div class="loc">
             <span class="loc__tag">Yangon</span>
@@ -516,7 +515,7 @@ locations = f"""    <section class="hero hero--page">
       <div class="wrap split reveal">
         <div class="split__media"><img src="img/taipei-lab.webp" alt="Sterile preparation bench with laminar flow cabinet and cryogenic vessel"></div>
         <div class="split__body">
-          <p class="eyebrow">Main centre &middot; By appointment only</p>
+          <p class="eyebrow">Main centre</p>
           <h2>Taipei &mdash; R2-IWAA</h2>
           <hr class="rule">
           <p class="lead">No.&nbsp;516, Section&nbsp;5, Zhongshan North Road, Shilin District. Our full-service medical centre, and the hub of the network &mdash; where clinical teams are trained and where the materials used in every clinic are prepared and released.</p>
@@ -635,7 +634,7 @@ consult = f"""    <section class="hero hero--page">
               <a href="mailto:care@r2-iwaa.com">care@r2-iwaa.com</a>
             </div>
             <div>
-              <span>Main centre &middot; By appointment</span>
+              <span>Main centre</span>
               <p>No.&nbsp;516, Section&nbsp;5, Zhongshan N. Rd, Shilin District, Taipei</p>
             </div>
             <div>
