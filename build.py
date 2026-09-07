@@ -251,7 +251,7 @@ home = f"""    <section class="hero">
           </div>
           <div class="loc">
             <span class="loc__tag">Yangon</span>
-            <h3>Beauty Bank Wellness &amp; Cell Therapy Center</h3>
+            <h3>Beauty Bank Wellness Center</h3>
             <p>Kamaryut Township, Yangon. Assessment, IV therapy and procedures.</p>
           </div>
           <div class="loc">
