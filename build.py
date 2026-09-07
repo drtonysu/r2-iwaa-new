@@ -112,7 +112,7 @@ INVITE = """    <section class="band band--emerald">
 # ---------------------------------------------------------------- home
 
 home = f"""    <section class="hero">
-      <img class="hero__bg" src="img/hero-suite.webp" alt="A private IV therapy suite in deep navy and emerald with warm golden light">
+      <img class="hero__bg" src="img/hero-taipei-dusk.webp" alt="Taipei skyline at deep dusk with warm city lights beneath a navy and emerald sky">
       <div class="hero__inner">
         <p class="eyebrow reveal">R2 International Wellness &amp; Anti-Aging</p>
         <h1 class="reveal">Medicine, calibrated to you.</h1>
@@ -348,11 +348,11 @@ iv = f"""    <section class="hero hero--page">
 # ---------------------------------------------------------------- advanced care
 
 adv_rows = [
-    ("Apheresis", "Therapeutic Plasma Exchange", "Blood purification by cyclic apheresis, performed in Taipei under continuous medical supervision. Considered for selected inflammatory and metabolic profiles.", "abstract-purify.webp", "Abstract golden fluid separating from dark fluid through a translucent membrane"),
-    ("Regenerative", "Mesenchymal Cell Therapy", "A cell-based regenerative option prepared under laboratory conditions. Offered only where clinically appropriate, and only where it is permitted.", "abstract-cells.webp", "Abstract luminous cells joined by fine golden filaments"),
-    ("Regenerative", "Exosome Intravenous Therapy", "Vesicle-based intravenous therapy, given as a short physician-directed course after assessment.", "abstract-vesicles.webp", "Abstract golden mist of microscopic luminous spheres"),
+    ("Apheresis", "Therapeutic Plasma Exchange", "Blood purification by cyclic apheresis, performed in Taipei under continuous medical supervision. Considered for selected inflammatory and metabolic profiles.", "adv-blood-purification.webp", "Golden and emerald plasma swirling through a translucent membrane"),
+    ("Regenerative", "Mesenchymal Cell Therapy", "A cell-based regenerative option prepared under laboratory conditions. Offered only where clinically appropriate, and only where it is permitted.", "adv-stem-cells.webp", "A luminous cluster of translucent cellular spheres with warm golden cores"),
+    ("Regenerative", "Exosome Intravenous Therapy", "Vesicle-based intravenous therapy, given as a short physician-directed course after assessment.", "adv-exosomes.webp", "Golden microscopic vesicles suspended in navy fluid with soft rays of light"),
     ("Orthopaedic", "Exosome Knee Programme", "A targeted intra-articular course for knee osteoarthritis, combined with a rehabilitation plan.", "abstract-joint.webp", "Abstract translucent knee joint forms glowing with warm golden light"),
-    ("Photomedicine", "Intravenous Laser Therapy", "Low-level intravascular light therapy, used alongside intravenous protocols rather than on its own.", "abstract-laser.webp", "A fine golden laser beam refracting through dark emerald fluid"),
+    ("Photomedicine", "Intravenous Laser Therapy", "Low-level intravascular light therapy, used alongside intravenous protocols rather than on its own.", "adv-iv-laser.webp", "A slender gold-emerald laser beam refracting through a translucent IV chamber"),
 ]
 
 rows_html = ""
