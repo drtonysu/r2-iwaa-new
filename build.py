@@ -245,8 +245,9 @@ home = f"""    <section class="hero">
         <div class="locs reveal">
           <div class="loc">
             <span class="loc__tag">Main centre</span>
-            <h3>Taipei</h3>
-            <p>Shilin District. Full-service regenerative centre, clinical training and materials preparation.</p>
+            <h3>Taipei &mdash; R2-IWAA</h3>
+            <p>No.&nbsp;516, Section&nbsp;5, Zhongshan North Road, Shilin District, Taipei. Full-service medical centre, clinical training and materials preparation.</p>
+            <p class="loc__meta">By appointment only</p>
           </div>
           <div class="loc">
             <span class="loc__tag">Yangon</span>
@@ -482,10 +483,10 @@ locations = f"""    <section class="hero hero--page">
       <div class="wrap split reveal">
         <div class="split__media"><img src="img/taipei-lab.webp" alt="Sterile preparation bench with laminar flow cabinet and cryogenic vessel"></div>
         <div class="split__body">
-          <p class="eyebrow">Main centre</p>
-          <h2>Taipei</h2>
+          <p class="eyebrow">Main centre &middot; By appointment only</p>
+          <h2>Taipei &mdash; R2-IWAA</h2>
           <hr class="rule">
-          <p class="lead">Shilin District. Our full-service regenerative centre, and the medical hub of the network &mdash; where clinical teams are trained and where the materials used in every clinic are prepared and released.</p>
+          <p class="lead">No.&nbsp;516, Section&nbsp;5, Zhongshan North Road, Shilin District. Our full-service medical centre, and the hub of the network &mdash; where clinical teams are trained and where the materials used in every clinic are prepared and released.</p>
         </div>
       </div>
     </section>
@@ -601,8 +602,8 @@ consult = f"""    <section class="hero hero--page">
               <a href="mailto:care@r2-iwaa.com">care@r2-iwaa.com</a>
             </div>
             <div>
-              <span>Main centre</span>
-              <p>Shilin District, Taipei</p>
+              <span>Main centre &middot; By appointment</span>
+              <p>No.&nbsp;516, Section&nbsp;5, Zhongshan N. Rd, Shilin District, Taipei</p>
             </div>
             <div>
               <span>Hours</span>
