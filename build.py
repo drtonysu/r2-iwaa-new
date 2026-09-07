@@ -351,8 +351,8 @@ adv_rows = [
     (
         "Apheresis",
         "Therapeutic Plasma Exchange",
-        "A medical procedure that separates and replaces a portion of your blood plasma with a sterile albumin and saline solution, while your own blood cells are returned to circulation. Used to reduce circulating inflammatory factors and metabolic load.",
-        "May be considered for adults with chronic inflammatory burden, elevated cardiometabolic markers, or long-COVID related fatigue &mdash; where laboratory workup supports the indication.",
+        "Blood plasma is separated and replaced with sterile albumin and saline; your blood cells are returned to circulation. Used to lower circulating inflammatory and metabolic factors.",
+        "Adults with chronic inflammatory burden, elevated cardiometabolic markers, or persistent post-viral fatigue &mdash; where laboratory workup supports it.",
         [
             ("Setting", "Taipei clinic only, under continuous physician supervision"),
             ("Session", "About 2 to 3 hours per procedure, cyclic apheresis system"),
@@ -365,8 +365,8 @@ adv_rows = [
     (
         "Regenerative",
         "Mesenchymal Cell Therapy",
-        "A cell-based intravenous therapy using mesenchymal cells prepared under controlled laboratory conditions. Studied for its immunomodulatory and tissue-support properties.",
-        "Discussed only for selected regenerative and inflammatory profiles, and only where local regulation permits treatment. Not offered as a routine service in every location.",
+        "An intravenous cell therapy using mesenchymal cells prepared under laboratory conditions. Studied for immunomodulatory and tissue-support effects.",
+        "Selected regenerative and inflammatory profiles, and only where local regulation permits treatment. Not a routine service in every location.",
         [
             ("Setting", "Delivered at partner clinics where locally permitted"),
             ("Session", "Slow intravenous infusion, 1 to 2 hours"),
@@ -379,8 +379,8 @@ adv_rows = [
     (
         "Regenerative",
         "Exosome Intravenous Therapy",
-        "An intravenous therapy using extracellular vesicles (exosomes) derived from mesenchymal cells. Given as a short, physician-directed course, typically layered on an IV hydration protocol.",
-        "Discussed for adults seeking regenerative support alongside a broader wellness plan. Availability depends on your assessment and on the local regulatory status where you are treated.",
+        "An intravenous course of extracellular vesicles (exosomes) from mesenchymal cells. Given as a short, physician-directed series, usually layered onto an IV hydration plan.",
+        "Adults seeking regenerative support alongside a wider wellness plan. Availability depends on your assessment and on local regulation.",
         [
             ("Setting", "Delivered at partner clinics where locally permitted"),
             ("Session", "Intravenous infusion, approximately 60 to 90 minutes"),
@@ -393,8 +393,8 @@ adv_rows = [
     (
         "Orthopaedic",
         "Exosome Knee Programme",
-        "An intra-articular (in-joint) course of exosome injections directed at knee osteoarthritis. Combined with a structured rehabilitation and load-management plan to support recovery.",
-        "Considered for adults with radiographically confirmed knee osteoarthritis, aiming to reduce symptomatic burden and support joint function. Not a substitute for surgical care where indicated.",
+        "An in-joint (intra-articular) exosome course for knee osteoarthritis, paired with a structured rehabilitation and load-management plan.",
+        "Adults with imaging-confirmed knee osteoarthritis, aiming to reduce symptoms and support function. Not a substitute for surgical care where indicated.",
         [
             ("Setting", "Delivered at partner clinics where locally permitted"),
             ("Session", "Guided intra-articular injection under aseptic conditions"),
@@ -407,8 +407,8 @@ adv_rows = [
     (
         "Photomedicine",
         "Intravenous Laser Therapy",
-        "Low-level intravascular light delivered through a fine intravenous line, using specific wavelengths. Used as an adjunct to intravenous protocols &mdash; not as a stand-alone treatment.",
-        "May be layered onto Precision IV or recovery protocols for adults seeking additional support alongside their planned course.",
+        "Low-level intravascular light at specific wavelengths, delivered through a fine intravenous line. Used as an adjunct to IV protocols &mdash; not a stand-alone treatment.",
+        "Adults on a planned IV course seeking additional support alongside hydration or recovery protocols.",
         [
             ("Setting", "Available at Taipei and selected partner clinics"),
             ("Session", "Approximately 30 to 60 minutes, alongside IV therapy"),
