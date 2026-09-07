@@ -268,30 +268,73 @@ home = f"""    <section class="hero">
 
 # ---------------------------------------------------------------- iv therapy
 
-iv_cards = [
-    ("01 &middot; Foundation", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-vials.webp", "Three amber ampoules on a brushed gold tray"),
-    ("02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-glow.webp", "A luminous pearl-white vial with a gold cap on emerald stone"),
-    ("03 &middot; Clearance", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "abstract-purify.webp", "Abstract golden fluid separating from dark fluid through a translucent membrane"),
-    ("04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-plan.webp", "A physician's desk with a hand-drawn chart, pen and clear vials"),
-    ("05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "reception.webp", "A emerald marble counter with a white orchid in a matte black vase"),
-    ("06 &middot; Foundation", "Myers&rsquo; Cocktail", "The classic B-vitamin, vitamin C, magnesium and zinc infusion.", "iv-myers.webp", "A single amber ampoule with a gold foil band on dark navy velvet"),
-    ("07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-neuro.webp", "Golden light refracting through an intravenous fluid bag against dark emerald"),
-    ("08 &middot; Recovery", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-rest.webp", "An ivory cashmere throw over a dark leather treatment chair"),
-    ("09 &middot; Recovery", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-recovery2.webp", "A lemon slice and a small glass dropper bottle on dark emerald marble"),
-    ("10 &middot; Foundation", "Omega Drip", "An omega-3 emulsion with vitamin C and B-complex, for cerebral and cardiac support.", "iv-omega.webp", "Golden droplets suspended in dark navy fluid"),
+iv_groups = [
+    (
+        "Foundation",
+        "Everyday cellular support",
+        "Antioxidant, nutrient and amino-acid infusions that sit under the rest of the programme. Chosen as a maintenance schedule for most patients.",
+        [
+            ("01", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-vials.webp", "Three amber ampoules on a brushed gold tray"),
+            ("02", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-glow.webp", "A luminous pearl-white vial with a gold cap on emerald stone"),
+            ("05", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "reception.webp", "A emerald marble counter with a white orchid in a matte black vase"),
+            ("06", "Myers&rsquo; Cocktail", "The classic B-vitamin, vitamin C, magnesium and zinc infusion.", "iv-myers.webp", "A single amber ampoule with a gold foil band on dark navy velvet"),
+            ("10", "Omega Drip", "An omega-3 emulsion with vitamin C and B-complex, for cerebral and cardiac support.", "iv-omega.webp", "Golden droplets suspended in dark navy fluid"),
+        ],
+    ),
+    (
+        "Clearance",
+        "Metabolic &amp; hepatic support",
+        "Structured protocols for accumulated load &mdash; sleep loss, chronic stress, medication or lifestyle exposure &mdash; delivered in defined courses rather than one-off drips.",
+        [
+            ("03", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "abstract-purify.webp", "Abstract golden fluid separating from dark fluid through a translucent membrane"),
+            ("04", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-plan.webp", "A physician's desk with a hand-drawn chart, pen and clear vials"),
+        ],
+    ),
+    (
+        "Cognitive",
+        "Neuro-support",
+        "Focused on the brain and nervous system. Offered only after individual medical assessment and never as a first drip.",
+        [
+            ("07", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-neuro.webp", "Golden light refracting through an intravenous fluid bag against dark emerald"),
+        ],
+    ),
+    (
+        "Recovery",
+        "Post-load restoration",
+        "Short-course infusions for physical output and acute recovery, timed around training or single events rather than run on a schedule.",
+        [
+            ("08", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-rest.webp", "An ivory cashmere throw over a dark leather treatment chair"),
+            ("09", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-recovery2.webp", "A lemon slice and a small glass dropper bottle on dark emerald marble"),
+        ],
+    ),
 ]
 
-cards_html = ""
-for label, name, text, img, alt in iv_cards:
-    cards_html += f"""
-          <article class="card">
-            <img src="img/{img}" alt="{alt}">
-            <div class="card__body">
-              <span class="card__label">{label}</span>
-              <h3>{name}</h3>
-              <p>{text}</p>
+groups_html = ""
+for eyebrow, heading, intro, items in iv_groups:
+    cards_inner = ""
+    for num, name, text, img, alt in items:
+        cards_inner += f"""
+            <article class="card">
+              <img src="img/{img}" alt="{alt}">
+              <div class="card__body">
+                <span class="card__label">{num}</span>
+                <h3>{name}</h3>
+                <p>{text}</p>
+              </div>
+            </article>"""
+    solo_class = " protogroup--solo" if len(items) == 1 else ""
+    groups_html += f"""
+        <div class="protogroup{solo_class} reveal">
+          <div class="protogroup__head">
+            <div>
+              <span class="eyebrow">{eyebrow}</span>
+              <h3>{heading}</h3>
             </div>
-          </article>"""
+            <p>{intro}</p>
+          </div>
+          <div class="cards">{cards_inner}
+          </div>
+        </div>"""
 
 iv = f"""    <section class="hero hero--page">
       <img class="hero__bg" src="img/iv-detail.webp" alt="A golden droplet forming inside an intravenous drip chamber">
@@ -309,8 +352,7 @@ iv = f"""    <section class="hero hero--page">
           <h2>Chosen for you, not from a menu.</h2>
           <p class="lead">Every programme starts from your history, examination and bloodwork. Composition and pace are set by your physician.</p>
         </div>
-        <div class="cards reveal">{cards_html}
-        </div>
+{groups_html}
       </div>
     </section>
 
