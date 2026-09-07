@@ -407,6 +407,71 @@ p { margin: 0; }
   letter-spacing: 0.06em;
 }
 
+/* founder page: languages + training network strip */
+.pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+}
+.pair__col > .eyebrow { margin-bottom: 0.8rem; }
+.pair__lines {
+  list-style: none; padding: 0; margin: 0;
+  border-top: 1px solid rgba(201, 162, 74, 0.28);
+}
+.pair__lines li {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 1.2rem;
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(201, 162, 74, 0.18);
+  font-size: var(--text-sm);
+}
+.pair__lines strong {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: var(--text-lg);
+  color: var(--gold-light);
+  letter-spacing: 0.01em;
+}
+.pair__lines span { color: var(--muted); line-height: 1.6; }
+.band--ivory .pair__lines { border-top-color: rgba(133, 101, 32, 0.28); }
+.band--ivory .pair__lines li { border-bottom-color: rgba(133, 101, 32, 0.18); }
+.band--ivory .pair__lines strong { color: var(--gold-ink); }
+.band--ivory .pair__lines span { color: var(--ink-soft); }
+
+/* founder page: protocol list */
+.protolist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.9rem 1.6rem;
+  margin-top: 1.8rem;
+  list-style: none;
+  padding: 0;
+}
+.protolist li {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  gap: 0.8rem;
+  align-items: baseline;
+  padding: 0.7rem 0;
+  border-top: 1px solid rgba(201, 162, 74, 0.22);
+  font-size: var(--text-sm);
+}
+.protolist li em {
+  font-style: normal;
+  font-family: var(--font-display);
+  color: var(--gold-light);
+  font-size: var(--text-base);
+}
+.protolist li span { color: var(--muted); line-height: 1.5; }
+.band--ivory .protolist li { border-top-color: rgba(133, 101, 32, 0.22); }
+.band--ivory .protolist li em { color: var(--gold-ink); }
+.band--ivory .protolist li span { color: var(--ink-soft); }
+@media (max-width: 640px) {
+  .pair__lines li { grid-template-columns: 7rem 1fr; gap: 0.9rem; }
+}
+
 /* two-up figures */
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.2rem, 3vw, 2.6rem); margin-top: clamp(3rem, 6vw, 5rem); }
 .duo__item { margin: 0; }

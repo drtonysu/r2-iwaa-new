@@ -420,8 +420,8 @@ founder = f"""    <section class="hero hero--page">
           <p class="eyebrow">Approach</p>
           <h2>Calibration over catalogue.</h2>
           <hr class="rule">
-          <p class="lead">Dr. Su founded R2-IWAA on a simple position: a patient should receive what their biology calls for, at the pace their life allows &mdash; not the package that happens to be on offer. Every protocol used across the network is written and reviewed by him.</p>
-          <div class="founder__meta"><span>Regenerative medicine</span><span>Anti-aging</span><span>Clinical training</span></div>
+          <p class="lead">Dr. Su&rsquo;s position is simple: a patient receives what their biology asks for, at the pace their life allows &mdash; not the package on offer. Every protocol used across the network is written and reviewed by him, and reviewed again when the evidence moves.</p>
+          <div class="founder__meta"><span>Internal medicine</span><span>Precision medicine</span><span>Cellular &amp; anti-aging medicine</span></div>
         </div>
       </div>
     </section>
@@ -431,25 +431,58 @@ founder = f"""    <section class="hero hero--page">
         <div class="band__head reveal narrow">
           <p class="eyebrow">Background</p>
           <h2>Trained where the margin for error is smallest.</h2>
-          <p class="lead">Board certified in internal medicine and precision medicine in Taiwan, Dr. Su trained in critical care, chest medicine and emergency medicine before pursuing cellular medicine in Japan and precision medicine at Harvard Medical School.</p>
+          <p class="lead">Critical care, chest and emergency medicine in Taiwan first &mdash; then cellular medicine in Japan and precision medicine at Harvard Medical School. The order matters: acute-care judgement came before the aesthetics.</p>
         </div>
         <hr class="rule">
         <div class="facts reveal">
-          <div><p class="fact__k">Taiwan</p><p class="fact__v">Board certified, Internal Medicine and Precision Medicine.</p></div>
-          <div><p class="fact__k">Japan</p><p class="fact__v">Cellular medicine training in dendritic and NK cell therapy.</p></div>
-          <div><p class="fact__k">Harvard</p><p class="fact__v">Precision medicine and immuno-oncology study.</p></div>
-          <div><p class="fact__k">Memberships</p><p class="fact__v">A4M, ACP and IASCT &mdash; anti-aging and stem cell medicine.</p></div>
+          <div><p class="fact__k">Taiwan</p><p class="fact__v">Board certified in Internal Medicine, and in Precision Medicine since 2021.</p></div>
+          <div><p class="fact__k">Japan</p><p class="fact__v">Dendritic cell therapy under Prof. Hasumi (2018) and NK cell therapy under Prof. Masuyama (2022).</p></div>
+          <div><p class="fact__k">Harvard</p><p class="fact__v">Precision oncology, cancer genomics and immuno-oncology, Harvard Medical School.</p></div>
+          <div><p class="fact__k">Fellowships</p><p class="fact__v">A4M (2022), American College of Physicians, IASCT professional member.</p></div>
         </div>
       </div>
     </section>
 
     <section class="band band--ivory band--hair">
-      <div class="wrap">
-        <div class="facts reveal">
-          <div><p class="fact__k">Taipei</p><p class="fact__v">Base of practice and clinical training for the network.</p></div>
-          <div><p class="fact__k">Three</p><p class="fact__v">Languages spoken with patients: Mandarin, English, Myanmar.</p></div>
-          <div><p class="fact__k">1&nbsp;:&nbsp;1</p><p class="fact__v">Every plan is set in a personal consultation.</p></div>
+      <div class="wrap pair reveal">
+        <div class="pair__col">
+          <p class="eyebrow">Languages</p>
+          <ul class="pair__lines">
+            <li><strong>Mandarin</strong><span>Native. First language of practice, in Taipei.</span></li>
+            <li><strong>English</strong><span>Clinical fluency for international patients and referring physicians.</span></li>
+            <li><strong>Myanmar</strong><span>Consultation-level, for patients from Yangon and the diaspora.</span></li>
+          </ul>
         </div>
+        <div class="pair__col">
+          <p class="eyebrow">Training network</p>
+          <ul class="pair__lines">
+            <li><strong>Taipei</strong><span>Main centre. Protocols are written and materials prepared here.</span></li>
+            <li><strong>Yangon</strong><span>Partner care at Beauty Bank Wellness &amp; Cell Therapy Center.</span></li>
+            <li><strong>Ho Chi Minh City</strong><span>Partner care at Recover Health.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--navy band--hair">
+      <div class="wrap reveal narrow">
+        <p class="eyebrow">Protocols authored by Dr. Su</p>
+        <h2>Ten intravenous formulas, one physician&rsquo;s hand.</h2>
+        <hr class="rule">
+        <p class="lead">The IV programme across every R2-IWAA location is authored by Dr. Su and reviewed each time the evidence moves. Every plan is set to a patient&rsquo;s bloodwork rather than a menu.</p>
+        <ol class="protolist">
+          <li><em>01</em><span>Anti-Aging Drip</span></li>
+          <li><em>02</em><span>Premium Anti-Aging Drip</span></li>
+          <li><em>03</em><span>Detox Drip</span></li>
+          <li><em>04</em><span>Advanced Antioxidant &amp; Detox</span></li>
+          <li><em>05</em><span>High-Dose Vitamin C</span></li>
+          <li><em>06</em><span>Myers&rsquo; Cocktail</span></li>
+          <li><em>07</em><span>NeuroVitality Drip</span></li>
+          <li><em>08</em><span>Sport Recovery Drip</span></li>
+          <li><em>09</em><span>Post-Hangover Drip</span></li>
+          <li><em>10</em><span>Omega Drip</span></li>
+        </ol>
+        <p style="margin-top:1.8rem"><a class="arrowlink" href="iv-therapy.html">See the IV therapy programme &rarr;</a></p>
       </div>
     </section>
 
