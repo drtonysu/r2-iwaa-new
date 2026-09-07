@@ -82,7 +82,7 @@ def page(slug, title, desc, body, current=None):
   <link rel="icon" type="image/png" href="{FAVICON}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Sans+Myanmar:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -502,6 +502,7 @@ locations = f"""    <section class="hero hero--page">
             <span class="loc__tag">Yangon</span>
             <h3>Beauty Bank Wellness &amp; Cell Therapy Center</h3>
             <p>Kamaryut Township, Yangon. Assessment, IV therapy and procedures, with Myanmar-language consultation.</p>
+            <p class="lang-my" lang="my">အမှတ် ၁၀၃(D)၊ သံလွင်လမ်း၊ ကမာရွတ်မြိုနယ်၊ ရန်ကုန်မြို။</p>
             <p class="loc__meta">Tel <a href="tel:09886234234">09 886 234 234</a></p>
           </div>
           <div class="loc">

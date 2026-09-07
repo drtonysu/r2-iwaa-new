@@ -376,6 +376,14 @@ p { margin: 0; }
 .loc__meta a { color: var(--gold-light); border-bottom: 1px solid rgba(201, 162, 74, 0.34); }
 .loc__meta a:hover { color: var(--gold); }
 
+.lang-my {
+  font-family: 'Noto Sans Myanmar', var(--font-body);
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--muted);
+}
+.band--ivory .lang-my { color: var(--ink-soft); }
+
 /* founder */
 .founder { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
 .portrait { position: relative; }
