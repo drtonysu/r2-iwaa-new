@@ -30,6 +30,18 @@
     });
   }
 
+  // Stagger grid children so groups arrive one after another, not all at once
+  var groups = document.querySelectorAll('.facts.reveal, .cards.reveal, .duo.reveal, .locs.reveal, .rows.reveal');
+  Array.prototype.forEach.call(groups, function (group) {
+    var kids = group.children;
+    if (kids.length < 2) return;
+    group.classList.remove('reveal');
+    Array.prototype.forEach.call(kids, function (kid, i) {
+      kid.classList.add('reveal');
+      kid.style.setProperty('--reveal-delay', i * 110 + 'ms');
+    });
+  });
+
   // Scroll reveal
   var targets = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && targets.length) {
@@ -53,13 +65,49 @@
     });
   }
 
-  // Consultation request — preview behaviour only (no backend yet)
+  // Consultation request — delivered to the clinic over WhatsApp, with an email fallback
+  var WHATSAPP = '886916196333';
+  var EMAIL = 'care@r2-iwaa.com';
+
   var form = document.querySelector('.form');
   if (form) {
+    var val = function (id) {
+      var el = form.querySelector('#' + id);
+      if (!el) return '';
+      if (el.tagName === 'SELECT') return el.options[el.selectedIndex].text;
+      return el.value.trim();
+    };
+
+    var compose = function () {
+      var lines = [
+        'Consultation request — r2-iwaa.com',
+        '',
+        'Name: ' + val('name'),
+        'Contact: ' + val('contact'),
+        'Preferred location: ' + val('city'),
+        'Language: ' + val('lang')
+      ];
+      var msg = val('msg');
+      if (msg) lines.push('', 'Notes:', msg);
+      return lines.join('\n');
+    };
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (typeof form.reportValidity === 'function' && !form.reportValidity()) return;
+
+      var body = compose();
+      window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(body), '_blank', 'noopener');
+
       var ok = document.querySelector('.form__ok');
       if (ok) {
+        var fallback = ok.querySelector('.form__fallback');
+        if (fallback) {
+          fallback.setAttribute(
+            'href',
+            'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Consultation request — ' + (val('name') || 'website')) + '&body=' + encodeURIComponent(body)
+          );
+        }
         ok.classList.add('is-on');
         ok.setAttribute('role', 'status');
       }

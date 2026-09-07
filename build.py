@@ -3,18 +3,9 @@ import os
 
 OUT = os.path.dirname(os.path.abspath(__file__))
 
-LOGO = """<svg viewBox="0 0 40 40" fill="none" aria-hidden="true">
-      <circle cx="20" cy="20" r="18.4" stroke="currentColor" stroke-width="0.9"/>
-      <path d="M20 8.6c0 0 6.9 7.6 6.9 12.2a6.9 6.9 0 0 1-13.8 0C13.1 16.2 20 8.6 20 8.6Z" stroke="currentColor" stroke-width="0.9"/>
-      <path d="M13.3 24.4h13.4" stroke="currentColor" stroke-width="0.9"/>
-    </svg>"""
+LOGO = """<img class="brand__mark" src="img/logo-512.png" alt="" width="512" height="488">"""
 
-FAVICON = (
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E"
-    "%3Ccircle cx='20' cy='20' r='18.4' fill='none' stroke='%23C9A24A' stroke-width='1.4'/%3E"
-    "%3Cpath d='M20 8.6c0 0 6.9 7.6 6.9 12.2a6.9 6.9 0 0 1-13.8 0C13.1 16.2 20 8.6 20 8.6Z' fill='none' stroke='%23C9A24A' stroke-width='1.4'/%3E"
-    "%3C/svg%3E"
-)
+FAVICON = "img/favicon.png"
 
 NAV_ITEMS = [
     ("iv-therapy.html", "IV Therapy"),
@@ -88,7 +79,7 @@ def page(slug, title, desc, body, current=None):
   <meta property="og:title" content="{title}">
   <meta property="og:description" content="{desc}">
   <meta property="og:type" content="website">
-  <link rel="icon" href="{FAVICON}">
+  <link rel="icon" type="image/png" href="{FAVICON}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
@@ -168,6 +159,34 @@ home = f"""    <section class="hero">
       </div>
     </section>
 
+    <section class="band band--hair">
+      <div class="wrap">
+        <div class="band__head reveal">
+          <p class="eyebrow">The difference</p>
+          <h2>Why patients stay with us.</h2>
+        </div>
+        <hr class="rule">
+        <div class="facts reveal">
+          <div class="fact">
+            <span class="fact__n">01</span>
+            <p>Every plan is written by a physician after examination and bloodwork &mdash; never chosen from a menu.</p>
+          </div>
+          <div class="fact">
+            <span class="fact__n">02</span>
+            <p>One patient at a time, in a private suite, with unhurried time to ask anything.</p>
+          </div>
+          <div class="fact">
+            <span class="fact__n">03</span>
+            <p>Materials and protocols come from one source in Taipei, so quality does not change by city.</p>
+          </div>
+          <div class="fact">
+            <span class="fact__n">04</span>
+            <p>Mandarin, English and Myanmar spoken directly by your physician, with no interpreter in between.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="statement">
       <img src="img/abstract-cells.webp" alt="Abstract luminous cells connected by fine golden filaments">
       <div class="statement__inner reveal">
@@ -190,11 +209,22 @@ home = f"""    <section class="hero">
           <a class="arrowlink" href="locations.html">Our locations &rarr;</a>
         </div>
       </div>
+
+      <div class="wrap duo reveal">
+        <figure class="duo__item">
+          <img src="img/r2-training.webp" alt="An empty clinical training room with a long walnut table, microscopes and protocol binders">
+          <figcaption><span class="card__label">Training</span>Clinical teams are taught and re-certified in Taipei before they treat anyone.</figcaption>
+        </figure>
+        <figure class="duo__item">
+          <img src="img/r2-supply.webp" alt="Cold-chain transport cases with labelled vials prepared for dispatch">
+          <figcaption><span class="card__label">Supply</span>Materials are prepared, checked and dispatched under cold chain to each clinic.</figcaption>
+        </figure>
+      </div>
     </section>
 
     <section class="band band--navy">
       <div class="wrap founder reveal">
-        <img src="img/founder-desk.webp" alt="A physician's desk with a folded white coat, stethoscope and brass lamp">
+        <div class="portrait"><img src="img/founder-portrait.webp" alt="Dr. Tony Su, founder and medical director of R2-IWAA"></div>
         <div>
           <p class="eyebrow">Founder</p>
           <h2>Dr. Tony Su</h2>
@@ -380,11 +410,15 @@ founder = f"""    <section class="hero hero--page">
     </section>
 
     <section class="band">
-      <div class="wrap narrow reveal">
-        <p class="eyebrow">Approach</p>
-        <h2>Calibration over catalogue.</h2>
-        <hr class="rule">
-        <p class="lead">Dr. Su founded R2-IWAA on a simple position: a patient should receive what their biology calls for, at the pace their life allows &mdash; not the package that happens to be on offer. Every protocol used across the network is written and reviewed by him.</p>
+      <div class="wrap founder reveal">
+        <div class="portrait"><img src="img/founder-portrait.webp" alt="Dr. Tony Su, founder and medical director of R2-IWAA"></div>
+        <div>
+          <p class="eyebrow">Approach</p>
+          <h2>Calibration over catalogue.</h2>
+          <hr class="rule">
+          <p class="lead">Dr. Su founded R2-IWAA on a simple position: a patient should receive what their biology calls for, at the pace their life allows &mdash; not the package that happens to be on offer. Every protocol used across the network is written and reviewed by him.</p>
+          <div class="founder__meta"><span>Regenerative medicine</span><span>Anti-aging</span><span>Clinical training</span></div>
+        </div>
       </div>
     </section>
 
@@ -523,8 +557,11 @@ consult = f"""    <section class="hero hero--page">
               <textarea id="msg" name="msg"></textarea>
             </div>
             <button class="btn btn--solid" type="submit">Send request</button>
-            <p class="form__note">We reply within one working day. Please do not include detailed medical records in this form &mdash; we will collect those securely once your consultation is arranged.</p>
-            <div class="form__ok">Thank you. Your request has been noted and our team will be in touch within one working day.</div>
+            <p class="form__note">Your request opens in WhatsApp so it reaches our team directly &mdash; press send there and we reply within one working day. Please do not include detailed medical records; we collect those securely once your consultation is arranged.</p>
+            <div class="form__ok">
+              <p>Thank you. Your request has been prepared in WhatsApp &mdash; press send there and our team will be in touch within one working day.</p>
+              <p class="form__alt">WhatsApp did not open? <a class="form__fallback" href="mailto:care@r2-iwaa.com">Send it by email instead</a>.</p>
+            </div>
           </form>
         </div>
         <div class="split__body">
