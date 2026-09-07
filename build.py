@@ -223,15 +223,14 @@ home = f"""    <section class="hero">
     </section>
 
     <section class="band band--navy">
-      <div class="wrap founder reveal">
-        <div class="portrait"><img src="img/founder-portrait.webp" alt="Dr. Tony Su, founder and medical director of R2-IWAA"></div>
-        <div>
+      <div class="wrap">
+        <div class="band__head reveal" style="max-width:640px">
           <p class="eyebrow">Founder</p>
           <h2>Dr. Tony Su</h2>
           <hr class="rule">
           <p class="lead">Founder and Medical Director. He leads every clinical protocol at R2-IWAA and trains the teams that deliver it.</p>
-          <div class="founder__meta"><span>Mandarin</span><span>English</span><span>Myanmar</span></div>
-          <a class="arrowlink" href="founder.html" style="margin-top:2rem">About Dr. Su &rarr;</a>
+          <div class="founder__meta" style="margin-top:1.4rem"><span>Mandarin</span><span>English</span><span>Myanmar</span></div>
+          <a class="arrowlink" href="founder.html" style="margin-top:2rem;display:inline-flex">About Dr. Su &rarr;</a>
         </div>
       </div>
     </section>
@@ -269,12 +268,16 @@ home = f"""    <section class="hero">
 # ---------------------------------------------------------------- iv therapy
 
 iv_cards = [
-    ("Foundation", "Hydration", "Fluids, electrolytes and essential vitamins. The baseline reset after travel, heat or a heavy week.", "iv-vials.webp", "Three amber ampoules on a brushed gold tray"),
-    ("Immunity", "Immune Support", "A high-dose vitamin C and mineral protocol, used around travel and seasonal illness.", "iv-glow.webp", "A luminous pearl-white vial with a gold cap on jade stone"),
-    ("Vitality", "Energy &amp; Metabolic", "B-complex, amino acids and cofactors for people who feel flat rather than unwell.", "iv-plan.webp", "A physician's desk with a hand-drawn chart, pen and clear vials"),
-    ("Radiance", "Skin &amp; Radiance", "A glutathione-based protocol for tone, clarity and evenness, run as a short course.", "reception.webp", "A jade marble counter with a white orchid in a matte black vase"),
-    ("Recovery", "Recovery", "Post-illness, post-exertion and post-procedure support, paced over consecutive days.", "iv-rest.webp", "An ivory cashmere throw over a dark leather treatment chair"),
-    ("Neurology", "Neuro Support", "A Cerebrolysin protocol, offered only after individual medical assessment.", "abstract-laser.webp", "A fine golden beam of light refracting through dark jade fluid"),
+    ("01 &middot; Foundation", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-vials.webp", "Three amber ampoules on a brushed gold tray"),
+    ("02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-glow.webp", "A luminous pearl-white vial with a gold cap on jade stone"),
+    ("03 &middot; Clearance", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "abstract-purify.webp", "Abstract golden fluid separating from dark fluid through a translucent membrane"),
+    ("04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-plan.webp", "A physician's desk with a hand-drawn chart, pen and clear vials"),
+    ("05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "reception.webp", "A jade marble counter with a white orchid in a matte black vase"),
+    ("06 &middot; Foundation", "Myers&rsquo; Cocktail", "The classic B-vitamin, vitamin C, magnesium and zinc infusion.", "iv-myers.webp", "A single amber ampoule with a gold foil band on dark navy velvet"),
+    ("07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-neuro.webp", "Golden light refracting through an intravenous fluid bag against dark jade"),
+    ("08 &middot; Recovery", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-rest.webp", "An ivory cashmere throw over a dark leather treatment chair"),
+    ("09 &middot; Recovery", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-recovery2.webp", "A lemon slice and a small glass dropper bottle on dark jade marble"),
+    ("10 &middot; Foundation", "Omega Drip", "An omega-3 emulsion with vitamin C and B-complex, for cerebral and cardiac support.", "iv-omega.webp", "Golden droplets suspended in dark navy fluid"),
 ]
 
 cards_html = ""
@@ -423,6 +426,23 @@ founder = f"""    <section class="hero hero--page">
     </section>
 
     <section class="band band--navy band--hair">
+      <div class="wrap">
+        <div class="band__head reveal narrow">
+          <p class="eyebrow">Background</p>
+          <h2>Trained where the margin for error is smallest.</h2>
+          <p class="lead">Board certified in internal medicine and precision medicine in Taiwan, Dr. Su trained in critical care, chest medicine and emergency medicine before pursuing cellular medicine in Japan and precision medicine at Harvard Medical School.</p>
+        </div>
+        <hr class="rule">
+        <div class="facts reveal">
+          <div><p class="fact__k">Taiwan</p><p class="fact__v">Board certified, Internal Medicine and Precision Medicine.</p></div>
+          <div><p class="fact__k">Japan</p><p class="fact__v">Cellular medicine training in dendritic and NK cell therapy.</p></div>
+          <div><p class="fact__k">Harvard</p><p class="fact__v">Precision medicine and immuno-oncology study.</p></div>
+          <div><p class="fact__k">Memberships</p><p class="fact__v">A4M, ACP and IASCT &mdash; anti-aging and stem cell medicine.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--pearl band--hair">
       <div class="wrap">
         <div class="facts reveal">
           <div><p class="fact__k">Taipei</p><p class="fact__v">Base of practice and clinical training for the network.</p></div>
