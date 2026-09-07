@@ -249,14 +249,14 @@ home = f"""    <section class="hero">
             <p>Shilin District. Full-service regenerative centre, clinical training and materials preparation.</p>
           </div>
           <div class="loc">
-            <span class="loc__tag">Clinic</span>
-            <h3>Yangon</h3>
-            <p>Bahan Township. Assessment, IV therapy and procedures.</p>
+            <span class="loc__tag">Yangon</span>
+            <h3>Beauty Bank Wellness &amp; Cell Therapy Center</h3>
+            <p>Kamaryut Township, Yangon. Assessment, IV therapy and procedures.</p>
           </div>
           <div class="loc">
-            <span class="loc__tag">Clinic</span>
-            <h3>Ho Chi Minh City</h3>
-            <p>District&nbsp;1. Assessment, IV therapy and procedures.</p>
+            <span class="loc__tag">Ho Chi Minh City</span>
+            <h3>Recover Health</h3>
+            <p>Xuân Hòa Ward, Ho Chi Minh City. Assessment, IV therapy and procedures.</p>
           </div>
         </div>
       </div>
@@ -499,14 +499,16 @@ locations = f"""    <section class="hero hero--page">
         <hr class="rule">
         <div class="locs reveal">
           <div class="loc">
-            <span class="loc__tag">Clinic</span>
-            <h3>Yangon</h3>
-            <p>Bahan Township. Assessment, IV therapy and procedures, with Myanmar-language consultation.</p>
+            <span class="loc__tag">Yangon</span>
+            <h3>Beauty Bank Wellness &amp; Cell Therapy Center</h3>
+            <p>Kamaryut Township, Yangon. Assessment, IV therapy and procedures, with Myanmar-language consultation.</p>
+            <p class="loc__meta">Tel <a href="tel:09886234234">09 886 234 234</a></p>
           </div>
           <div class="loc">
-            <span class="loc__tag">Clinic</span>
-            <h3>Ho Chi Minh City</h3>
-            <p>District&nbsp;1. Assessment, IV therapy and procedures.</p>
+            <span class="loc__tag">Ho Chi Minh City</span>
+            <h3>Recover Health</h3>
+            <p>260&ndash;262A Điện Biên Phủ, Xuân Hòa Ward, Ho Chi Minh City. Assessment, IV therapy and procedures.</p>
+            <p class="loc__meta">Hotline <a href="tel:0902766786">0902 766 786</a> &middot; <a href="mailto:info@recoverhealth.vn">info@recoverhealth.vn</a></p>
           </div>
           <div class="loc">
             <span class="loc__tag">Please note</span>

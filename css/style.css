@@ -370,8 +370,11 @@ p { margin: 0; }
   text-transform: uppercase;
   color: var(--gold);
 }
-.loc h3 { font-size: var(--text-xl); margin: 0.9rem 0 0.5rem; }
+.loc h3 { font-size: var(--text-lg); margin: 0.9rem 0 0.5rem; }
 .loc p { font-size: var(--text-sm); color: var(--muted); line-height: 1.7; }
+.loc__meta { margin-top: 0.7rem; font-size: var(--text-sm); }
+.loc__meta a { color: var(--gold-light); border-bottom: 1px solid rgba(201, 162, 74, 0.34); }
+.loc__meta a:hover { color: var(--gold); }
 
 /* founder */
 .founder { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
@@ -538,6 +541,8 @@ p { margin: 0; }
 .band--ivory .locs { background: var(--ivory-deep); border-color: var(--ivory-deep); }
 .band--ivory .pillar,
 .band--ivory .loc { background: var(--ivory-soft); }
+.band--ivory .loc__meta a { color: var(--gold-ink); border-bottom-color: rgba(138, 106, 35, 0.34); }
+.band--ivory .loc__meta a:hover { color: #6f5417; }
 .band--ivory .pillar svg { color: var(--gold-ink); }
 
 .band--ivory .card {
