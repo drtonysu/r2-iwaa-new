@@ -124,7 +124,7 @@ home = f"""    <section class="hero">
       </div>
     </section>
 
-    <section class="band">
+    <section class="band band--pearl">
       <div class="wrap">
         <div class="pillars reveal">
           <div class="pillar">
@@ -159,7 +159,7 @@ home = f"""    <section class="hero">
       </div>
     </section>
 
-    <section class="band band--hair">
+    <section class="band band--hair band--pearl">
       <div class="wrap">
         <div class="band__head reveal">
           <p class="eyebrow">The difference</p>
@@ -236,7 +236,7 @@ home = f"""    <section class="hero">
       </div>
     </section>
 
-    <section class="band band--hair">
+    <section class="band band--hair band--pearl">
       <div class="wrap">
         <div class="band__head reveal">
           <p class="eyebrow">Where to find us</p>
@@ -298,7 +298,7 @@ iv = f"""    <section class="hero hero--page">
       </div>
     </section>
 
-    <section class="band">
+    <section class="band band--pearl">
       <div class="wrap">
         <div class="band__head reveal">
           <p class="eyebrow">Programmes</p>
@@ -374,7 +374,7 @@ adv = f"""    <section class="hero hero--page">
       </div>
     </section>
 
-    <section class="band">
+    <section class="band band--pearl">
       <div class="wrap">
         <div class="band__head narrow reveal">
           <p class="eyebrow">What we may discuss</p>
@@ -409,7 +409,7 @@ founder = f"""    <section class="hero hero--page">
       </div>
     </section>
 
-    <section class="band">
+    <section class="band band--pearl">
       <div class="wrap founder reveal">
         <div class="portrait"><img src="img/founder-portrait.webp" alt="Dr. Tony Su, founder and medical director of R2-IWAA"></div>
         <div>
@@ -458,7 +458,7 @@ locations = f"""    <section class="hero hero--page">
       </div>
     </section>
 
-    <section class="band">
+    <section class="band band--pearl">
       <div class="wrap split reveal">
         <div class="split__media"><img src="img/taipei-lab.webp" alt="Sterile preparation bench with laminar flow cabinet and cryogenic vessel"></div>
         <div class="split__body">
@@ -520,7 +520,7 @@ consult = f"""    <section class="hero hero--page">
       </div>
     </section>
 
-    <section class="band">
+    <section class="band band--pearl">
       <div class="wrap split reveal">
         <div class="split__body">
           <p class="eyebrow">Request</p>
