@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
+  <script>(function(){try{var t=localStorage.getItem('r2-theme');if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}catch(e){}})();</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dr. Tony Su &mdash; R2-IWAA</title>
@@ -31,6 +32,10 @@
       <a href="iv-therapy.html">IV Therapy</a>
       <a href="locations.html">Locations</a>
       <a href="founder.html" aria-current="page">Dr. Tony Su</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
       <a class="btn" href="consultation.html">Consultation</a>
     </nav>
   </header>
@@ -57,20 +62,64 @@
       </div>
     </section>
 
+    <section class="band">
+      <div class="wrap quote-band reveal">
+        <div class="quote-band__photo">
+          <img src="img/founder-portrait-warm.webp" alt="Dr. Tony Su in a physician's white coat, hands clasped, natural studio light">
+        </div>
+        <figure class="quote-band__quote">
+          <span class="quote-band__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>A regenerative plan should follow bloodwork, not a brochure. That is the standard I hold every R2-IWAA physician to.</blockquote>
+          <figcaption><span class="quote-band__name">Dr. Tony Su</span><span class="quote-band__role">Founder &amp; Medical Director</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="band band--navy band--hair">
       <div class="wrap">
         <div class="band__head reveal narrow">
-          <p class="eyebrow">Background</p>
+          <p class="eyebrow">Publications &amp; Training</p>
           <h2>Trained where the margin for error is smallest.</h2>
           <p class="lead">Critical care, chest and emergency medicine in Taiwan first &mdash; then cellular medicine in Japan and precision medicine at Harvard Medical School. The order matters: acute-care judgement came before the aesthetics.</p>
         </div>
         <hr class="rule">
-        <div class="facts reveal">
-          <div><p class="fact__k">Taiwan</p><p class="fact__v">Board certified in Internal Medicine, and in Precision Medicine since 2021.</p></div>
-          <div><p class="fact__k">Japan</p><p class="fact__v">Dendritic cell therapy under Prof. Hasumi (2018) and NK cell therapy under Prof. Masuyama (2022).</p></div>
-          <div><p class="fact__k">Harvard</p><p class="fact__v">Precision oncology, cancer genomics and immuno-oncology, Harvard Medical School.</p></div>
-          <div><p class="fact__k">Fellowships</p><p class="fact__v">A4M (2022), American College of Physicians, IASCT professional member.</p></div>
-        </div>
+        <ol class="pubs reveal">
+          <li>
+            <span class="pubs__tag">Board Certification</span>
+            <span class="pubs__body">Internal Medicine &mdash; Taiwan</span>
+            <span class="pubs__place">Taiwan</span>
+          </li>
+          <li>
+            <span class="pubs__tag">Board Certification</span>
+            <span class="pubs__body">Precision Medicine, since 2021</span>
+            <span class="pubs__place">Taiwan</span>
+          </li>
+          <li>
+            <span class="pubs__tag">Cellular Therapy Fellowship</span>
+            <span class="pubs__body">Dendritic cell therapy under Prof. Hasumi</span>
+            <span class="pubs__place">Japan, 2018</span>
+          </li>
+          <li>
+            <span class="pubs__tag">Cellular Therapy Fellowship</span>
+            <span class="pubs__body">NK cell therapy &amp; Osaki Method under Prof. Masuyama</span>
+            <span class="pubs__place">Japan, 2022</span>
+          </li>
+          <li>
+            <span class="pubs__tag">Postgraduate Training</span>
+            <span class="pubs__body">Precision Oncology, Cancer Genomics &amp; Immuno-Oncology</span>
+            <span class="pubs__place">Harvard Medical School</span>
+          </li>
+          <li>
+            <span class="pubs__tag">Fellowship</span>
+            <span class="pubs__body">American Academy of Anti-Aging Medicine (A4M)</span>
+            <span class="pubs__place">2022</span>
+          </li>
+          <li>
+            <span class="pubs__tag">Professional Memberships</span>
+            <span class="pubs__body">American College of Physicians &middot; IASCT</span>
+            <span class="pubs__place">Ongoing</span>
+          </li>
+        </ol>
       </div>
     </section>
 

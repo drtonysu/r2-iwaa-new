@@ -2,6 +2,16 @@
 (function () {
   'use strict';
 
+  // Theme toggle — light/dark. Initial theme is set inline in <head> to avoid FOUC.
+  var themeBtn = document.querySelector('.theme-toggle');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', cur);
+      try { localStorage.setItem('r2-theme', cur); } catch (e) {}
+    });
+  }
+
   // Sticky header state
   var header = document.querySelector('.header');
   if (header) {

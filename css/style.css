@@ -721,7 +721,10 @@ p { margin: 0; }
 /* ---------- responsive ---------- */
 
 @media (max-width: 900px) {
-  .nav { display: none; }
+  /* keep .nav in flow so the toggle button inside stays visible; hide its other children */
+  .nav:not(.is-open) > a,
+  .nav:not(.is-open) > .btn { display: none; }
+  .nav:not(.is-open) { display: block; background: none; position: static; height: auto; padding: 0; }
   .nav.is-open {
     display: flex;
     flex-direction: column;
@@ -758,3 +761,334 @@ p { margin: 0; }
   .row__meta { grid-template-columns: 1fr; }
   .hero__cta .btn { width: 100%; justify-content: center; }
 }
+
+/* ---------- founder: pull-quote + secondary photo band ---------- */
+
+.quote-band {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+}
+.quote-band__photo {
+  position: relative;
+  max-width: 460px;
+  margin-inline: auto;
+  width: 100%;
+}
+.quote-band__photo::before {
+  content: '';
+  position: absolute;
+  inset: 1rem -0.9rem -0.9rem 1rem;
+  border: 1px solid var(--gold);
+  opacity: 0.5;
+  z-index: 0;
+  pointer-events: none;
+}
+.quote-band__photo img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center 18%;
+  background: var(--ivory-deep);
+}
+.quote-band__quote {
+  margin: 0;
+  position: relative;
+  padding-left: clamp(1rem, 2.4vw, 2.2rem);
+}
+.quote-band__mark {
+  position: absolute;
+  left: -0.35rem;
+  top: -2.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(7rem, 14vw, 12rem);
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.35;
+  pointer-events: none;
+}
+.quote-band__quote blockquote {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.6vw, 2.6rem);
+  line-height: 1.22;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: var(--ivory);
+  position: relative;
+}
+.quote-band__quote figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 1.8rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+}
+.quote-band__name {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--gold-light);
+  letter-spacing: 0.01em;
+}
+.quote-band__role {
+  font-size: 0.75rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ivory-band variant (if placed on ivory later) */
+.band--ivory .quote-band__quote blockquote { color: var(--ink); }
+.band--ivory .quote-band__quote figcaption { border-top-color: rgba(133, 101, 32, 0.35); }
+.band--ivory .quote-band__name { color: var(--gold-ink); }
+.band--ivory .quote-band__role { color: var(--ink-soft); }
+.band--ivory .quote-band__mark { color: var(--gold-ink); opacity: 0.28; }
+
+@media (max-width: 820px) {
+  .quote-band { grid-template-columns: 1fr; gap: 2.4rem; }
+  .quote-band__photo { max-width: 320px; }
+  .quote-band__mark { font-size: 6.5rem; top: -1.6rem; }
+}
+
+/* ---------- publications & training list ---------- */
+
+.pubs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+.pubs li {
+  display: grid;
+  grid-template-columns: 15rem 1fr 12rem;
+  gap: 2rem;
+  align-items: baseline;
+  padding: 1.3rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.pubs__tag {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.pubs__body {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.9vw, 1.42rem);
+  line-height: 1.35;
+  color: var(--ivory);
+}
+.pubs__place {
+  font-size: 0.9rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  text-align: right;
+}
+.band--ivory .pubs { border-top-color: rgba(133, 101, 32, 0.28); }
+.band--ivory .pubs li { border-bottom-color: rgba(133, 101, 32, 0.2); }
+.band--ivory .pubs__tag { color: var(--gold-ink); }
+.band--ivory .pubs__body { color: var(--ink); }
+.band--ivory .pubs__place { color: var(--ink-soft); }
+
+@media (max-width: 820px) {
+  .pubs li {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 1.4rem 0;
+  }
+  .pubs__place { text-align: left; }
+}
+
+/* ---------- theme toggle button ---------- */
+
+.theme-toggle {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: inherit;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+  margin-right: 0.6rem;
+}
+.theme-toggle:hover { border-color: var(--gold); background: rgba(201, 162, 74, 0.08); }
+.theme-toggle svg { width: 18px; height: 18px; display: block; }
+.theme-toggle .theme-toggle__sun { display: none; }
+.theme-toggle .theme-toggle__moon { display: block; }
+[data-theme="light"] .theme-toggle .theme-toggle__sun { display: block; }
+[data-theme="light"] .theme-toggle .theme-toggle__moon { display: none; }
+
+@media (max-width: 900px) {
+  /* keep toggle visible even when .nav is collapsed on mobile; sit LEFT of burger */
+  .nav > .theme-toggle {
+    display: inline-flex !important;
+    position: fixed; /* pin to viewport, not the collapsed nav container */
+    top: 22px;
+    right: 80px; /* burger sits at ~var(--pad-x) from right; leave clear gap */
+    z-index: 81;
+    width: 34px; height: 34px;
+    background: transparent;
+  }
+  .nav > .theme-toggle svg { width: 15px; height: 15px; }
+}
+
+/* ---------- LIGHT THEME (ivory base) ---------- */
+
+[data-theme="light"] {
+  color-scheme: light;
+}
+
+[data-theme="light"] body {
+  background: var(--ivory-soft);
+  color: var(--ink);
+}
+
+/* header: ivory chrome — only invert once scrolled off the hero image */
+[data-theme="light"] .header.is-scrolled {
+  background: rgba(251, 248, 241, 0.9);
+  border-bottom-color: rgba(133, 101, 32, 0.18);
+}
+[data-theme="light"] .header.is-scrolled .nav a { color: var(--ink); }
+[data-theme="light"] .header.is-scrolled .nav a:hover,
+[data-theme="light"] .header.is-scrolled .nav a[aria-current='page'] { color: var(--gold-ink); }
+[data-theme="light"] .header.is-scrolled .brand-mark { color: var(--ink); }
+[data-theme="light"] .header.is-scrolled .brand-sub { color: var(--ink-soft); }
+[data-theme="light"] .header.is-scrolled .nav .btn { color: var(--gold-ink); border-color: var(--gold-ink); }
+[data-theme="light"] .header.is-scrolled .nav .btn:hover { background: var(--gold-ink); color: var(--ivory-soft); }
+[data-theme="light"] .header.is-scrolled .theme-toggle { border-color: rgba(133, 101, 32, 0.35); color: var(--ink); }
+[data-theme="light"] .header.is-scrolled .theme-toggle:hover { border-color: var(--gold-ink); background: rgba(133, 101, 32, 0.08); }
+/* At top of page in light mode: header is transparent over dark hero, so toggle stays ivory */
+[data-theme="light"] .header:not(.is-scrolled) .theme-toggle {
+  border-color: rgba(248, 244, 234, 0.35);
+  color: var(--ivory);
+}
+[data-theme="light"] .header:not(.is-scrolled) .theme-toggle:hover {
+  border-color: var(--gold-light);
+  background: rgba(248, 244, 234, 0.08);
+}
+
+/* hero: keep photographic bg but add ivory scrim so title reads dark */
+[data-theme="light"] .hero { color: var(--ivory); }
+[data-theme="light"] .hero::after {
+  background: linear-gradient(180deg, rgba(6, 15, 26, 0.35) 0%, rgba(6, 15, 26, 0.62) 100%);
+}
+[data-theme="light"] .hero .eyebrow { color: var(--gold-light); }
+
+/* body-level bands (no modifier): become ivory-soft with dark text */
+[data-theme="light"] .band { background: var(--ivory-soft); color: var(--ink); }
+[data-theme="light"] .band h2,
+[data-theme="light"] .band h3 { color: var(--ink); }
+[data-theme="light"] .band .lead,
+[data-theme="light"] .band p { color: var(--ink-soft); }
+[data-theme="light"] .band .eyebrow,
+[data-theme="light"] .band .card__label { color: var(--gold-ink); }
+[data-theme="light"] .band .rule { background: var(--gold-ink); opacity: 0.5; }
+
+/* explicit ivory bands: shift to slightly warmer ivory-mid so alternation still reads */
+[data-theme="light"] .band--ivory { background: var(--ivory-mid); }
+
+/* quote band — invert type in light mode */
+[data-theme="light"] .quote-band__quote blockquote { color: var(--ink); }
+[data-theme="light"] .quote-band__quote figcaption { border-top-color: rgba(133, 101, 32, 0.35); }
+[data-theme="light"] .quote-band__name { color: var(--gold-ink); }
+[data-theme="light"] .quote-band__role { color: var(--ink-soft); }
+[data-theme="light"] .quote-band__mark { color: var(--gold-ink); opacity: 0.28; }
+
+/* pubs list — invert in light mode */
+[data-theme="light"] .pubs { border-top-color: rgba(133, 101, 32, 0.28); }
+[data-theme="light"] .pubs li { border-bottom-color: rgba(133, 101, 32, 0.2); }
+[data-theme="light"] .pubs__tag { color: var(--gold-ink); }
+[data-theme="light"] .pubs__body { color: var(--ink); }
+[data-theme="light"] .pubs__place { color: var(--ink-soft); }
+
+/* dark bands (band--navy) already carry ivory text — keep as-is (accent strips) */
+
+/* cards on body-level bands in light mode */
+[data-theme="light"] .band .card { background: var(--ivory-mid); border-color: rgba(133, 101, 32, 0.18); }
+[data-theme="light"] .band .card:hover { border-color: rgba(138, 106, 35, 0.5); }
+[data-theme="light"] .band .card h3 { color: var(--ink); }
+[data-theme="light"] .band .card p { color: var(--ink-soft); }
+
+/* rows (advanced care) in light mode when on body-level bands */
+[data-theme="light"] .band .row__who { border-left-color: rgba(133, 101, 32, 0.45); background: rgba(133, 101, 32, 0.05); }
+[data-theme="light"] .band .row__who-tag,
+[data-theme="light"] .band .row__meta-key { color: var(--gold-ink); }
+[data-theme="light"] .band .row__meta { border-top-color: rgba(133, 101, 32, 0.3); }
+
+/* facts/pair/protolist on body-level bands in light mode */
+[data-theme="light"] .band .fact__k,
+[data-theme="light"] .band .pair__lines strong,
+[data-theme="light"] .band .protolist li em { color: var(--gold-ink); }
+[data-theme="light"] .band .fact__v,
+[data-theme="light"] .band .pair__lines span,
+[data-theme="light"] .band .protolist li span { color: var(--ink-soft); }
+[data-theme="light"] .band .pair__lines { border-top-color: rgba(133, 101, 32, 0.28); }
+[data-theme="light"] .band .pair__lines li { border-bottom-color: rgba(133, 101, 32, 0.18); }
+[data-theme="light"] .band .protolist li { border-top-color: rgba(133, 101, 32, 0.22); }
+
+/* founder specific in light mode */
+[data-theme="light"] .band .founder__meta { color: var(--gold-ink); }
+[data-theme="light"] .band .portrait::after { border-color: rgba(138, 106, 35, 0.45); }
+
+/* invite band (emerald) — keep dark, it's an accent */
+
+/* footer stays dark navy — acts as a grounding element in both themes */
+
+/* .loc tiles keep their dark navy identity in light mode — they're an intentional dark island */
+[data-theme="light"] .loc { background: var(--navy); color: var(--ivory); }
+[data-theme="light"] .loc h3 { color: var(--ivory); }
+[data-theme="light"] .loc p { color: var(--muted); }
+[data-theme="light"] .locs { background: rgba(201, 162, 74, 0.16); }
+
+/* form inputs on light body-level bands — give a subtle ivory background so field is visible */
+[data-theme="light"] .band input[type="text"],
+[data-theme="light"] .band input[type="email"],
+[data-theme="light"] .band textarea,
+[data-theme="light"] .band select {
+  background: rgba(255, 255, 255, 0.55);
+  color: var(--ink);
+  border-color: rgba(133, 101, 32, 0.28);
+}
+[data-theme="light"] .band input[type="text"]:focus,
+[data-theme="light"] .band input[type="email"]:focus,
+[data-theme="light"] .band textarea:focus,
+[data-theme="light"] .band select:focus {
+  border-color: var(--gold-ink);
+  background: #fff;
+}
+[data-theme="light"] .band .field label { color: var(--gold-ink); }
+[data-theme="light"] .band .contactlist span { color: var(--gold-ink); }
+[data-theme="light"] .band .contactlist strong,
+[data-theme="light"] .band .contactlist a { color: var(--ink); }
+
+/* navy bands stay dark — intentional as accent strips; keeps luxury duality */
+/* (no override needed — they already use --navy-deep and light ivory text) */
+
+/* Section-level polish tokens honored below */
+
+/* ---------- global polish: section spacing + gold accent tuning ---------- */
+
+/* refine section rhythm — small tightening on desktop for airier grid */
+.band { padding-block: var(--pad-y); }
+.band--hair { padding-block: calc(var(--pad-y) * 0.78); }
+.band + .band { border-top: none; }
+
+/* subtle gold intensity: soften the raw gold to a warmer champagne everywhere */
+:root {
+  --gold-soft: rgba(201, 162, 74, 0.68);
+}
+
+/* Nav underline uses softer gold */
+.nav a::after { background: var(--gold-soft); }
+/* Buttons keep primary gold for CTAs */
