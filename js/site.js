@@ -8,7 +8,7 @@
     themeBtn.addEventListener('click', function () {
       var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', cur);
-      try { localStorage.setItem('r2-theme', cur); } catch (e) {}
+      try { document.cookie = 'r2th=' + cur + '; max-age=31536000; path=/; SameSite=Lax'; } catch (e) {}
     });
   }
 
