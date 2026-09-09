@@ -973,7 +973,14 @@ p { margin: 0; }
 [data-theme="light"] .header.is-scrolled .nav .btn:hover { background: var(--gold-ink); color: var(--ivory-soft); }
 [data-theme="light"] .header.is-scrolled .theme-toggle { border-color: rgba(133, 101, 32, 0.35); color: var(--ink); }
 [data-theme="light"] .header.is-scrolled .theme-toggle:hover { border-color: var(--gold-ink); background: rgba(133, 101, 32, 0.08); }
-/* At top of page in light mode: header is transparent over dark hero, so toggle stays ivory */
+/* At top of page in light mode: header is transparent over dark hero — text stays ivory */
+[data-theme="light"] .header:not(.is-scrolled) .brand-mark { color: var(--ivory); }
+[data-theme="light"] .header:not(.is-scrolled) .brand-sub { color: var(--muted); }
+[data-theme="light"] .header:not(.is-scrolled) .nav a { color: rgba(248, 244, 234, 0.94); }
+[data-theme="light"] .header:not(.is-scrolled) .nav a:hover,
+[data-theme="light"] .header:not(.is-scrolled) .nav a[aria-current='page'] { color: var(--gold); }
+[data-theme="light"] .header:not(.is-scrolled) .nav .btn { color: var(--ivory); border-color: var(--gold); }
+[data-theme="light"] .header:not(.is-scrolled) .nav .btn:hover { background: var(--gold); color: var(--navy); }
 [data-theme="light"] .header:not(.is-scrolled) .theme-toggle {
   border-color: rgba(248, 244, 234, 0.35);
   color: var(--ivory);
