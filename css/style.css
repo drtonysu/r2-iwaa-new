@@ -385,21 +385,26 @@ p { margin: 0; }
 }
 .row__meta-val {
   font-size: var(--text-sm);
-  color: var(--muted);
+  color: var(--ivory);
   line-height: 1.55;
 }
-.band--ivory .row__who { border-left-color: rgba(133, 101, 32, 0.45); }
+.band--ivory .row__who { border-left-color: rgba(133, 101, 32, 0.45); background: rgba(133, 101, 32, 0.05); }
 .band--ivory .row__who-tag,
 .band--ivory .row__meta-key { color: var(--gold-ink); }
 .band--ivory .row__meta { border-top-color: rgba(133, 101, 32, 0.3); }
+.band--ivory .row__meta-val { color: var(--ink); font-weight: 500; }
+.band--ivory .row h3 { color: var(--ink); }
+.band--ivory .row__what { color: var(--ink); }
+.band--ivory .row__note { color: var(--gold-ink); font-weight: 500; }
 .row__note {
   display: block;
   font-size: var(--text-xs);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(201, 162, 74, 0.75);
+  color: var(--gold-light);
   text-align: right;
   line-height: 1.6;
+  font-weight: 500;
 }
 
 /* locations */
@@ -1025,6 +1030,10 @@ p { margin: 0; }
 [data-theme="light"] .band .row__who-tag,
 [data-theme="light"] .band .row__meta-key { color: var(--gold-ink); }
 [data-theme="light"] .band .row__meta { border-top-color: rgba(133, 101, 32, 0.3); }
+[data-theme="light"] .band .row__meta-val { color: var(--ink); font-weight: 500; }
+[data-theme="light"] .band .row h3 { color: var(--ink); }
+[data-theme="light"] .band .row__what { color: var(--ink); }
+[data-theme="light"] .band .row__note { color: var(--gold-ink); font-weight: 500; }
 
 /* facts/pair/protolist on body-level bands in light mode */
 [data-theme="light"] .band .fact__k,
