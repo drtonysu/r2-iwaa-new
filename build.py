@@ -436,15 +436,14 @@ for label, name, what, who, meta, img, alt in adv_rows:
     )
     rows_html += f"""
           <article class="row">
-            <img src="img/{img}" alt="{alt}">
-            <div>
+            <div class="row__media"><img src="img/{img}" alt="{alt}" loading="lazy"></div>
+            <div class="row__body">
               <span class="card__label">{label}</span>
               <h3>{name}</h3>
               <p class="row__what">{what}</p>
               <p class="row__who"><span class="row__who-tag">Who it may suit</span> {who}</p>
               <div class="row__meta">{meta_items}</div>
             </div>
-            <span class="row__note">Availability confirmed<br>at consultation</span>
           </article>"""
 
 adv = f"""    <section class="hero hero--page">
@@ -469,11 +468,14 @@ adv = f"""    <section class="hero hero--page">
     </section>
 
     <section class="band band--navy band--hair">
-      <div class="wrap narrow reveal">
-        <p class="eyebrow">How we speak about outcomes</p>
-        <h2>No promises we cannot keep.</h2>
-        <hr class="rule">
-        <p class="lead">Regenerative medicine is a developing field. We will tell you what is established, what is still being studied, and what we simply do not know &mdash; including when the honest answer is that a therapy is not right for you.</p>
+      <div class="wrap split reveal">
+        <div class="split__media"><img src="img/adv-honest-note.webp" alt="A physician's gloved hand writing careful notes in a leather clinical notebook under a warm brass lamp"></div>
+        <div class="split__body">
+          <p class="eyebrow">How we speak about outcomes</p>
+          <h2>Considered, and told plainly.</h2>
+          <hr class="rule">
+          <p class="lead">Regenerative medicine is a developing field. We will tell you what is established, what is still being studied, and what we simply do not know &mdash; including when the honest answer is that a therapy is not right for you.</p>
+        </div>
       </div>
     </section>
 

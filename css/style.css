@@ -7,8 +7,8 @@
   --navy-soft: #12293f;
 
   /* emerald — the green accent ground */
-  --emerald: #0c5240;
-  --emerald-deep: #06382a;
+  --emerald: #073626;
+  --emerald-deep: #04241a;
 
   /* champagne gold — the metal */
   --gold: #c9a24a;
@@ -381,13 +381,25 @@ p { margin: 0; }
 .rows { border-top: 1px solid rgba(201, 162, 74, 0.16); margin-top: 3rem; }
 .row {
   display: grid;
-  grid-template-columns: 168px minmax(0, 1fr) 210px;
-  gap: clamp(1.4rem, 3.5vw, 3rem);
+  grid-template-columns: minmax(300px, 34%) minmax(0, 1fr);
+  gap: clamp(1.8rem, 4vw, 3.4rem);
   align-items: center;
-  padding: clamp(1.8rem, 3.5vw, 2.8rem) 0;
+  padding: clamp(2rem, 3.8vw, 3.2rem) 0;
   border-bottom: 1px solid rgba(201, 162, 74, 0.16);
 }
-.row img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.row__media { overflow: hidden; }
+.row__media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.9s var(--ease);
+}
+.row:hover .row__media img { transform: scale(1.03); }
+@media (max-width: 780px) {
+  .row { grid-template-columns: 1fr; gap: 1.4rem; }
+  .row__media img { aspect-ratio: 4 / 3; }
+}
 .row h3 { font-size: var(--text-xl); margin-bottom: 0.55rem; }
 .row p { font-size: var(--text-sm); color: var(--muted); line-height: 1.7; }
 .row__what { margin-bottom: 0.9rem; }
