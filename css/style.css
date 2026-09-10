@@ -986,12 +986,12 @@ p { margin: 0; }
 [data-theme="light"] .theme-toggle .theme-toggle__moon { display: none; }
 
 @media (max-width: 900px) {
-  /* keep toggle visible even when .nav is collapsed on mobile; sit LEFT of burger */
+  /* keep toggle visible even when .nav is collapsed on mobile; sit LEFT of burger with clear breathing room */
   .nav > .theme-toggle {
     display: inline-flex !important;
     position: fixed; /* pin to viewport, not the collapsed nav container */
-    top: 22px;
-    right: 80px; /* burger sits at ~var(--pad-x) from right; leave clear gap */
+    top: 24px;
+    right: calc(var(--pad-x) + 44px); /* burger is ~40px wide at pad-x; add a real gap */
     z-index: 81;
     width: 34px; height: 34px;
     background: transparent;
