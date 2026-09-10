@@ -1,0 +1,9 @@
+{
+  "name": "r2-iwaa-new",
+  "version": "1.0.0",
+  "private": true,
+  "description": "R2 International Wellness & Anti-Aging — static site regenerated from build.py on every Vercel build",
+  "scripts": {
+    "build": "python3 build.py && echo 'Build complete'"
+  }
+}
