@@ -61,7 +61,7 @@ FOOTER = """<footer class="footer">
         </div>
       </div>
       <div class="footer__base">
-        <span>&copy; 2026 R2 International Wellness &amp; Anti-Aging</span>
+        <span>&copy; 2023 R2 International Wellness &amp; Anti-Aging</span>
         <span>Availability of individual therapies is confirmed at consultation and differs by location.</span>
       </div>
     </div>
