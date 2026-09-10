@@ -276,23 +276,23 @@ home = f"""    <section class="hero">
 # ---------------------------------------------------------------- iv therapy
 
 iv_cards = [
-    ("01 &middot; Foundation", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-vials.webp", "Three amber ampoules on a brushed gold tray"),
-    ("02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-glow.webp", "A luminous pearl-white vial with a gold cap on emerald stone"),
-    ("03 &middot; Clearance", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "abstract-purify.webp", "Abstract golden fluid separating from dark fluid through a translucent membrane"),
-    ("04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-plan.webp", "A physician's desk with a hand-drawn chart, pen and clear vials"),
-    ("05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "reception.webp", "A emerald marble counter with a white orchid in a matte black vase"),
-    ("06 &middot; Foundation", "Myers&rsquo; Cocktail", "The classic B-vitamin, vitamin C, magnesium and zinc infusion.", "iv-myers.webp", "A single amber ampoule with a gold foil band on dark navy velvet"),
-    ("07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-neuro.webp", "Golden light refracting through an intravenous fluid bag against dark emerald"),
-    ("08 &middot; Recovery", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-rest.webp", "An ivory cashmere throw over a dark leather treatment chair"),
-    ("09 &middot; Recovery", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-recovery2.webp", "A lemon slice and a small glass dropper bottle on dark emerald marble"),
-    ("10 &middot; Foundation", "Omega Drip", "An omega-3 emulsion with vitamin C and B-complex, for cerebral and cardiac support.", "iv-omega.webp", "Golden droplets suspended in dark navy fluid"),
+    ("01 &middot; Foundation", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-01-antiaging.webp", "Three amber ampoules on a brushed gold tray, warm side light on deep navy velvet"),
+    ("02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-02-premium.webp", "A tall pearl-white amino acid vial with a gold cap on polished emerald marble"),
+    ("03 &middot; Clearance", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "iv-03-detox.webp", "Amber fluid separating from emerald fluid through a translucent membrane, golden threads dispersing"),
+    ("04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-04-advanced-detox.webp", "Golden intravenous drip chamber with a single amber droplet caught mid-fall in a warm treatment suite"),
+    ("05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "iv-05-vitc.webp", "Sliced orange and lemon cross-sections on dark stone, translucent flesh catching golden light"),
+    ("06 &middot; Foundation", "Myers&rsquo; Cocktail", "The classic B-vitamin, vitamin C, magnesium and zinc infusion.", "iv-06-myers.webp", "An amber, a clear and a gold-capped pharmaceutical vial resting on folded dark navy velvet"),
+    ("07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-07-neuro.webp", "Abstract golden neural filaments and glowing nodes suspended in dark navy fluid"),
+    ("08 &middot; Recovery", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-08-sport.webp", "A single amber vial beside a folded ivory linen towel on dark stone with a deep navy background"),
+    ("09 &middot; Recovery", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-09-hangover.webp", "A crystal-cut carafe of amber liquid and lemon halves on a dark emerald marble slab"),
+    ("10 &middot; Foundation", "Omega Drip", "An omega-3 emulsion with vitamin C and B-complex, for cerebral and cardiac support.", "iv-10-omega.webp", "A single golden omega oil droplet falling into a shallow crystal dish with warm gold bokeh"),
 ]
 
 cards_html = ""
 for label, name, text, img, alt in iv_cards:
     cards_html += f"""
-          <article class="card">
-            <img src="img/{img}" alt="{alt}">
+          <article class="card card--iv">
+            <div class="card__media"><img src="img/{img}" alt="{alt}" loading="lazy"></div>
             <div class="card__body">
               <span class="card__label">{label}</span>
               <h3>{name}</h3>
@@ -316,7 +316,7 @@ iv = f"""    <section class="hero hero--page">
           <h2>Chosen for you, not from a menu.</h2>
           <p class="lead">Every programme starts from your history, examination and bloodwork. Composition and pace are set by your physician.</p>
         </div>
-        <div class="cards reveal">{cards_html}
+        <div class="cards cards--iv reveal">{cards_html}
         </div>
       </div>
     </section>
