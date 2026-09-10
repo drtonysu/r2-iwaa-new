@@ -619,7 +619,7 @@ locations = f"""    <section class="hero hero--page">
       <img class="hero__bg" src="img/taipei-lab.webp" alt="A precise clinical laboratory with cryogenic storage and sterile preparation area">
       <div class="hero__inner">
         <p class="eyebrow reveal">Locations</p>
-        <h1 class="reveal">Taipei, Yangon, Ho Chi Minh City.</h1>
+        <h1 class="reveal">Taipei, Yangon, Ho&nbsp;Chi&nbsp;Minh&nbsp;City.</h1>
         <p class="lead reveal">One clinical standard, prepared and trained in Taipei, delivered in all three cities.</p>
       </div>
     </section>
