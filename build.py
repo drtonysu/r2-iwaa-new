@@ -254,7 +254,7 @@ home = f"""    <section class="hero">
           <div class="loc">
             <span class="loc__tag">Main centre</span>
             <h3>Taipei &mdash; R2-IWAA</h3>
-            <p>Shilin District, Taipei. Full-service medical centre, clinical training and materials preparation.</p>
+            <p>Shilin District, Taipei. R2-IWAA main center, clinical training and materials preparation.</p>
           </div>
           <div class="loc">
             <span class="loc__tag">Yangon</span>
@@ -631,7 +631,7 @@ locations = f"""    <section class="hero hero--page">
           <p class="eyebrow">Main centre</p>
           <h2>Taipei &mdash; R2-IWAA</h2>
           <hr class="rule">
-          <p class="lead">No.&nbsp;516, Section&nbsp;5, Zhongshan North Road, Shilin District. Our full-service medical centre, and the hub of the network &mdash; where clinical teams are trained and where the materials used in every clinic are prepared and released.</p>
+          <p class="lead">No.&nbsp;516, Section&nbsp;5, Zhongshan North Road, Shilin District. Our R2-IWAA main center, and the hub of the network &mdash; where clinical teams are trained and where the materials used in every clinic are prepared and released.</p>
         </div>
       </div>
     </section>
