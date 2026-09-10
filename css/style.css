@@ -460,6 +460,9 @@ p { margin: 0; }
 
 /* locations */
 .locs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(201, 162, 74, 0.16); }
+.locs--two { grid-template-columns: repeat(2, 1fr); max-width: 960px; margin-inline: auto; border: 1px solid rgba(201, 162, 74, 0.16); }
+.locs--two .loc { padding: clamp(2.2rem, 4vw, 3.4rem); }
+.loc__addr { color: var(--ivory); opacity: 0.94; margin: 0 0 0.35rem; font-size: var(--text-sm); line-height: 1.55; }
 .loc { background: var(--navy); padding: clamp(1.8rem, 3.2vw, 2.8rem); }
 .loc__tag {
   font-size: var(--text-xs);

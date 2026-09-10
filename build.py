@@ -643,24 +643,20 @@ locations = f"""    <section class="hero hero--page">
           <h2>Cared for close to home.</h2>
         </div>
         <hr class="rule">
-        <div class="locs reveal">
+        <div class="locs locs--two reveal">
           <div class="loc">
             <span class="loc__tag">Yangon</span>
             <h3>Beauty Bank Wellness &amp; Cell Therapy Center</h3>
-            <p>Kamaryut Township, Yangon. Assessment, IV therapy and procedures, with Myanmar-language consultation.</p>
-            <p class="lang-my" lang="my">အမှတ် ၁၀၃(D)၊ သံလွင်လမ်း၊ ကမာရွတ်မြိုနယ်၊ ရန်ကုန်မြို။</p>
-            <p class="loc__meta">Tel <a href="tel:09886234234">09 886 234 234</a></p>
+            <p class="loc__addr">Kamaryut Township, Yangon</p>
+            <p>Assessment, IV therapy and procedures.</p>
+            <p class="loc__meta">Tel <a href="tel:09886234234">09&nbsp;886&nbsp;234&nbsp;234</a></p>
           </div>
           <div class="loc">
             <span class="loc__tag">Ho Chi Minh City</span>
             <h3>Recover Health</h3>
-            <p>260&ndash;262A Điện Biên Phủ, Xuân Hòa Ward, Ho Chi Minh City. Assessment, IV therapy and procedures.</p>
-            <p class="loc__meta">Hotline <a href="tel:0902766786">0902 766 786</a> &middot; <a href="mailto:info@recoverhealth.vn">info@recoverhealth.vn</a></p>
-          </div>
-          <div class="loc">
-            <span class="loc__tag">Please note</span>
-            <h3>Before you travel</h3>
-            <p>Assessment and treatment days differ by city, and not every therapy is offered at every location. Confirm your appointment with us first.</p>
+            <p class="loc__addr">260&ndash;262A Điện Biên Phủ, Xuân Hòa Ward, Ho Chi Minh City</p>
+            <p>Assessment, IV therapy and procedures.</p>
+            <p class="loc__meta">Hotline <a href="tel:0902766786">0902&nbsp;766&nbsp;786</a><br><a href="mailto:info@recoverhealth.vn">info@recoverhealth.vn</a></p>
           </div>
         </div>
       </div>
