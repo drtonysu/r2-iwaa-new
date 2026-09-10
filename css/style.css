@@ -649,6 +649,16 @@ p { margin: 0; }
 }
 .contactlist a, .contactlist p { font-size: var(--text-lg); }
 .contactlist a:hover { color: var(--gold-light); }
+.contact__icons { display: flex; gap: 0.8rem; margin-top: 0.35rem; }
+.contact__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid rgba(201, 162, 74, 0.35);
+  color: var(--gold);
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.contact__icon svg { width: 22px; height: 22px; }
+.contact__icon:hover { color: var(--gold-light); border-color: var(--gold-light); background: rgba(201, 162, 74, 0.08); transform: translateY(-1px); }
 
 /* closing invite */
 .invite { text-align: center; }
