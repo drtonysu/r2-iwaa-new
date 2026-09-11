@@ -152,7 +152,7 @@ home = f"""    <section class="hero">
         <div class="split__media split__media--tall"><img src="img/iv-detail.webp" alt="Close view of a golden droplet forming in an intravenous drip chamber"></div>
         <div class="split__body">
           <p class="eyebrow">The foundation</p>
-          <h2>Intravenous therapy, <em>built around you</em>.</h2>
+          <h2>Intravenous therapy, built around you.</h2>
           <hr class="rule">
           <p class="lead">Hydration, vitamins, minerals and amino acids delivered directly — chosen from your bloodwork and how you actually live.</p>
           <a class="arrowlink" href="iv-therapy.html">See IV programmes &rarr;</a>
@@ -192,7 +192,7 @@ home = f"""    <section class="hero">
       <img src="img/abstract-cells.webp" alt="Abstract luminous cells connected by fine golden filaments">
       <div class="statement__inner reveal">
         <p class="eyebrow">Advanced regenerative care</p>
-        <h2>Selected therapies, <em>by consultation</em>.</h2>
+        <h2>Selected therapies, by consultation.</h2>
         <p>Where the evidence and your assessment support it, our medical team may discuss advanced regenerative options with you.</p>
         <hr class="rule rule--center">
         <a class="arrowlink" href="advanced-care.html">Learn more &rarr;</a>
@@ -204,7 +204,7 @@ home = f"""    <section class="hero">
         <div class="split__media"><img src="img/taipei-lab.webp" alt="A precise clinical laboratory with cryogenic storage and sterile preparation area"></div>
         <div class="split__body">
           <p class="eyebrow">Taipei</p>
-          <h2>One standard, <em>three cities</em>.</h2>
+          <h2>One standard, three cities.</h2>
           <hr class="rule">
           <p class="lead">Our Taipei centre trains every clinical team and prepares the materials used in Yangon and Ho Chi Minh City — so care does not change when the city does.</p>
           <a class="arrowlink" href="locations.html">Our locations &rarr;</a>
@@ -243,7 +243,7 @@ home = f"""    <section class="hero">
       <div class="wrap">
         <div class="band__head reveal">
           <p class="eyebrow">Where to find us</p>
-          <h2>Three clinics, <em>one network</em>.</h2>
+          <h2>Three clinics, one network.</h2>
         </div>
         <hr class="rule">
         <div class="locs reveal">
@@ -309,7 +309,7 @@ iv = f"""    <section class="hero hero--page">
       <div class="wrap">
         <div class="band__head reveal">
           <p class="eyebrow">Programmes</p>
-          <h2>Chosen for you, <em>not from a menu</em>.</h2>
+          <h2>Chosen for you, not from a menu.</h2>
           <p class="lead">Every programme starts from your history, examination and bloodwork. Composition and pace are set by your physician.</p>
         </div>
         <div class="cards cards--iv reveal">{cards_html}
@@ -338,7 +338,7 @@ iv = f"""    <section class="hero hero--page">
         <div class="split__media split__media--tall"><img src="img/abstract-vesicles.webp" alt="Abstract golden mist of microscopic luminous spheres in dark fluid"></div>
         <div class="split__body">
           <p class="eyebrow">Beyond the foundation</p>
-          <h2>Advanced <em>regenerative</em> care.</h2>
+          <h2>Advanced regenerative care.</h2>
           <hr class="rule">
           <p class="lead">Some patients are assessed for options that go further than intravenous nutrition. These are discussed individually, never sold from a list.</p>
           <a class="arrowlink" href="advanced-care.html">Learn more &rarr;</a>
@@ -455,7 +455,7 @@ adv = f"""    <section class="hero hero--page">
       <div class="wrap">
         <div class="band__head narrow reveal">
           <p class="eyebrow">What we may discuss</p>
-          <h2>A short, <em>honest</em> list.</h2>
+          <h2>A short, honest list.</h2>
           <p class="lead">What is appropriate for you depends on your assessment, and what is available depends on where you are treated. Your physician will tell you both, plainly, before anything begins.</p>
         </div>
         <div class="rows reveal">{rows_html}
@@ -468,7 +468,7 @@ adv = f"""    <section class="hero hero--page">
         <div class="split__media"><img src="img/adv-honest-note.webp" alt="A physician's gloved hand writing careful notes in a leather clinical notebook under a warm brass lamp"></div>
         <div class="split__body">
           <p class="eyebrow">How we speak about outcomes</p>
-          <h2>Considered, and <em>told plainly</em>.</h2>
+          <h2>Considered, and told plainly.</h2>
           <hr class="rule">
           <p class="lead">Regenerative medicine is a developing field. We will tell you what is established, what is still being studied, and what we simply do not know &mdash; including when the honest answer is that a therapy is not right for you.</p>
         </div>
@@ -494,7 +494,7 @@ founder = f"""    <section class="hero hero--page">
         <div class="portrait"><img src="img/founder-portrait.webp" alt="Dr. Tony Su, founder and medical director of R2-IWAA"></div>
         <div>
           <p class="eyebrow">Approach</p>
-          <h2>Calibration over <em>catalogue</em>.</h2>
+          <h2>Calibration over catalogue.</h2>
           <hr class="rule">
           <p class="lead">Dr. Su&rsquo;s position is simple: a patient receives what their biology asks for, at the pace their life allows &mdash; not the package on offer. Every protocol used across the network is written and reviewed by him, and reviewed again when the evidence moves.</p>
           <div class="founder__meta"><span>Internal medicine</span><span>Precision medicine</span><span>Cellular &amp; anti-aging medicine</span></div>
@@ -519,7 +519,7 @@ founder = f"""    <section class="hero hero--page">
       <div class="wrap">
         <div class="band__head reveal narrow">
           <p class="eyebrow">Publications &amp; Training</p>
-          <h2>Trained where the margin for error is <em>smallest</em>.</h2>
+          <h2>Trained where the margin for error is smallest.</h2>
           <p class="lead">Critical care, chest and emergency medicine in Taiwan first &mdash; then cellular medicine in Japan and precision medicine at Harvard Medical School. The order matters: acute-care judgement came before the aesthetics.</p>
         </div>
         <hr class="rule">
@@ -587,7 +587,7 @@ founder = f"""    <section class="hero hero--page">
     <section class="band band--navy band--hair">
       <div class="wrap reveal narrow">
         <p class="eyebrow">Protocols authored by Dr. Su</p>
-        <h2>Every formula, <em>one physician&rsquo;s hand</em>.</h2>
+        <h2>Every formula, one physician&rsquo;s hand.</h2>
         <hr class="rule">
         <p class="lead">The IV programme across every R2-IWAA location is authored by Dr. Su and reviewed each time the evidence moves. Every plan is set to a patient&rsquo;s bloodwork rather than a menu.</p>
         <p style="margin-top:1.8rem"><a class="arrowlink" href="iv-therapy.html">See the IV therapy programme &rarr;</a></p>
@@ -636,7 +636,7 @@ locations = f"""    <section class="hero hero--page">
       <div class="wrap">
         <div class="band__head reveal">
           <p class="eyebrow">Partner clinics</p>
-          <h2>Cared for <em>close to home</em>.</h2>
+          <h2>Cared for close to home.</h2>
         </div>
         <hr class="rule">
         <div class="locs locs--two reveal">
@@ -685,7 +685,7 @@ consult = f"""    <section class="hero hero--page">
       <div class="wrap split reveal">
         <div class="split__body">
           <p class="eyebrow">Request</p>
-          <h2>Start a <em>conversation</em>.</h2>
+          <h2>Start a conversation.</h2>
           <hr class="rule">
           <form class="form" novalidate>
             <div class="field">
@@ -727,7 +727,7 @@ consult = f"""    <section class="hero hero--page">
         </div>
         <div class="split__body">
           <p class="eyebrow">Direct</p>
-          <h2>Or <em>reach us</em> now.</h2>
+          <h2>Or reach us now.</h2>
           <hr class="rule">
           <div class="contactlist">
             <div>
