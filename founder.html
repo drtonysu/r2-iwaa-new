@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <script>(function(){try{var m=document.cookie.match(/(?:^|; )r2th=(light|dark)/);if(m){document.documentElement.setAttribute('data-theme',m[1]);}}catch(e){}})();</script>
+  <script>(function(){try{var m=document.cookie.match(/(?:^|; )r2th=(light|dark)/);if(m){document.documentElement.setAttribute('data-theme',m[1]);}var l=document.cookie.match(/(?:^|; )r2lang=(en|my)/);if(l){document.documentElement.setAttribute('lang',l[1]);}}catch(e){}})();</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dr. Tony Su &mdash; R2-IWAA</title>
@@ -32,7 +32,10 @@
       <a href="iv-therapy.html">IV Therapy</a>
       <a href="locations.html">Locations</a>
       <a href="founder.html" aria-current="page">Dr. Tony Su</a>
-      <a class="btn" href="consultation.html">Consultation</a>
+      <a class="btn" href="consultation.html" data-i18n="nav.consultation">Consultation</a>
+      <button class="lang-toggle" type="button" aria-label="Switch language" title="Switch language">
+        <span data-lang-label>EN</span>
+      </button>
     </nav>
   </header>
   <main>
@@ -196,5 +199,6 @@
     </div>
   </footer>
   <script src="js/site.js" defer></script>
+  <script src="js/i18n.js" defer></script>
 </body>
 </html>
