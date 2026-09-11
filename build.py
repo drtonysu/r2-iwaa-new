@@ -541,7 +541,7 @@ founder = f"""    <section class="hero hero--page">
           </li>
           <li>
             <span class="pubs__tag">Cellular Therapy Fellowship</span>
-            <span class="pubs__body">NK cell therapy &amp; Osaki Method under Prof. Masuyama</span>
+            <span class="pubs__body">Osaki Method NK cell therapy under Prof. Masuyama</span>
             <span class="pubs__place">Japan, 2022</span>
           </li>
           <li>
@@ -556,7 +556,7 @@ founder = f"""    <section class="hero hero--page">
           </li>
           <li>
             <span class="pubs__tag">Professional Memberships</span>
-            <span class="pubs__body">American College of Physicians &middot; IASCT</span>
+            <span class="pubs__body">American College of Physicians</span>
             <span class="pubs__place">Ongoing</span>
           </li>
         </ol>
