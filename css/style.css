@@ -786,8 +786,8 @@ p em { font-style: italic; color: var(--ivory-warm); }
 
 /* closing invite */
 .invite { text-align: center; }
-.invite h2 { font-size: var(--text-3xl); max-width: 24ch; margin-inline: auto; }
-.invite p { margin: 1.4rem auto 0; max-width: 46ch; color: rgba(248, 244, 234, 0.94); font-size: var(--text-lg); }
+.invite h2 { font-size: var(--text-3xl); max-width: min(720px, 92vw); margin-inline: auto; line-height: 1.1; }
+.invite p { margin: 1.4rem auto 0; max-width: min(58ch, 90vw); color: rgba(248, 244, 234, 0.94); font-size: var(--text-lg); line-height: 1.65; }
 .invite .btn { margin-top: 2.4rem; }
 
 /* footer */
