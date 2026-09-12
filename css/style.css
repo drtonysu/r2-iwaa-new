@@ -905,7 +905,7 @@ p em { font-style: italic; color: var(--ivory-warm); }
   /* keep .nav in flow so the toggle button inside stays visible; hide its other children */
   .nav:not(.is-open) > a,
   .nav:not(.is-open) > .btn { display: none; }
-  .nav:not(.is-open) { display: block; background: none; position: static; height: auto; padding: 0; }
+  .nav:not(.is-open) { display: none; }
   .nav.is-open {
     display: flex;
     flex-direction: column;
@@ -919,7 +919,7 @@ p em { font-style: italic; color: var(--ivory-warm); }
   }
   .nav.is-open a { font-size: var(--text-xl); font-family: var(--font-display); letter-spacing: 0; }
   .nav.is-open .btn { font-family: var(--font-body); font-size: var(--text-sm); margin-top: 1rem; }
-  .burger { display: block; z-index: 80; position: relative; }
+  .burger { display: block; z-index: 80; position: relative; margin-left: auto; }
   .brand { position: relative; z-index: 80; }
 
   .pillars { grid-template-columns: 1fr; }
