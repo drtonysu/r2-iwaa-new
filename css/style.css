@@ -572,14 +572,6 @@ p em { font-style: italic; color: var(--ivory-warm); }
 .loc__meta a { color: var(--gold-light); border-bottom: 1px solid rgba(201, 162, 74, 0.34); }
 .loc__meta a:hover { color: var(--gold); }
 
-.lang-my {
-  font-family: 'Noto Sans Myanmar', var(--font-body);
-  display: block;
-  margin-top: 0.35rem;
-  color: var(--muted);
-}
-.band--ivory .lang-my { color: var(--ink-soft); }
-
 /* founder */
 .founder { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
 .portrait { position: relative; }
@@ -1293,83 +1285,3 @@ p em { font-style: italic; color: var(--ivory-warm); }
 .nav a::after { background: var(--gold-soft); }
 /* Buttons keep primary gold for CTAs */
 
-/* ---------- language toggle + Myanmar type ---------- */
-.lang-toggle {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 3.2rem;
-  height: 2.2rem;
-  padding: 0 0.7rem;
-  margin-left: 0.6rem;
-  background: transparent;
-  border: 1px solid var(--line);
-  color: var(--muted);
-  border-radius: 999px;
-  font-family: var(--font-body);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  transition: color 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-}
-.lang-toggle:hover { color: var(--gold-light); border-color: var(--gold-soft); }
-.lang-toggle:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
-[data-theme="light"] .lang-toggle { color: var(--gold-ink); border-color: rgba(122, 90, 27, 0.35); }
-[data-theme="light"] .lang-toggle:hover { color: var(--ink); border-color: var(--gold-ink); }
-
-/* keep the toggle visible on mobile even when nav collapses */
-@media (max-width: 860px) {
-  .nav > .lang-toggle {
-    display: inline-flex !important;
-    position: absolute;
-    right: calc(1rem + 44px + 0.6rem);
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .nav > .lang-toggle svg { display: none; }
-}
-
-/* Myanmar typography — apply Noto Sans Myanmar only when lang=my */
-html[lang="my"] body,
-html[lang="my"] h1,
-html[lang="my"] h2,
-html[lang="my"] h3,
-html[lang="my"] h4,
-html[lang="my"] p,
-html[lang="my"] a,
-html[lang="my"] span,
-html[lang="my"] li,
-html[lang="my"] label,
-html[lang="my"] input,
-html[lang="my"] textarea,
-html[lang="my"] select,
-html[lang="my"] button,
-html[lang="my"] figcaption,
-html[lang="my"] blockquote {
-  font-family: 'Noto Sans Myanmar', var(--font-body), sans-serif;
-}
-/* Burmese diacritics stack — a bit more line-height and slightly reduced weight for elegance */
-html[lang="my"] body { line-height: 1.75; }
-html[lang="my"] h1,
-html[lang="my"] h2 {
-  font-family: 'Noto Sans Myanmar', var(--font-display), serif;
-  font-style: normal; /* Instrument Serif italics are Latin only */
-  font-weight: 500;
-  line-height: 1.35;
-  letter-spacing: 0;
-}
-html[lang="my"] h3 { line-height: 1.45; }
-html[lang="my"] em {
-  font-style: normal;
-  color: var(--gold-light);
-  font-weight: 500;
-}
-html[lang="my"] .band--ivory em { color: var(--gold-ink); }
-/* Numerals in fact tiles are the same in Latin script — keep them serif italic */
-html[lang="my"] .fact__n,
-html[lang="my"] .fact__k { font-family: var(--font-display); font-style: italic; }
-html[lang="my"] .eyebrow { letter-spacing: 0.08em; }
-html[lang="my"] .card__label,
-html[lang="my"] .loc__tag,
-html[lang="my"] .pubs__tag { letter-spacing: 0.06em; }

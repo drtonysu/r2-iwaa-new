@@ -31,10 +31,7 @@ def header(current):
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
     <nav class="nav" aria-label="Main">{links}
-      <a class="btn" href="consultation.html" data-i18n="nav.consultation">Consultation</a>
-      <button class="lang-toggle" type="button" aria-label="Switch language" title="Switch language">
-        <span data-lang-label>EN</span>
-      </button>
+      <a class="btn" href="consultation.html">Consultation</a>
     </nav>
   </header>"""
 
@@ -75,7 +72,7 @@ def page(slug, title, desc, body, current=None):
     html = f"""<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <script>(function(){{try{{var m=document.cookie.match(/(?:^|; )r2th=(light|dark)/);if(m){{document.documentElement.setAttribute('data-theme',m[1]);}}var l=document.cookie.match(/(?:^|; )r2lang=(en|my)/);if(l){{document.documentElement.setAttribute('lang',l[1]);}}}}catch(e){{}}}})();</script>
+  <script>(function(){{try{{var m=document.cookie.match(/(?:^|; )r2th=(light|dark)/);if(m){{document.documentElement.setAttribute('data-theme',m[1]);}}}}catch(e){{}}}})();</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{title}</title>
@@ -86,7 +83,7 @@ def page(slug, title, desc, body, current=None):
   <link rel="icon" type="image/png" href="{FAVICON}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Sans+Myanmar:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -97,7 +94,6 @@ def page(slug, title, desc, body, current=None):
   </main>
   {FOOTER}
   <script src="js/site.js" defer></script>
-  <script src="js/i18n.js" defer></script>
 </body>
 </html>
 """
