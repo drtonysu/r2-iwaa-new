@@ -274,7 +274,7 @@ home = f"""    <section class="hero">
 # ---------------------------------------------------------------- iv therapy
 
 iv_cards = [
-    ("iv-anti-aging.html",       "01 &middot; Foundation", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-01-antiaging.webp", "Three amber ampoules on a brushed gold tray, warm side light on deep navy velvet"),
+    ("iv-anti-aging.html",       "01 &middot; Foundation", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-01-antiaging.webp", "A guest reclining in a private R2 suite during an Anti-Aging Drip session &mdash; soft golden infusion in the morning light"),
     ("iv-premium-anti-aging.html", "02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-02-premium.webp", "A guest resting in a private R2 suite during a Premium Anti-Aging Drip session &mdash; a warm golden amino-acid infusion in a private suite"),
     ("iv-detox.html",             "03 &middot; Clearance", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "iv-03-detox.webp", "Amber fluid separating from emerald fluid through a translucent membrane, golden threads dispersing"),
     ("iv-advanced-detox.html",    "04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-04-advanced-detox.webp", "Golden intravenous drip chamber with a single amber droplet caught mid-fall in a warm treatment suite"),
@@ -785,7 +785,11 @@ iv_drips = {
         "label": "IVF0001 &middot; Foundation",
         "name": "Anti-Aging Drip",
         "hero_img": "iv-01-antiaging.webp",
-        "hero_alt": "Three amber ampoules on a brushed gold tray, warm side light on deep navy velvet",
+        "hero_alt": "A guest reclining in a private R2 suite during an Anti-Aging Drip session &mdash; a soft golden infusion in the morning light, an emerald plant behind",
+        "editorial": {
+            "img": "iv-01-antiaging-editorial.webp",
+            "alt": "Editorial poster of the R2 Anti-Aging IV Drip: guest at rest with a golden infusion, seven key ingredients labelled &mdash; normal saline, vitamin C, B-complex, zinc, thiocan (\u03b1-lipoic acid), N-acetylcysteine and vitamin B12 &mdash; with potential benefits and who it suits",
+        },
         "aim": "Everyday antioxidant support and free-radical clearance &mdash; the R2 foundation for cellular housekeeping.",
         "lead": "Our entry anti-aging infusion, built on a saline base with vitamin C, a full B-complex, N-acetylcysteine and &alpha;-lipoic acid. Together they replenish antioxidant capacity, help the liver clear metabolic waste, and give the body the cofactors it needs for daily energy production and repair.",
         "ingredients": [
