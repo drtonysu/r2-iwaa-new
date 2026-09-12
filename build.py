@@ -847,6 +847,14 @@ iv_drips = {
         "course": "Single session or a short course, set by your physician",
         "suits": "Those looking for periodic hepatic and antioxidant support &mdash; after a heavy work period, travel, or dietary indulgence. Also a common maintenance choice between Premium Anti-Aging sessions.",
         "note": "Glutathione is administered separately from the main bag so that its thiol group is not oxidised by other nutrients.",
+        "principle": {
+            "eyebrow": "A note on sequence",
+            "text": (
+                "Clear first, then build. A single stem cell infusion into an inflamed, burdened system is an expensive way to waste good biology.\n\n"
+                "<em>Clearance first, regeneration second</em> &mdash; which is why the intensive programmes run across days rather than single sessions."
+            ),
+            "attrib": "Dr. Tony Su &middot; R2-IWAA",
+        },
     },
 
     "iv-advanced-detox.html": {
@@ -867,6 +875,14 @@ iv_drips = {
         "course": "Programme course set by your physician; often paired with lifestyle review",
         "suits": "Guests dealing with recent high stress, poor sleep, work fatigue, or those who want to reinforce antioxidant defence beyond the standard Detox Drip.",
         "note": "Clinical note: glutathione is never mixed with high-dose vitamin C or multi-nutrient bags &mdash; the free thiol group would oxidise. R2 administers it alone in a dedicated 100 ml saline bag.",
+        "principle": {
+            "eyebrow": "A note on sequence",
+            "text": (
+                "Clear first, then build. A single stem cell infusion into an inflamed, burdened system is an expensive way to waste good biology.\n\n"
+                "<em>Clearance first, regeneration second</em> &mdash; which is why the intensive programmes run across days rather than single sessions."
+            ),
+            "attrib": "Dr. Tony Su &middot; R2-IWAA",
+        },
     },
 
     "iv-vitamin-c.html": {
@@ -1000,6 +1016,41 @@ iv_drips = {
 }
 
 
+def render_principle(principle, band="navy"):
+    """Optional sequence-principle pull-quote band.
+
+    `principle` may be:
+      - None / falsy         -> render nothing
+      - str                  -> quote text only; default eyebrow/attrib
+      - dict with keys       -> text (required), eyebrow (optional),
+                                attrib (optional)
+
+    Rendered as its own <section> so callers just interpolate the string.
+    """
+    if not principle:
+        return ""
+    if isinstance(principle, str):
+        principle = {"text": principle}
+    text = principle.get("text", "").strip()
+    if not text:
+        return ""
+    eyebrow = principle.get("eyebrow", "A note on sequence")
+    attrib = principle.get("attrib", "Dr. Tony Su &middot; R2-IWAA")
+    band_cls = "band--navy" if band == "navy" else "band--ivory"
+    # Split on double newlines into paragraphs for the blockquote
+    paras = [p.strip() for p in text.split("\n\n") if p.strip()]
+    body = "".join(f"<p>{p}</p>" for p in paras) if paras else f"<p>{text}</p>"
+    return f"""    <section class="band {band_cls} band--hair">
+      <div class="principle reveal">
+        <p class="principle__eyebrow">{eyebrow}</p>
+        <span class="principle__mark" aria-hidden="true">&ldquo;</span>
+        <blockquote>{body}</blockquote>
+        <hr class="principle__rule">
+        <p class="principle__attrib">{attrib}</p>
+      </div>
+    </section>"""
+
+
 def render_drip(spec):
     ing_rows = "".join(
         f'''
@@ -1012,6 +1063,7 @@ def render_drip(spec):
         for n, _d, e in spec["ingredients"]
     )
     note_html = f'<p class="drip__note"><em>{spec["note"]}</em></p>' if spec.get("note") else ""
+    principle_html = render_principle(spec.get("principle"), band="navy")
     return f"""    <section class="hero hero--page hero--drip">
       <img class="hero__bg" src="img/{spec['hero_img']}" alt="{spec['hero_alt']}">
       <div class="hero__inner">
@@ -1052,6 +1104,8 @@ def render_drip(spec):
         {note_html}
       </div>
     </section>
+
+{principle_html}
 
     <section class="band band--ivory band--hair">
       <div class="wrap reveal narrow">
@@ -1132,6 +1186,14 @@ adv_pages = {
             ("Session", "Up to about 2 hours"),
             ("Before", "Full blood panel, cardiac and coagulation screen"),
         ],
+        "principle": {
+            "eyebrow": "A note on sequence",
+            "text": (
+                "Clear first, then build. A single stem cell infusion into an inflamed, burdened system is an expensive way to waste good biology.\n\n"
+                "<em>Clearance first, regeneration second</em> &mdash; which is why the intensive programmes run across days rather than single sessions."
+            ),
+            "attrib": "Dr. Tony Su &middot; R2-IWAA",
+        },
     },
     "adv-mesenchymal-cells.html": {
         "label": "Regenerative",
@@ -1159,6 +1221,14 @@ adv_pages = {
             ("Course", "Single infusion or a short course, defined after assessment"),
             ("Documentation", "Cell product traceability shared with the patient"),
         ],
+        "principle": {
+            "eyebrow": "A note on sequence",
+            "text": (
+                "Clear first, then build. A single stem cell infusion into an inflamed, burdened system is an expensive way to waste good biology.\n\n"
+                "<em>Clearance first, regeneration second</em> &mdash; which is why the intensive programmes run across days rather than single sessions."
+            ),
+            "attrib": "Dr. Tony Su &middot; R2-IWAA",
+        },
     },
     "adv-exosome-iv.html": {
         "label": "Regenerative",
@@ -1186,6 +1256,14 @@ adv_pages = {
             ("Course", "Typically 3&ndash;6 sessions, planned individually"),
             ("Pairs with", "Precision IV hydration and recovery protocols"),
         ],
+        "principle": {
+            "eyebrow": "A note on sequence",
+            "text": (
+                "Clear first, then build. Signalling molecules given into an inflamed, burdened system land in noise rather than in a system ready to answer.\n\n"
+                "<em>Clearance first, regeneration second</em> &mdash; which is why exosomes are given as a short series alongside a considered IV plan, not as a one-off infusion."
+            ),
+            "attrib": "Dr. Tony Su &middot; R2-IWAA",
+        },
     },
     "adv-exosome-knee.html": {
         "label": "Orthopaedic",
@@ -1269,6 +1347,7 @@ def render_adv(spec):
         for k, v in spec["meta"]
     )
     note_html = f'<p class="drip__note"><em>{spec["note"]}</em></p>' if spec.get("note") else ""
+    principle_html = render_principle(spec.get("principle"), band="navy")
     return f"""    <section class="hero hero--page hero--drip">
       <img class="hero__bg" src="img/{spec['hero_img']}" alt="{spec['hero_alt']}">
       <div class="hero__inner">
@@ -1318,6 +1397,8 @@ def render_adv(spec):
         {note_html}
       </div>
     </section>
+
+{principle_html}
 
     <section class="band band--ivory band--hair">
       <div class="wrap reveal narrow">

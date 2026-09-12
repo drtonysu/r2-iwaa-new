@@ -1503,6 +1503,73 @@ p em { font-style: italic; color: var(--ivory-warm); }
   .bene:nth-child(2) { border-top: 1px solid rgba(20, 30, 45, 0.14); padding-top: 1.6rem; }
 }
 
+/* ---------- Principle band (sequence pull-quote inside therapy pages) ---------- */
+.principle {
+  max-width: 820px;
+  margin: 0 auto;
+  padding-inline: var(--pad-x);
+  text-align: center;
+}
+.principle__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin: 0 0 0.9rem;
+}
+.principle__mark {
+  font-family: var(--font-serif);
+  font-size: 3.4rem;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.55;
+  margin: 0 auto 0.4rem;
+  display: block;
+  font-style: italic;
+}
+.principle blockquote {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.25rem, 1.9vw, 1.55rem);
+  line-height: 1.55;
+  color: var(--ink-strong, #0d1b2a);
+  font-weight: 400;
+}
+.principle blockquote p { margin: 0 0 0.55rem; }
+.principle blockquote p:last-child { margin-bottom: 0; }
+.principle blockquote em {
+  color: var(--gold-dark, #a07b2b);
+  font-style: italic;
+}
+.principle__rule {
+  border: 0;
+  height: 1px;
+  width: 60px;
+  background: var(--gold);
+  opacity: 0.55;
+  margin: 1.6rem auto 0.9rem;
+}
+.principle__attrib {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(20, 30, 45, 0.62);
+  margin: 0;
+}
+/* Principle on navy: invert */
+.band--navy .principle blockquote { color: #f4ecd8; }
+.band--navy .principle__attrib { color: rgba(244, 236, 216, 0.65); }
+.band--navy .principle__eyebrow { color: var(--gold); }
+@media (max-width: 640px) {
+  .principle blockquote { font-size: 1.1rem; }
+  .principle__mark { font-size: 2.6rem; }
+}
+
 /* ---------- News: story detail page ---------- */
 .hero--story .hero__inner { max-width: 900px; }
 .hero--story .hero__inner .eyebrow {
