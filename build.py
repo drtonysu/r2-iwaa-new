@@ -1122,7 +1122,7 @@ adv_pages = {
             ("Continuous physician oversight", "Every session runs in the Taipei clinic under a supervising physician &mdash; not delegated to a technician."),
             ("Lower circulating burden", "Removes a portion of plasma-borne inflammatory and metabolic factors; your own bloodwork is how we measure change, not the appearance of the collection bag."),
         ],
-        "note": "Blood purification is offered only at the Taipei clinic. Photographs of the post-exchange collection bag are illustrative only &mdash; colour and cloudiness are not measures of health. Laboratory results are the basis for assessment and follow-up.",
+        "note": "Blood purification is offered only at the Taipei clinic. Photographs of the post-exchange collection bag are illustrative only &mdash; color and cloudiness are not measures of health. Laboratory results are the basis for assessment and follow-up.",
         "meta": [
             ("Setting", "Taipei clinic only, private suite"),
             ("System", "Haemonetics MCS+ single-needle apheresis"),
