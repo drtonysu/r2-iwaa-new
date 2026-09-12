@@ -1120,9 +1120,10 @@ adv_pages = {
             ("Single-needle, one-arm access", "One fine cannula in one arm for the whole session. Two-access systems typically require a needle in each arm and take three to four hours."),
             ("Up to two hours per session", "Cyclic operation on the MCS+ keeps the session short and comfortable, under continuous physician supervision."),
             ("Continuous physician oversight", "Every session runs in the Taipei clinic under a supervising physician &mdash; not delegated to a technician."),
-            ("Lower circulating burden", "Removes a portion of plasma-borne inflammatory and metabolic factors; your own bloodwork is how we measure change, not the appearance of the collection bag."),
+            ("Lower circulating burden", "Removes a portion of plasma-borne inflammatory and metabolic factors, so the load your liver, kidneys and immune system have to clear is reduced for a period after the session."),
+            ("What the bag color can tell us", "The color of the removed plasma is a visible signal we look at during the session. A deeper, cloudier or more turbid bag can point to a higher circulating load of lipids, inflammatory mediators or metabolic waste &mdash; useful context, always read alongside your bloodwork by the physician."),
         ],
-        "note": "Blood purification is offered only at the Taipei clinic. Photographs of the post-exchange collection bag are illustrative only &mdash; color and cloudiness are not measures of health. Laboratory results are the basis for assessment and follow-up.",
+        "note": "Blood purification is offered only at the Taipei clinic. Bag color is one visual signal used during the session &mdash; it is interpreted by the physician together with your laboratory results, not on its own.",
         "meta": [
             ("Setting", "Taipei clinic only, private suite"),
             ("System", "Haemonetics MCS+ single-needle apheresis"),
@@ -1313,6 +1314,16 @@ def render_adv(spec):
         <ul class="benes">{benefits_html}
         </ul>
         {note_html}
+      </div>
+    </section>
+
+    <section class="band band--ivory band--hair">
+      <div class="wrap reveal narrow">
+        <p class="eyebrow">Next step</p>
+        <h2>See if this <em>fits you</em>.</h2>
+        <hr class="rule">
+        <p class="lead">Every advanced therapy is confirmed at consultation. Suitability, timing and any subsequent session are decided by your physician after reviewing your history and, where it changes the plan, your bloodwork.</p>
+        <p style="margin-top:1.8rem"><a class="btn btn--gold" href="consultation.html">Request a consultation</a> &nbsp; <a class="arrowlink" href="advanced-care.html">Back to Advanced Care &rarr;</a></p>
       </div>
     </section>
 
