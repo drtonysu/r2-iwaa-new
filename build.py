@@ -1374,6 +1374,17 @@ news_pages = {
              ["M VITA joins us as a cooperating clinic in Ho Chi Minh City, alongside our existing partner care already offered in the city. The two settings serve different neighbourhoods and different patient needs; together they widen the map of places a patient can be seen without leaving the region.",
               "As with every location we cooperate with, availability of individual therapies is confirmed at consultation and differs by site. The IV programme and materials standards authored in Taipei remain the reference; local teams apply them to the room they run."]),
         ],
+        "gallery": {
+            "heading": "From the opening",
+            "note": "Photographs via M VITA Clinic on Facebook.",
+            "images": [
+                ("news/mvita-01-opening-lineup.jpg", "Founding team lined up in front of the &lsquo;Grand Opening MVITA&rsquo; backdrop, holding bouquets."),
+                ("news/mvita-04-guests-embrace.jpg", "Guests exchanging greetings and bouquets on stage at the ceremony."),
+                ("news/mvita-03-partners-stage.jpg", "Partners and physicians on stage during the ribbon-cutting."),
+                ("news/mvita-05-suit-guest.jpg", "Founding partner receiving guests in the reception hall."),
+                ("news/mvita-02-bouquets.jpg", "Presentation of bouquets to the founding team."),
+            ],
+        },
         "visit": {
             "name": "M VITA CLINIC \u00b7 Wellness &amp; Beauty Center",
             "address": "572A \u0110\u01b0\u1eddng 3/2, Ph\u01b0\u1eddng Di\u00ean H\u1ed3ng, Ho Chi Minh City, Vietnam",
@@ -1441,6 +1452,37 @@ def render_news(spec):
     </section>
 """
 
+    gallery_html = ""
+    gallery = spec.get("gallery")
+    if gallery:
+        # First image is the feature; remainder go in a 2x2 grid
+        feature_src, feature_alt = gallery["images"][0]
+        rest = gallery["images"][1:]
+        tiles_html = "".join(
+            f'          <figure class="story__tile"><img src="img/{src}" alt="{alt}" loading="lazy"></figure>\n'
+            for src, alt in rest
+        )
+        # Alternate band shade based on how many text sections came before
+        gband = "band--navy" if len(spec["sections"]) % 2 == 0 else "band--ivory"
+        gallery_html = f"""
+    <section class="band {gband} band--hair">
+      <div class="wrap reveal">
+        <div class="band__head">
+          <p class="eyebrow">Gallery</p>
+          <h2>{gallery['heading']}</h2>
+        </div>
+        <div class="story__gallery">
+          <figure class="story__feature">
+            <img src="img/{feature_src}" alt="{feature_alt}" loading="lazy">
+          </figure>
+          <div class="story__tiles">
+{tiles_html}          </div>
+        </div>
+        <p class="story__credit">{gallery['note']}</p>
+      </div>
+    </section>
+"""
+
     visit = spec["visit"]
     website_label, website_url = visit["website"]
     visit_html = f"""
@@ -1481,7 +1523,7 @@ def render_news(spec):
         <p class="lead reveal">{spec['dek']}</p>
       </div>
     </section>
-{sections_html}{visit_html}{next_html}{INVITE}
+{sections_html}{gallery_html}{visit_html}{next_html}{INVITE}
 """
 
 
