@@ -1400,6 +1400,8 @@ p em { font-style: italic; color: var(--ivory-warm); }
   max-width: 60ch;
 }
 [data-theme="light"] .drip__note { color: var(--ink-soft); }
+.band--ivory .drip__note { color: var(--ink-soft); opacity: 1; }
+.band--ivory .drip__note em { color: var(--ink-soft); }
 
 /* ---------- advanced-care row: make whole row clickable ---------- */
 .row--link {
