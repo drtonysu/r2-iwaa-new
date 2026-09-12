@@ -272,29 +272,30 @@ home = f"""    <section class="hero">
 # ---------------------------------------------------------------- iv therapy
 
 iv_cards = [
-    ("01 &middot; Foundation", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-01-antiaging.webp", "Three amber ampoules on a brushed gold tray, warm side light on deep navy velvet"),
-    ("02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-02-premium.webp", "A tall pearl-white amino acid vial with a gold cap on polished emerald marble"),
-    ("03 &middot; Clearance", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "iv-03-detox.webp", "Amber fluid separating from emerald fluid through a translucent membrane, golden threads dispersing"),
-    ("04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-04-advanced-detox.webp", "Golden intravenous drip chamber with a single amber droplet caught mid-fall in a warm treatment suite"),
-    ("05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "iv-05-vitc.webp", "Sliced orange and lemon cross-sections on dark stone, translucent flesh catching golden light"),
-    ("06 &middot; Foundation", "Myers&rsquo; Cocktail", "The classic B-vitamin, vitamin C, magnesium and zinc infusion.", "iv-06-myers.webp", "An amber, a clear and a gold-capped pharmaceutical vial resting on folded dark navy velvet"),
-    ("07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-07-neuro.webp", "Abstract golden neural filaments and glowing nodes suspended in dark navy fluid"),
-    ("08 &middot; Recovery", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-08-sport.webp", "A single amber vial beside a folded ivory linen towel on dark stone with a deep navy background"),
-    ("09 &middot; Recovery", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-09-hangover.webp", "A crystal-cut carafe of amber liquid and lemon halves on a dark emerald marble slab"),
-    ("10 &middot; Foundation", "Omega Drip", "An omega-3 emulsion with vitamin C and B-complex, for cerebral and cardiac support.", "iv-10-omega.webp", "A single golden omega oil droplet falling into a shallow crystal dish with warm gold bokeh"),
+    ("iv-anti-aging.html",       "01 &middot; Foundation", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-01-antiaging.webp", "Three amber ampoules on a brushed gold tray, warm side light on deep navy velvet"),
+    ("iv-premium-anti-aging.html", "02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-02-premium.webp", "A tall pearl-white amino acid vial with a gold cap on polished emerald marble"),
+    ("iv-detox.html",             "03 &middot; Clearance", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "iv-03-detox.webp", "Amber fluid separating from emerald fluid through a translucent membrane, golden threads dispersing"),
+    ("iv-advanced-detox.html",    "04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-04-advanced-detox.webp", "Golden intravenous drip chamber with a single amber droplet caught mid-fall in a warm treatment suite"),
+    ("iv-vitamin-c.html",         "05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "iv-05-vitc.webp", "Sliced orange and lemon cross-sections on dark stone, translucent flesh catching golden light"),
+    ("iv-myers.html",             "06 &middot; Foundation", "Myers&rsquo; Cocktail", "The classic B-vitamin, vitamin C, magnesium and zinc infusion.", "iv-06-myers.webp", "An amber, a clear and a gold-capped pharmaceutical vial resting on folded dark navy velvet"),
+    ("iv-neuro.html",             "07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-07-neuro.webp", "Abstract golden neural filaments and glowing nodes suspended in dark navy fluid"),
+    ("iv-sport.html",             "08 &middot; Recovery", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-08-sport.webp", "A single amber vial beside a folded ivory linen towel on dark stone with a deep navy background"),
+    ("iv-hangover.html",          "09 &middot; Recovery", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-09-hangover.webp", "A crystal-cut carafe of amber liquid and lemon halves on a dark emerald marble slab"),
+    ("iv-omega.html",             "10 &middot; Foundation", "Omega Drip", "An omega-3 emulsion with vitamin C and B-complex, for cerebral and cardiac support.", "iv-10-omega.webp", "A single golden omega oil droplet falling into a shallow crystal dish with warm gold bokeh"),
 ]
 
 cards_html = ""
-for label, name, text, img, alt in iv_cards:
+for slug, label, name, text, img, alt in iv_cards:
     cards_html += f"""
-          <article class="card card--iv">
+          <a class="card card--iv card--link" href="{slug}">
             <div class="card__media"><img src="img/{img}" alt="{alt}" loading="lazy"></div>
             <div class="card__body">
               <span class="card__label">{label}</span>
               <h3>{name}</h3>
               <p>{text}</p>
+              <span class="card__more">See the formula &rarr;</span>
             </div>
-          </article>"""
+          </a>"""
 
 iv = f"""    <section class="hero hero--page">
       <img class="hero__bg" src="img/iv-detail.webp" alt="A golden droplet forming inside an intravenous drip chamber">
@@ -759,6 +760,148 @@ consult = f"""    <section class="hero hero--page">
     </section>
 """
 
+# ---------------------------------------------------------------- iv drip detail subpages
+
+# Schema per drip:
+#   slug, label, name, hero_img, hero_alt,
+#   aim (short single sentence), lead (one paragraph, 2-3 sentences),
+#   ingredients: list of (name, dose_or_note, effect_sentence),
+#   duration, course, suits (short paragraph on who this suits),
+#   note (optional, italic caveat)
+
+iv_drips = {
+    "iv-anti-aging.html": {
+        "label": "01 &middot; Foundation",
+        "name": "Anti-Aging Drip",
+        "hero_img": "iv-01-antiaging.webp",
+        "hero_alt": "Three amber ampoules on a brushed gold tray, warm side light on deep navy velvet",
+        "aim": "Everyday antioxidant support &mdash; a gentle, well-tolerated foundation to protect cells from ongoing free-radical stress.",
+        "lead": "Our entry regenerative infusion. It combines the master antioxidant glutathione with vitamin C and B-complex on a base of balanced hydration, so cells are supplied with what they need to neutralise free radicals and repair the small daily damage of ageing.",
+        "ingredients": [
+            ("Glutathione", "1,200 mg", "The body&rsquo;s master antioxidant. Recycles other antioxidants, supports the liver&rsquo;s detoxification pathways, and helps protect cells from oxidative damage."),
+            ("Vitamin C", "2 g", "A powerful antioxidant that recycles glutathione so it lasts longer in the body. Supports collagen synthesis, skin structure and immunity."),
+            ("Vitamin B-complex", "B1, B2, B3, B6", "Cofactors for energy production, red-blood-cell formation and nervous-system function. Support the cellular machinery that runs on antioxidants."),
+            ("Balanced hydration", "Sodium, potassium, calcium", "An isotonic saline base that carries the actives and restores the fluid and electrolytes cells need to work well."),
+        ],
+        "duration": "45 to 60 minutes in a private suite",
+        "course": "Single session, or a short series set by your physician",
+        "suits": "Adults looking for a well-tolerated regenerative baseline &mdash; for skin, energy and everyday recovery from stress, travel or a demanding week. A good first infusion for those new to IV therapy.",
+        "note": "Composition and dose are confirmed at consultation and may be adjusted for your bloodwork and medical history.",
+    },
+    # placeholders (draft copy to come)
+    "iv-premium-anti-aging.html": None,
+    "iv-detox.html": None,
+    "iv-advanced-detox.html": None,
+    "iv-vitamin-c.html": None,
+    "iv-myers.html": None,
+    "iv-neuro.html": None,
+    "iv-sport.html": None,
+    "iv-hangover.html": None,
+    "iv-omega.html": None,
+}
+
+
+def render_drip(spec):
+    ing_rows = "".join(
+        f'''
+              <li class="ing">
+                <div class="ing__head">
+                  <span class="ing__name">{n}</span>
+                  <span class="ing__dose">{d}</span>
+                </div>
+                <p class="ing__effect">{e}</p>
+              </li>'''
+        for n, d, e in spec["ingredients"]
+    )
+    note_html = f'<p class="drip__note"><em>{spec["note"]}</em></p>' if spec.get("note") else ""
+    return f"""    <section class="hero hero--page hero--drip">
+      <img class="hero__bg" src="img/{spec['hero_img']}" alt="{spec['hero_alt']}">
+      <div class="hero__inner">
+        <p class="eyebrow reveal">{spec['label']}</p>
+        <h1 class="reveal">{spec['name']}.</h1>
+        <p class="lead reveal">{spec['aim']}</p>
+      </div>
+    </section>
+
+    <section class="band band--ivory">
+      <div class="wrap drip reveal">
+        <div class="drip__lead">
+          <p class="eyebrow">The aim</p>
+          <h2>What this <em>drip is for</em>.</h2>
+          <hr class="rule">
+          <p class="lead">{spec['lead']}</p>
+        </div>
+
+        <div class="drip__meta">
+          <div><span class="drip__k">Time</span><span class="drip__v">{spec['duration']}</span></div>
+          <div><span class="drip__k">Course</span><span class="drip__v">{spec['course']}</span></div>
+          <div><span class="drip__k">Who it may suit</span><span class="drip__v">{spec['suits']}</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--navy band--hair">
+      <div class="wrap reveal">
+        <div class="band__head narrow">
+          <p class="eyebrow">Inside the drip</p>
+          <h2>The <em>formula</em>, ingredient by ingredient.</h2>
+          <p class="lead">Each component is chosen for a specific effect. Nothing is here for weight or theatre &mdash; every line has a reason.</p>
+        </div>
+        <hr class="rule">
+        <ul class="ings reveal">{ing_rows}
+        </ul>
+        {note_html}
+      </div>
+    </section>
+
+    <section class="band band--ivory band--hair">
+      <div class="wrap reveal narrow">
+        <p class="eyebrow">Next step</p>
+        <h2>See if this <em>fits you</em>.</h2>
+        <hr class="rule">
+        <p class="lead">Every drip we give is confirmed at consultation. Composition, dose and pace are set by your physician after reviewing your history and, where it changes the plan, your bloodwork.</p>
+        <p style="margin-top:1.8rem"><a class="btn btn--gold" href="consultation.html">Request a consultation</a> &nbsp; <a class="arrowlink" href="iv-therapy.html">Back to IV programmes &rarr;</a></p>
+      </div>
+    </section>
+
+{INVITE}
+"""
+
+
+def render_drip_stub(slug, label, name, hero_img, hero_alt):
+    return f"""    <section class="hero hero--page hero--drip">
+      <img class="hero__bg" src="img/{hero_img}" alt="{hero_alt}">
+      <div class="hero__inner">
+        <p class="eyebrow reveal">{label}</p>
+        <h1 class="reveal">{name}.</h1>
+        <p class="lead reveal">The full formula for this drip is being reviewed. Please request a consultation and our team will walk you through the composition in person.</p>
+      </div>
+    </section>
+
+    <section class="band band--ivory band--hair">
+      <div class="wrap reveal narrow">
+        <p class="eyebrow">Next step</p>
+        <h2>Speak with the <em>medical team</em>.</h2>
+        <hr class="rule">
+        <p class="lead">Every drip we give is confirmed at consultation. Composition, dose and pace are set by your physician after reviewing your history and, where it changes the plan, your bloodwork.</p>
+        <p style="margin-top:1.8rem"><a class="btn btn--gold" href="consultation.html">Request a consultation</a> &nbsp; <a class="arrowlink" href="iv-therapy.html">Back to IV programmes &rarr;</a></p>
+      </div>
+    </section>
+
+{INVITE}
+"""
+
+
+# build a body per drip subpage, keyed by slug
+drip_bodies = {}
+for slug, label, name, _text, img, alt in iv_cards:
+    spec = iv_drips.get(slug)
+    if spec:
+        drip_bodies[slug] = render_drip(spec)
+    else:
+        drip_bodies[slug] = render_drip_stub(slug, label, name, img, alt)
+
+
 pages = [
     ("index.html", "R2-IWAA &mdash; International Wellness &amp; Anti-Aging",
      "Physician-led regenerative and anti-aging medicine. IV therapy and advanced regenerative care in Taipei, Yangon and Ho Chi Minh City.", home, "index.html"),
@@ -773,6 +916,17 @@ pages = [
     ("consultation.html", "Request a Consultation &mdash; R2-IWAA",
      "Request a private one-to-one consultation with the R2-IWAA medical team in Mandarin, English or Myanmar.", consult, "consultation.html"),
 ]
+
+# append each drip subpage
+for slug, _label, name, text, _img, _alt in iv_cards:
+    display_name = name.replace("&rsquo;", "\u2019").replace("&amp;", "&")
+    pages.append((
+        slug,
+        f"{display_name} &mdash; R2-IWAA",
+        text,
+        drip_bodies[slug],
+        "iv-therapy.html",
+    ))
 
 for slug, title, desc, body, cur in pages:
     page(slug, title, desc, body, cur)
