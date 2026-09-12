@@ -420,7 +420,7 @@ p em { font-style: italic; color: var(--ivory-warm); }
   background:
     radial-gradient(ellipse at center, rgba(5, 16, 29, 0.35) 0%, rgba(5, 16, 29, 0.7) 70%, rgba(3, 10, 19, 0.9) 100%);
 }
-.statement__inner { position: relative; z-index: 2; max-width: 32ch; }
+.statement__inner { position: relative; z-index: 2; max-width: min(760px, 88vw); padding-inline: clamp(1rem, 3vw, 2rem); }
 .statement h2 { font-size: var(--text-3xl); line-height: 1.08; letter-spacing: -0.024em; }
 .statement p { margin-top: 1.4rem; color: var(--ivory-warm); font-size: var(--text-lg); line-height: 1.6; font-style: italic; font-family: var(--font-display); font-size: 1.4rem; }
 
