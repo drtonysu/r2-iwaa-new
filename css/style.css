@@ -199,7 +199,7 @@ p em { font-style: italic; color: var(--ivory-warm); }
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 1.5rem var(--pad-x);
+  padding: 1.5rem clamp(1rem, 2vw, 2rem) 1.5rem var(--pad-x);
   transition: background 0.4s var(--ease), padding 0.4s var(--ease), border-color 0.4s var(--ease);
   border-bottom: 1px solid transparent;
 }
@@ -221,7 +221,7 @@ p em { font-style: italic; color: var(--ivory-warm); }
   color: var(--muted);
 }
 
-.nav { display: flex; align-items: center; gap: 2.4rem; }
+.nav { display: flex; align-items: center; gap: 2rem; margin-left: auto; }
 .nav a {
   font-size: var(--text-sm);
   letter-spacing: 0.02em;
@@ -240,7 +240,7 @@ p em { font-style: italic; color: var(--ivory-warm); }
 }
 .nav a:hover, .nav a[aria-current='page'] { color: var(--gold-light); }
 .nav a:hover::after, .nav a[aria-current='page']::after { width: 100%; }
-.nav .btn { padding: 0.65rem 1.4rem; margin-left: 0.4rem; }
+.nav .btn { padding: 0.65rem 1.4rem; margin-left: 0.8rem; }
 .nav .btn:hover { color: var(--navy-deep); }
 .nav .btn::after { display: none; }
 
