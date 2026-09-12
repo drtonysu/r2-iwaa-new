@@ -781,13 +781,13 @@ iv_drips = {
         "aim": "Everyday antioxidant support and free-radical clearance &mdash; the R2 foundation for cellular housekeeping.",
         "lead": "Our entry anti-aging infusion, built on a saline base with vitamin C, a full B-complex, N-acetylcysteine and &alpha;-lipoic acid. Together they replenish antioxidant capacity, help the liver clear metabolic waste, and give the body the cofactors it needs for daily energy production and repair.",
         "ingredients": [
-            ("Normal saline", "100 cc", "Balanced electrolyte base that carries the actives and restores hydration at cell level."),
-            ("Vitamin C", "5 g", "A powerful antioxidant that supports collagen, skin and immunity, and helps regenerate other antioxidants in the body."),
-            ("Vitamin B-complex", "B1 100 mg, B2 5 mg, B6 2 mg, B3 50 mg", "Cofactors for energy metabolism, nerve function and red-blood-cell formation &mdash; the daily machinery of the cell."),
-            ("Vitamin B12", "500 mcg", "Supports nervous-system health and red-blood-cell production."),
-            ("Zinc", "1 amp", "An essential trace mineral for immunity, skin repair and enzyme activity."),
-            ("Thiocan (&alpha;-lipoic acid)", "2 amps (5 mg / 5 ml)", "A universal antioxidant with hepatoprotective effect; recycles glutathione and vitamin C."),
-            ("Ancare (N-acetylcysteine)", "1 amp (300 mg)", "Precursor to glutathione &mdash; supports the body&rsquo;s own detoxification pathways and respiratory health."),
+            ("Normal saline", "", "Balanced electrolyte base that carries the actives and restores hydration at cell level."),
+            ("Vitamin C", "", "A powerful antioxidant that supports collagen, skin and immunity, and helps regenerate other antioxidants in the body."),
+            ("Vitamin B-complex", "", "Cofactors for energy metabolism, nerve function and red-blood-cell formation &mdash; the daily machinery of the cell."),
+            ("Vitamin B12", "", "Supports nervous-system health and red-blood-cell production."),
+            ("Zinc", "", "An essential trace mineral for immunity, skin repair and enzyme activity."),
+            ("Thiocan (&alpha;-lipoic acid)", "", "A universal antioxidant with hepatoprotective effect; recycles glutathione and vitamin C."),
+            ("Ancare (N-acetylcysteine)", "", "Precursor to glutathione &mdash; supports the body&rsquo;s own detoxification pathways and respiratory health."),
         ],
         "duration": "About 45 minutes in a private suite",
         "price": "NT$ 2,500 per session",
@@ -804,14 +804,14 @@ iv_drips = {
         "aim": "A stronger, amino-acid-based version of our anti-aging foundation &mdash; for periods of depletion, recovery and heavier restoration.",
         "lead": "Built on a full 250 ml amino-acid base (Aminogen-X) rather than plain saline. Amino acids are the raw material the body uses to build enzymes, hormones, muscle and skin, so this formula gives both the antioxidants and the substrates cells need to rebuild.",
         "ingredients": [
-            ("Aminogen-X", "250 ml", "An amino-acid infusion base &mdash; the building blocks the body uses to make proteins, enzymes and neurotransmitters."),
-            ("Vitamin C", "5 g", "Antioxidant support for collagen, skin, immunity and vascular integrity."),
-            ("Vitamin B-complex", "2 amps (B1, B2, B3, B6)", "Doubled B-complex for energy production and nervous-system support."),
-            ("Vitamin B12", "1,000 mcg", "Neurological support and red-blood-cell formation."),
-            ("Pyridoxine (B6)", "2 amps (10 mg)", "Extra B6 for neurotransmitter synthesis and amino-acid metabolism."),
-            ("Ancare (N-acetylcysteine)", "2 amps (300 mg)", "Doubled precursor to glutathione for stronger detoxification and antioxidant support."),
-            ("Zinc", "6.75 mg", "For immunity, skin repair and hormonal balance."),
-            ("Magneter (magnesium)", "500 mg (4 mEq)", "For muscle relaxation, sleep quality and cardiovascular rhythm."),
+            ("Aminogen-X", "", "An amino-acid infusion base &mdash; the building blocks the body uses to make proteins, enzymes and neurotransmitters."),
+            ("Vitamin C", "", "Antioxidant support for collagen, skin, immunity and vascular integrity."),
+            ("Vitamin B-complex", "", "A fuller B-complex course for energy production and nervous-system support."),
+            ("Vitamin B12", "", "Neurological support and red-blood-cell formation."),
+            ("Pyridoxine (B6)", "", "Extra B6 for neurotransmitter synthesis and amino-acid metabolism."),
+            ("Ancare (N-acetylcysteine)", "", "Precursor to glutathione for detoxification and antioxidant support."),
+            ("Zinc", "", "For immunity, skin repair and hormonal balance."),
+            ("Magneter (magnesium)", "", "For muscle relaxation, sleep quality and cardiovascular rhythm."),
         ],
         "duration": "45 to 60 minutes in a private suite",
         "price": "NT$ 5,000 per session",
@@ -828,11 +828,11 @@ iv_drips = {
         "aim": "Metabolic and hepatic support &mdash; a clean, focused antioxidant infusion to help the body clear its own waste.",
         "lead": "A 250 ml saline infusion with B-complex, N-acetylcysteine and &alpha;-lipoic acid, closing with a slow glutathione IV push. This staged sequence protects the glutathione from oxidation, so the master antioxidant reaches the tissues intact.",
         "ingredients": [
-            ("Normal saline", "250 ml", "Balanced hydration base to carry the actives at a steady pace."),
-            ("Vitamin B-complex", "2 amps (B1, B2, B3, B6)", "Cofactors for energy metabolism and nervous-system support during detoxification."),
-            ("Ancare (N-acetylcysteine)", "2 amps (300 mg)", "Precursor to glutathione &mdash; supports the liver&rsquo;s Phase II detoxification pathways."),
-            ("Thiocan (&alpha;-lipoic acid)", "2 amps (5 mg / 5 ml)", "Hepatoprotective antioxidant that recycles glutathione and vitamin C."),
-            ("Glutathione", "500 mg &mdash; slow IV push", "The body&rsquo;s master antioxidant. Given separately at the end of the session so the thiol group is not degraded by other nutrients in the bag."),
+            ("Normal saline", "", "Balanced hydration base to carry the actives at a steady pace."),
+            ("Vitamin B-complex", "", "Cofactors for energy metabolism and nervous-system support during detoxification."),
+            ("Ancare (N-acetylcysteine)", "", "Precursor to glutathione &mdash; supports the liver&rsquo;s Phase II detoxification pathways."),
+            ("Thiocan (&alpha;-lipoic acid)", "", "Hepatoprotective antioxidant that recycles glutathione and vitamin C."),
+            ("Glutathione", "slow IV push", "The body&rsquo;s master antioxidant. Given separately at the end of the session so the thiol group is not degraded by other nutrients in the bag."),
         ],
         "duration": "45 to 60 minutes in a private suite",
         "price": "NT$ 3,500 per session",
@@ -849,10 +849,10 @@ iv_drips = {
         "aim": "An escalated antioxidant course &mdash; higher doses of vitamin C, &alpha;-lipoic acid and glutathione for periods of accumulated stress, sleep loss or prolonged fatigue.",
         "lead": "A three-bag infusion. Vitamin C and higher-dose &alpha;-lipoic acid are given first, followed by glutathione in a dedicated saline bag so the master antioxidant is delivered intact. This is the R2 protocol for guests who need to reinforce antioxidant defence rather than gentle maintenance.",
         "ingredients": [
-            ("Normal saline", "3 &times; 100 ml bags", "Three separate bags allow each active to be delivered on its own line for stability and pace."),
-            ("Vitamin C", "10 g (2 amps in NS 100 ml)", "High-dose antioxidant support delivered on its own bag."),
-            ("Thiocan (&alpha;-lipoic acid, high dose)", "6 amps of 25 mg / 5 ml, in NS 100 ml", "A higher-dose &alpha;-lipoic acid infusion for stronger antioxidant recycling and hepatic support."),
-            ("Glutathione", "2 vials (1,000 mg), dedicated NS 100 ml bag", "The master antioxidant. Given in its own bag &mdash; not mixed with vitamin C or other nutrients &mdash; so the free thiol group is not oxidised before it reaches the tissues."),
+            ("Normal saline", "three separate bags", "Three saline lines allow each active to be delivered on its own bag for stability and pace."),
+            ("Vitamin C", "", "High-dose antioxidant support delivered on its own bag."),
+            ("Thiocan (&alpha;-lipoic acid)", "high-dose infusion", "A stronger &alpha;-lipoic acid infusion for antioxidant recycling and hepatic support."),
+            ("Glutathione", "dedicated bag", "The master antioxidant. Given in its own bag &mdash; never mixed with vitamin C or other nutrients &mdash; so the free thiol group is not oxidised before it reaches the tissues."),
         ],
         "duration": "45 to 60 minutes in a private suite",
         "price": "NT$ 5,000 per session",
@@ -869,8 +869,8 @@ iv_drips = {
         "aim": "A concentrated vitamin C infusion, dosed and paced under physician supervision.",
         "lead": "A physician-set dose of intravenous vitamin C in a 250 ml saline base. Because oral vitamin C is capped by gut absorption, an IV can reach plasma levels many times higher &mdash; useful for antioxidant support, collagen and immunity. Dose is determined at consultation.",
         "ingredients": [
-            ("Normal saline", "250 cc", "Balanced hydration base to deliver the vitamin C at a steady pace."),
-            ("Vitamin C", "30 g to 60 g (6 to 12 amps)", "A concentrated antioxidant infusion. Supports collagen, skin, immunity and vascular integrity. Delivered slowly at a rate chosen by your physician."),
+            ("Normal saline", "", "Balanced hydration base to deliver the vitamin C at a steady pace."),
+            ("Vitamin C", "physician-set dose", "A concentrated antioxidant infusion. Supports collagen, skin, immunity and vascular integrity. Delivered slowly at a rate chosen by your physician."),
         ],
         "duration": "45 to 60 minutes in a private suite",
         "price": "NT$ 3,500 per session",
@@ -887,13 +887,13 @@ iv_drips = {
         "aim": "The classic B-vitamin, magnesium, zinc and vitamin C infusion &mdash; a broad-spectrum restorative for fatigue and everyday depletion.",
         "lead": "A 250 ml saline base with a full B-complex, extra B6 and B12, magnesium, zinc and vitamin C. First developed by Dr. John Myers in the 1970s and refined for R2, this remains one of the most widely used maintenance drips worldwide.",
         "ingredients": [
-            ("Normal saline", "250 ml", "Balanced hydration base."),
-            ("Vitamin B-complex", "1 amp (B1, B2, B3, B6)", "Cofactors for energy production and nervous-system function."),
-            ("Pyridoxine (B6)", "10 mg", "Extra B6 for neurotransmitter synthesis."),
-            ("Vitamin B12", "1,000 mcg", "Neurological and haematological support."),
-            ("Vitamin C", "10 g (2 amps)", "Antioxidant support for immunity, collagen and vascular integrity."),
-            ("Zinc", "6.75 mg", "Immunity, skin repair and enzyme activity."),
-            ("Magneter (magnesium)", "1,000 mg (2 amps, 8 mEq)", "For muscle relaxation, sleep quality and cardiovascular rhythm."),
+            ("Normal saline", "", "Balanced hydration base."),
+            ("Vitamin B-complex", "", "Cofactors for energy production and nervous-system function."),
+            ("Pyridoxine (B6)", "", "Extra B6 for neurotransmitter synthesis."),
+            ("Vitamin B12", "", "Neurological and haematological support."),
+            ("Vitamin C", "", "Antioxidant support for immunity, collagen and vascular integrity."),
+            ("Zinc", "", "Immunity, skin repair and enzyme activity."),
+            ("Magneter (magnesium)", "", "For muscle relaxation, sleep quality and cardiovascular rhythm."),
         ],
         "duration": "45 to 60 minutes in a private suite",
         "price": "NT$ 3,500 per session",
@@ -910,14 +910,14 @@ iv_drips = {
         "aim": "A two-stage neuro-support protocol &mdash; a B-complex and Ginkgo micro-circulation stage, followed by a Cerebrolysin stage for neurotrophic support.",
         "lead": "Given in two sequential 30-minute stages. The first stage delivers a taurine-based B-complex, vitamin C, B12, B6 and Ginkgo to support micro-circulation. The second stage delivers Cerebrolysin, a neuropeptide preparation used clinically for neurological support. Offered only after individual medical assessment.",
         "ingredients": [
-            ("Stage 1 &mdash; Normal saline", "100 cc base", "Hydration base for the vitamin and Ginkgo stage."),
-            ("B-complex Mejuoline", "20 ml (taurine, B1, B2, B3, methionine)", "A taurine-based B-complex &mdash; taurine and methionine add hepatic and neurological support to the standard B-vitamin base."),
-            ("Vitamin C", "5 g", "Antioxidant support for vascular integrity."),
-            ("Vitamin B12", "500 mcg", "Neurological and haematological support."),
-            ("Pyridoxine (B6)", "10 mg", "For neurotransmitter synthesis."),
-            ("Ginkgo biloba", "4 mg / 5 ml", "A cerebral circulation support used in vascular and cognitive medicine."),
-            ("Stage 2 &mdash; Normal saline", "100 cc base", "Fresh saline bag for the neurotrophic stage."),
-            ("Cerebrolysin", "1 to 2 amps (10 ml)", "A neuropeptide preparation used clinically for neurological support; dose confirmed by your physician after assessment."),
+            ("Stage 1 &mdash; Normal saline", "", "Hydration base for the vitamin and Ginkgo stage."),
+            ("Mejuoline (taurine B-complex)", "", "A taurine-based B-complex with methionine &mdash; adds hepatic and neurological support to the standard B-vitamin base."),
+            ("Vitamin C", "", "Antioxidant support for vascular integrity."),
+            ("Vitamin B12", "", "Neurological and haematological support."),
+            ("Pyridoxine (B6)", "", "For neurotransmitter synthesis."),
+            ("Ginkgo biloba", "", "A cerebral circulation support used in vascular and cognitive medicine."),
+            ("Stage 2 &mdash; Normal saline", "", "Fresh saline bag for the neurotrophic stage."),
+            ("Cerebrolysin", "", "A neuropeptide preparation used clinically for neurological support; dose confirmed by your physician after assessment."),
         ],
         "duration": "About 60 minutes across two stages",
         "price": "NT$ 5,000 &ndash; 8,000 per session",
@@ -934,12 +934,12 @@ iv_drips = {
         "aim": "A fast amino-acid infusion for athletes and heavy training loads &mdash; restores substrates for muscle repair, hydration and electrolyte balance.",
         "lead": "Built on a 250 ml amino-acid base (Aminogen) rather than plain saline, with a taurine-based B-complex, extra B6 and B12, zinc and magnesium. Often paired with ILIB (intravascular laser irradiation) for training-block recovery.",
         "ingredients": [
-            ("Aminogen", "250 cc", "An amino-acid infusion base &mdash; substrate for muscle repair and enzyme synthesis after heavy training."),
-            ("B-complex Mejuoline", "20 ml (taurine, B1, B2, B3, methionine)", "Taurine-based B-complex for energy metabolism and muscle function."),
-            ("Vitamin B12", "1,000 mcg", "For red-blood-cell production and endurance recovery."),
-            ("Vitamin B6", "2 amps", "Amino-acid metabolism and neurotransmitter synthesis."),
-            ("Zinc", "6.75 mg", "For immunity and tissue repair."),
-            ("Magneter (magnesium)", "500 mg (4 mEq)", "For muscle relaxation and cramp prevention."),
+            ("Aminogen", "", "An amino-acid infusion base &mdash; substrate for muscle repair and enzyme synthesis after heavy training."),
+            ("Mejuoline (taurine B-complex)", "", "Taurine-based B-complex with methionine for energy metabolism and muscle function."),
+            ("Vitamin B12", "", "For red-blood-cell production and endurance recovery."),
+            ("Vitamin B6", "", "Amino-acid metabolism and neurotransmitter synthesis."),
+            ("Zinc", "", "For immunity and tissue repair."),
+            ("Magneter (magnesium)", "", "For muscle relaxation and cramp prevention."),
         ],
         "duration": "About 30 minutes in a private suite",
         "price": "NT$ 3,500 per session",
@@ -956,12 +956,12 @@ iv_drips = {
         "aim": "Full rehydration followed by slower antioxidant and hepatic support &mdash; a physician-built recovery drip after a heavy evening.",
         "lead": "Two 250 ml saline bags for full rehydration, a taurine-based B-complex, extra B12 and B6, zinc, and a slow &alpha;-lipoic acid infusion for hepatic support. Often paired with ILIB (intravascular laser) to help oxidative recovery.",
         "ingredients": [
-            ("Normal saline", "2 &times; 250 ml (500 ml total)", "Full rehydration &mdash; hangover physiology is largely a fluid and electrolyte deficit."),
-            ("B-complex Mejuoline", "20 ml (taurine, B1, B2, B3, methionine)", "Taurine and methionine add hepatic and neurological support to the B-complex."),
-            ("Vitamin B12", "1,000 mcg", "Restores B12 depleted by alcohol; supports nervous-system recovery."),
-            ("Vitamin B6 (Pyridoxine)", "2 amps (10 mg)", "For neurotransmitter recovery and nausea."),
-            ("Zinc", "1 amp", "For immunity and enzyme recovery."),
-            ("Thiocan (&alpha;-lipoic acid)", "4 amps in NS 250 ml, over 60 min", "Given on a separate line, over an hour, for hepatic antioxidant support after alcohol."),
+            ("Normal saline", "full rehydration", "Hangover physiology is largely a fluid and electrolyte deficit &mdash; two bags restore both."),
+            ("Mejuoline (taurine B-complex)", "", "Taurine and methionine add hepatic and neurological support to the B-complex."),
+            ("Vitamin B12", "", "Restores B12 depleted by alcohol; supports nervous-system recovery."),
+            ("Vitamin B6 (Pyridoxine)", "", "For neurotransmitter recovery and nausea."),
+            ("Zinc", "", "For immunity and enzyme recovery."),
+            ("Thiocan (&alpha;-lipoic acid)", "separate slow line", "Given on its own line, over an hour, for hepatic antioxidant support after alcohol."),
         ],
         "duration": "45 to 60 minutes in a private suite",
         "price": "NT$ 3,500 per session",
@@ -978,10 +978,10 @@ iv_drips = {
         "aim": "An omega-3 fish-oil infusion with vitamin C and B-complex &mdash; for brain and cardiac support, and to help calm systemic inflammation and allergic reactivity.",
         "lead": "A fish-oil emulsion delivered through a side line, alongside a saline bag with vitamin C and a taurine-based B-complex. Intravenous omega-3 delivers EPA and DHA directly to plasma, bypassing gut absorption limits.",
         "ingredients": [
-            ("Fish-oil infusion (omega-3)", "1 bottle, side-line delivery", "An intravenous omega-3 emulsion. EPA and DHA support brain and cardiac cell membranes and modulate inflammatory signalling."),
-            ("Normal saline", "100 cc", "Hydration base for the vitamin and B-complex line."),
-            ("Vitamin C", "5 g", "Antioxidant support for vascular integrity."),
-            ("B-complex Mejuoline", "20 ml (taurine, B1, B2, B3, methionine)", "Taurine-based B-complex &mdash; taurine and methionine give additional hepatic and neurological support."),
+            ("Fish-oil infusion (omega-3)", "side-line delivery", "An intravenous omega-3 emulsion. EPA and DHA support brain and cardiac cell membranes and modulate inflammatory signalling."),
+            ("Normal saline", "", "Hydration base for the vitamin and B-complex line."),
+            ("Vitamin C", "", "Antioxidant support for vascular integrity."),
+            ("Mejuoline (taurine B-complex)", "", "Taurine-based B-complex with methionine &mdash; adds hepatic and neurological support to the standard B-vitamin base."),
         ],
         "duration": "45 to 60 minutes in a private suite",
         "price": "NT$ 5,000 per session",
@@ -998,11 +998,10 @@ def render_drip(spec):
               <li class="ing">
                 <div class="ing__head">
                   <span class="ing__name">{n}</span>
-                  <span class="ing__dose">{d}</span>
                 </div>
                 <p class="ing__effect">{e}</p>
               </li>'''
-        for n, d, e in spec["ingredients"]
+        for n, _d, e in spec["ingredients"]
     )
     note_html = f'<p class="drip__note"><em>{spec["note"]}</em></p>' if spec.get("note") else ""
     return f"""    <section class="hero hero--page hero--drip">
@@ -1025,7 +1024,7 @@ def render_drip(spec):
 
         <div class="drip__meta">
           <div><span class="drip__k">Time</span><span class="drip__v">{spec['duration']}</span></div>
-          <div><span class="drip__k">Investment</span><span class="drip__v">{spec.get('price', 'By consultation')}</span></div>
+          <div><span class="drip__k">Investment</span><span class="drip__v">By consultation</span></div>
           <div><span class="drip__k">Course</span><span class="drip__v">{spec['course']}</span></div>
           <div><span class="drip__k">Who it may suit</span><span class="drip__v">{spec['suits']}</span></div>
         </div>
