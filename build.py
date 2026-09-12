@@ -354,13 +354,14 @@ iv = f"""    <section class="hero hero--page">
 
 adv_rows = [
     (
+        "adv-blood-purification.html",
         "Apheresis",
         "Therapeutic Plasma Exchange",
         "Blood plasma is separated and replaced with sterile albumin and saline; your blood cells are returned to circulation. Used to lower circulating inflammatory and metabolic factors.",
         "Adults with chronic inflammatory burden, elevated cardiometabolic markers, or persistent post-viral fatigue &mdash; where laboratory workup supports it.",
         [
             ("Setting", "Taipei clinic only, under continuous physician supervision"),
-            ("Session", "About 2 to 3 hours per procedure, cyclic apheresis system"),
+            ("Session", "Up to about 2 hours, Haemonetics MCS+ single-needle system"),
             ("Course", "Typically a short assessed course, spaced weekly or monthly"),
             ("Before", "Full blood panel, cardiac and coagulation screen required"),
         ],
@@ -368,6 +369,7 @@ adv_rows = [
         "Golden and emerald plasma swirling through a translucent membrane",
     ),
     (
+        "adv-mesenchymal-cells.html",
         "Regenerative",
         "Mesenchymal Cell Therapy",
         "An intravenous cell therapy using mesenchymal cells prepared under laboratory conditions. Studied for immunomodulatory and tissue-support effects.",
@@ -382,6 +384,7 @@ adv_rows = [
         "A luminous cluster of translucent cellular spheres with warm golden cores",
     ),
     (
+        "adv-exosome-iv.html",
         "Regenerative",
         "Exosome Intravenous Therapy",
         "An intravenous course of extracellular vesicles (exosomes) from mesenchymal cells. Given as a short, physician-directed series, usually layered onto an IV hydration plan.",
@@ -396,6 +399,7 @@ adv_rows = [
         "Golden microscopic vesicles suspended in navy fluid with soft rays of light",
     ),
     (
+        "adv-exosome-knee.html",
         "Orthopaedic",
         "Exosome Knee Programme",
         "An in-joint (intra-articular) exosome course for knee osteoarthritis, paired with a structured rehabilitation and load-management plan.",
@@ -410,6 +414,7 @@ adv_rows = [
         "Abstract translucent knee joint forms glowing with warm golden light",
     ),
     (
+        "adv-iv-laser.html",
         "Photomedicine",
         "Intravenous Laser Therapy",
         "Low-level intravascular light at specific wavelengths, delivered through a fine intravenous line. Used as an adjunct to IV protocols &mdash; not a stand-alone treatment.",
@@ -426,13 +431,13 @@ adv_rows = [
 ]
 
 rows_html = ""
-for label, name, what, who, meta, img, alt in adv_rows:
+for slug, label, name, what, who, meta, img, alt in adv_rows:
     meta_items = "".join(
         f'<div class="row__meta-item"><span class="row__meta-key">{k}</span><span class="row__meta-val">{v}</span></div>'
         for k, v in meta
     )
     rows_html += f"""
-          <article class="row">
+          <a class="row row--link" href="{slug}">
             <div class="row__media"><img src="img/{img}" alt="{alt}" loading="lazy"></div>
             <div class="row__body">
               <span class="card__label">{label}</span>
@@ -440,8 +445,9 @@ for label, name, what, who, meta, img, alt in adv_rows:
               <p class="row__what">{what}</p>
               <p class="row__who"><span class="row__who-tag">Who it may suit</span> {who}</p>
               <div class="row__meta">{meta_items}</div>
+              <span class="row__more">Read how it works &rarr;</span>
             </div>
-          </article>"""
+          </a>"""
 
 adv = f"""    <section class="hero hero--page">
       <img class="hero__bg" src="img/abstract-purify.webp" alt="Abstract golden and emerald fluid separating through a translucent membrane">
@@ -1093,6 +1099,230 @@ for slug, label, name, _text, img, alt in iv_cards:
         drip_bodies[slug] = render_drip_stub(slug, label, name, img, alt)
 
 
+# ---------------------------------------------------------------- advanced care subpages
+
+adv_pages = {
+    "adv-blood-purification.html": {
+        "label": "Apheresis &middot; Taipei only",
+        "name": "Therapeutic Plasma Exchange",
+        "hero_img": "adv-blood-purification.webp",
+        "hero_alt": "Golden and emerald plasma swirling through a translucent membrane, backlit on deep navy",
+        "aim": "A physician-supervised blood-purification session on the Haemonetics MCS+ apheresis system &mdash; single needle, one arm, up to two hours.",
+        "lead": "Plasma exchange separates the fluid part of your blood (plasma) from your cells. The plasma is discarded, sterile replacement fluid is added, and your own red and white cells are returned to circulation through the same fine needle in one arm. The Haemonetics MCS+ system runs this as a cyclic draw&ndash;separate&ndash;return process.",
+        "steps": [
+            ("01", "Assessment &amp; consent", "A full physician review with recent bloodwork, cardiac and coagulation screen. We discuss what plasma exchange can and cannot do, and confirm suitability. Nothing is booked from a menu."),
+            ("02", "Preparation", "You rest in a private suite. One fine intravenous access is placed in a single arm &mdash; there is no second needle in the opposite arm as with older systems. Vital signs are monitored continuously."),
+            ("03", "Cyclic apheresis", "The MCS+ draws a small volume of blood, separates plasma from your blood cells, discards the plasma, and returns your cells to you &mdash; then repeats. The whole cycle runs through the one needle. A session takes about two hours at most."),
+            ("04", "Fluid replacement", "As plasma is removed, sterile albumin and saline are infused as replacement so your blood volume stays balanced throughout the session."),
+            ("05", "Recovery &amp; review", "Brief post-procedure observation, hydration, and a written summary. Follow-up bloodwork is scheduled to guide any further sessions."),
+        ],
+        "benefits": [
+            ("Single-needle, one-arm access", "One fine cannula in one arm for the whole session. Two-access systems typically require a needle in each arm and take three to four hours."),
+            ("Up to two hours per session", "Cyclic operation on the MCS+ keeps the session short and comfortable, under continuous physician supervision."),
+            ("Continuous physician oversight", "Every session runs in the Taipei clinic under a supervising physician &mdash; not delegated to a technician."),
+            ("Lower circulating burden", "Removes a portion of plasma-borne inflammatory and metabolic factors; your own bloodwork is how we measure change, not the appearance of the collection bag."),
+        ],
+        "note": "Blood purification is offered only at the Taipei clinic. Photographs of the post-exchange collection bag are illustrative only &mdash; colour and cloudiness are not measures of health. Laboratory results are the basis for assessment and follow-up.",
+        "meta": [
+            ("Setting", "Taipei clinic only, private suite"),
+            ("System", "Haemonetics MCS+ single-needle apheresis"),
+            ("Session", "Up to about 2 hours"),
+            ("Before", "Full blood panel, cardiac and coagulation screen"),
+        ],
+    },
+    "adv-mesenchymal-cells.html": {
+        "label": "Regenerative",
+        "name": "Mesenchymal Cell Therapy",
+        "hero_img": "adv-stem-cells.webp",
+        "hero_alt": "A luminous cluster of translucent cellular spheres with warm golden cores on deep navy",
+        "aim": "An intravenous cell therapy using laboratory-prepared mesenchymal cells &mdash; studied for its immunomodulatory and tissue-support effects.",
+        "lead": "Mesenchymal cells are a type of cell studied for their ability to modulate immune activity and support tissue repair signalling. They are prepared under laboratory conditions from certified sources, and delivered as a slow intravenous infusion under physician supervision.",
+        "steps": [
+            ("01", "Assessment &amp; consent", "A detailed medical review, including bloodwork and any relevant imaging. We discuss what is known and not known about the therapy, and what regulation allows in your treating location."),
+            ("02", "Product traceability", "The cell product is documented from source through preparation. You receive traceability documentation as part of your medical record."),
+            ("03", "Slow intravenous infusion", "The infusion is given in a private suite over one to two hours, with continuous physician monitoring throughout."),
+            ("04", "Recovery &amp; follow-up", "Post-infusion observation, hydration and a written summary. Any subsequent session is discussed only after review."),
+        ],
+        "benefits": [
+            ("Laboratory-prepared", "Prepared under controlled laboratory conditions, with source and preparation records shared with the patient."),
+            ("Physician-supervised infusion", "Delivered under continuous physician monitoring in a private suite &mdash; not as an out-patient walk-in."),
+            ("Personalised course", "A single infusion or short course, defined only after assessment. There is no fixed package."),
+            ("Regional coordination", "Where locally permitted, delivered at our Taipei centre or at partner clinics that meet the same clinical standard."),
+        ],
+        "note": "Mesenchymal cell therapy is offered only where local regulation permits. It is not a routine service in every location, and it is never presented as a cure. Suitability, timing and any subsequent session are decided individually.",
+        "meta": [
+            ("Setting", "Taipei centre and partner clinics, where locally permitted"),
+            ("Session", "Slow IV infusion, 1&ndash;2 hours"),
+            ("Course", "Single infusion or a short course, defined after assessment"),
+            ("Documentation", "Cell product traceability shared with the patient"),
+        ],
+    },
+    "adv-exosome-iv.html": {
+        "label": "Regenerative",
+        "name": "Exosome Intravenous Therapy",
+        "hero_img": "adv-exosomes.webp",
+        "hero_alt": "Golden microscopic vesicles suspended in navy fluid with soft rays of light",
+        "aim": "A short physician-directed series of intravenous extracellular vesicles (exosomes), usually layered onto an IV hydration plan.",
+        "lead": "Exosomes are small extracellular vesicles released by cells &mdash; carriers of signalling molecules used in cell-to-cell communication. In this therapy they are prepared from mesenchymal cell sources under laboratory conditions and given as a slow intravenous infusion.",
+        "steps": [
+            ("01", "Assessment &amp; consent", "A physician review with bloodwork. We explain what exosomes are and what current evidence supports, and check what regulation allows in your treating location."),
+            ("02", "Product preparation", "The exosome preparation is drawn from a documented laboratory source. Product records are shared with the patient."),
+            ("03", "Slow intravenous infusion", "Given in a private suite over 60 to 90 minutes, alongside an IV hydration base if indicated. Physician-monitored throughout."),
+            ("04", "Series review", "After each session, response and tolerance are reviewed before the next is scheduled. Typically three to six sessions."),
+        ],
+        "benefits": [
+            ("Layered onto IV protocols", "Usually delivered alongside a precision IV hydration or recovery plan, so a session serves more than one purpose."),
+            ("Short, defined series", "Typically three to six sessions, planned individually rather than sold as a fixed package."),
+            ("Physician-monitored", "Every infusion runs under physician supervision in a private suite."),
+            ("Traceable preparation", "Product source and preparation records are shared with the patient as part of their medical record."),
+        ],
+        "note": "Exosome therapy is offered only where local regulation permits, and it is not a substitute for standard medical care. Suitability and course length are defined individually after assessment.",
+        "meta": [
+            ("Setting", "Taipei centre and partner clinics, where locally permitted"),
+            ("Session", "IV infusion, 60&ndash;90 minutes"),
+            ("Course", "Typically 3&ndash;6 sessions, planned individually"),
+            ("Pairs with", "Precision IV hydration and recovery protocols"),
+        ],
+    },
+    "adv-exosome-knee.html": {
+        "label": "Orthopaedic",
+        "name": "Exosome Knee Programme",
+        "hero_img": "abstract-joint.webp",
+        "hero_alt": "Abstract translucent knee joint forms glowing with warm golden light on deep navy",
+        "aim": "An in-joint (intra-articular) exosome course for knee osteoarthritis, paired with a structured rehabilitation and load-management plan.",
+        "lead": "For imaging-confirmed knee osteoarthritis, an exosome preparation is delivered directly into the joint under aseptic conditions. The injection is one part of a wider programme that includes rehabilitation guidance and follow-up review &mdash; the joint injection alone is not the treatment.",
+        "steps": [
+            ("01", "Imaging &amp; assessment", "Recent knee imaging (X-ray, MRI) and a functional assessment. We confirm the injection is appropriate and that surgical care is not indicated instead."),
+            ("02", "Aseptic in-joint injection", "The exosome preparation is placed directly into the knee joint under aseptic conditions by the treating physician. Skin cleansing, sterile field and single-use materials throughout."),
+            ("03", "Structured rehabilitation", "Individual rehabilitation guidance follows every injection: load management, movement, and strength work matched to your knee."),
+            ("04", "Series &amp; review", "Typically a short series over several weeks, with a follow-up review to check symptoms, function, and whether to continue."),
+        ],
+        "benefits": [
+            ("Direct in-joint delivery", "Delivered directly into the affected joint rather than systemically, which places the preparation where the target tissue is."),
+            ("Rehabilitation-first mindset", "Injection is paired with structured rehabilitation, not offered as a stand-alone shot."),
+            ("Imaging-guided decision", "Suitability is confirmed with recent imaging, not booked from a symptom list alone."),
+            ("Physician-delivered", "The injection is performed by the treating physician, not delegated, under aseptic conditions."),
+        ],
+        "note": "This programme is offered only where local regulation permits, and it is not a substitute for surgical care where surgery is indicated. It aims to reduce symptoms and support function &mdash; not to reverse structural change.",
+        "meta": [
+            ("Setting", "Taipei centre and partner clinics, where locally permitted"),
+            ("Session", "Guided intra-articular injection"),
+            ("Course", "Short series over several weeks"),
+            ("Includes", "Rehabilitation guidance and follow-up review"),
+        ],
+    },
+    "adv-iv-laser.html": {
+        "label": "Photomedicine",
+        "name": "Intravenous Laser Therapy",
+        "hero_img": "adv-iv-laser.webp",
+        "hero_alt": "A slender gold-emerald laser beam refracting through a translucent IV chamber",
+        "aim": "Low-level intravascular light at specific wavelengths, delivered through a fine intravenous line as an adjunct to IV protocols &mdash; never as a stand-alone treatment.",
+        "lead": "Also known as ILIB (intravascular laser irradiation of blood), this photomedicine adjunct delivers low-level light at defined wavelengths through a fine intravenous fibre. It is used alongside an IV drip &mdash; for recovery, neurological support and hangover programmes &mdash; not as a treatment on its own.",
+        "steps": [
+            ("01", "Assessment &amp; planning", "A physician plans the laser session as part of your wider IV course &mdash; the two run together, not separately."),
+            ("02", "IV access &amp; fibre placement", "A fine intravenous line is placed. The laser fibre is introduced through this line under aseptic conditions in a private suite."),
+            ("03", "Low-level intravascular light", "Light at the chosen wavelength is delivered continuously for about 30 to 60 minutes, alongside your IV drip."),
+            ("04", "Session review", "Post-session hydration and a brief written summary. Frequency is set as a short series aligned with your IV plan."),
+        ],
+        "benefits": [
+            ("Adjunct, not stand-alone", "Delivered alongside a planned IV protocol &mdash; recovery, neuro-support, hangover &mdash; so the session serves the wider plan."),
+            ("Physician-planned", "Wavelength, session length and frequency are set by the treating physician, not by a fixed package."),
+            ("Comfortable and short", "About 30 to 60 minutes in a private suite alongside your drip, with no downtime."),
+            ("Aseptic, single-use", "Sterile technique and single-use disposables throughout."),
+        ],
+        "note": "Intravenous laser is an adjunct to IV therapy, not a stand-alone treatment. It is offered at the Taipei centre and at selected partner clinics.",
+        "meta": [
+            ("Setting", "Taipei and selected partner clinics"),
+            ("Session", "About 30&ndash;60 minutes, alongside IV therapy"),
+            ("Course", "Short series, aligned with your IV plan"),
+            ("Pairs with", "Precision IV hydration, recovery, neuro-support protocols"),
+        ],
+    },
+}
+
+
+def render_adv(spec):
+    steps_html = "".join(
+        f'''
+              <li class="step">
+                <span class="step__n">{n}</span>
+                <div class="step__body">
+                  <h3>{title}</h3>
+                  <p>{text}</p>
+                </div>
+              </li>'''
+        for n, title, text in spec["steps"]
+    )
+    benefits_html = "".join(
+        f'''
+              <li class="bene">
+                <h4>{title}</h4>
+                <p>{text}</p>
+              </li>'''
+        for title, text in spec["benefits"]
+    )
+    meta_html = "".join(
+        f'<div><span class="drip__k">{k}</span><span class="drip__v">{v}</span></div>'
+        for k, v in spec["meta"]
+    )
+    note_html = f'<p class="drip__note"><em>{spec["note"]}</em></p>' if spec.get("note") else ""
+    return f"""    <section class="hero hero--page hero--drip">
+      <img class="hero__bg" src="img/{spec['hero_img']}" alt="{spec['hero_alt']}">
+      <div class="hero__inner">
+        <p class="eyebrow reveal">{spec['label']}</p>
+        <h1 class="reveal">{spec['name']}.</h1>
+        <p class="lead reveal">{spec['aim']}</p>
+      </div>
+    </section>
+
+    <section class="band band--ivory">
+      <div class="wrap drip reveal">
+        <div class="drip__lead">
+          <p class="eyebrow">The therapy</p>
+          <h2>What this <em>therapy is</em>.</h2>
+          <hr class="rule">
+          <p class="lead">{spec['lead']}</p>
+        </div>
+
+        <div class="drip__meta">
+          {meta_html}
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--navy band--hair">
+      <div class="wrap reveal">
+        <div class="band__head narrow">
+          <p class="eyebrow">How the session runs</p>
+          <h2>Step by <em>step</em>.</h2>
+          <p class="lead">Every part of the session is decided by the treating physician. Nothing is booked from a menu.</p>
+        </div>
+        <hr class="rule">
+        <ol class="steps">{steps_html}
+        </ol>
+      </div>
+    </section>
+
+    <section class="band band--ivory">
+      <div class="wrap reveal">
+        <div class="band__head narrow">
+          <p class="eyebrow">Why it&rsquo;s built this way</p>
+          <h2>The <em>advantages</em>.</h2>
+        </div>
+        <hr class="rule">
+        <ul class="benes">{benefits_html}
+        </ul>
+        {note_html}
+      </div>
+    </section>
+
+{INVITE}
+"""
+
+
+adv_bodies = {slug: render_adv(spec) for slug, spec in adv_pages.items()}
+
+
 pages = [
     ("index.html", "R2-IWAA &mdash; International Wellness &amp; Anti-Aging",
      "Physician-led regenerative and anti-aging medicine. IV therapy and advanced regenerative care in Taipei, Yangon and Ho Chi Minh City.", home, "index.html"),
@@ -1117,6 +1347,17 @@ for slug, _label, name, text, _img, _alt in iv_cards:
         text,
         drip_bodies[slug],
         "iv-therapy.html",
+    ))
+
+# append each advanced-care subpage
+for slug, spec in adv_pages.items():
+    display_name = spec["name"].replace("&rsquo;", "\u2019").replace("&amp;", "&")
+    pages.append((
+        slug,
+        f"{display_name} &mdash; R2-IWAA",
+        spec["aim"].replace("&mdash;", "\u2014").replace("&nbsp;", " "),
+        adv_bodies[slug],
+        "advanced-care.html",
     ))
 
 for slug, title, desc, body, cur in pages:

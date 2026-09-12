@@ -1400,3 +1400,103 @@ p em { font-style: italic; color: var(--ivory-warm); }
   max-width: 60ch;
 }
 [data-theme="light"] .drip__note { color: var(--ink-soft); }
+
+/* ---------- advanced-care row: make whole row clickable ---------- */
+.row--link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.row--link:hover { transform: translateY(-2px); }
+.row--link:hover .row__more { color: var(--gold-light); }
+[data-theme="light"] .row--link:hover .row__more { color: var(--gold-ink); }
+.row__more {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  transition: color 0.3s var(--ease);
+}
+[data-theme="light"] .row__more { color: var(--gold-ink); }
+
+/* ---------- advanced-care subpage: step list ---------- */
+.steps {
+  list-style: none;
+  padding: 0;
+  margin: 2.4rem 0 0;
+  display: grid;
+  gap: 0;
+}
+.step {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 1.8rem;
+  align-items: start;
+  padding: 1.8rem 0;
+  border-top: 1px solid rgba(212, 175, 106, 0.14);
+}
+.step:first-child { border-top: 0; padding-top: 1rem; }
+.step__n {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  color: var(--gold-light);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+.step__body h3 {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: inherit;
+  font-weight: 400;
+}
+.step__body p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: inherit;
+  opacity: 0.86;
+  max-width: 68ch;
+}
+
+/* ---------- advanced-care subpage: benefits grid ---------- */
+.benes {
+  list-style: none;
+  padding: 0;
+  margin: 2.4rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 2.6rem;
+}
+.bene {
+  padding: 1.6rem 0;
+  border-top: 1px solid rgba(20, 30, 45, 0.14);
+}
+.bene:nth-child(-n+2) { border-top: 0; padding-top: 1rem; }
+.bene h4 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: inherit;
+  font-weight: 400;
+  letter-spacing: 0.005em;
+}
+.bene p {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: inherit;
+  opacity: 0.86;
+  max-width: 56ch;
+}
+
+@media (max-width: 780px) {
+  .step { grid-template-columns: 60px 1fr; gap: 1.2rem; }
+  .step__n { font-size: 1.8rem; }
+  .benes { grid-template-columns: 1fr; gap: 0; }
+  .bene:nth-child(2) { border-top: 1px solid rgba(20, 30, 45, 0.14); padding-top: 1.6rem; }
+}
