@@ -428,7 +428,7 @@ adv_rows = [
             ("Pairs with", "Precision IV hydration, recovery, neuro-support protocols"),
         ],
         "adv-iv-laser.webp",
-        "A slender gold-emerald laser beam refracting through a translucent IV chamber",
+        "A guest resting in a private R2 suite during an ILIB session &mdash; a fine laser fibre taped over the forearm vein, warm lamplight and cream linens",
     ),
 ]
 
@@ -1296,7 +1296,7 @@ adv_pages = {
         "label": "Photomedicine",
         "name": "Intravenous Laser Therapy",
         "hero_img": "adv-iv-laser.webp",
-        "hero_alt": "A slender gold-emerald laser beam refracting through a translucent IV chamber",
+        "hero_alt": "A guest resting in a private R2 suite during an ILIB session &mdash; a fine laser fibre taped over the forearm vein, warm lamplight and cream linens",
         "aim": "Low-level intravascular light at specific wavelengths, delivered through a fine intravenous line as an adjunct to IV protocols &mdash; never as a stand-alone treatment.",
         "lead": "Also known as ILIB (intravascular laser irradiation of blood), this photomedicine adjunct delivers low-level light at defined wavelengths through a fine intravenous fibre. It is used alongside an IV drip &mdash; for recovery, neurological support and hangover programmes &mdash; not as a treatment on its own.",
         "steps": [
