@@ -511,19 +511,6 @@ founder = f"""    <section class="hero hero--page">
       </div>
     </section>
 
-    <section class="band">
-      <div class="wrap quote-band reveal">
-        <div class="quote-band__photo">
-          <img src="img/founder-portrait-warm.webp" alt="Dr. Tony Su in a physician's white coat, mid-consultation with a patient, warm and attentive">
-        </div>
-        <figure class="quote-band__quote">
-          <span class="quote-band__mark" aria-hidden="true">&ldquo;</span>
-          <blockquote>A regenerative plan should follow bloodwork, not a brochure. That is the standard I hold every R2-IWAA physician to.</blockquote>
-          <figcaption><span class="quote-band__name">Dr. Tony Su</span><span class="quote-band__role">Founder &amp; Medical Director</span></figcaption>
-        </figure>
-      </div>
-    </section>
-
     <section class="band band--navy band--hair">
       <div class="wrap">
         <div class="band__head reveal narrow">
@@ -569,6 +556,19 @@ founder = f"""    <section class="hero hero--page">
             <span class="pubs__place">Ongoing</span>
           </li>
         </ol>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap quote-band reveal">
+        <div class="quote-band__photo">
+          <img src="img/founder-portrait-warm.webp" alt="Dr. Tony Su in a physician's white coat, mid-consultation with a patient, warm and attentive">
+        </div>
+        <figure class="quote-band__quote">
+          <span class="quote-band__mark" aria-hidden="true">&ldquo;</span>
+          <blockquote>A regenerative plan should follow bloodwork, not a brochure. That is the standard I hold every R2-IWAA physician to.</blockquote>
+          <figcaption><span class="quote-band__name">Dr. Tony Su</span><span class="quote-band__role">Founder &amp; Medical Director</span></figcaption>
+        </figure>
       </div>
     </section>
 
