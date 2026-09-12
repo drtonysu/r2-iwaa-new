@@ -516,7 +516,7 @@ founder = f"""    <section class="hero hero--page">
         <div class="band__head reveal narrow">
           <p class="eyebrow">Publications &amp; Training</p>
           <h2>Trained where the margin for error is <em>smallest</em>.</h2>
-          <p class="lead">Critical care, chest and emergency medicine in Taiwan first &mdash; then cellular medicine in Japan and precision medicine at Harvard Medical School. The order matters: acute-care judgement came before the aesthetics.</p>
+          <p class="lead">General internal medicine, critical care, chest speciality and emergency medicine in Taiwan first &mdash; then cellular medicine in Japan. The order matters: acute-care judgement came before the regenerative medicine for longevity and healthspan.</p>
         </div>
         <hr class="rule">
         <ol class="pubs reveal">
