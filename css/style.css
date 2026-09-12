@@ -327,6 +327,25 @@ p em { font-style: italic; color: var(--ivory-warm); }
 }
 .band--navy-tint { background: var(--navy-tint); }
 .band--hair { border-top: 1px solid var(--line-soft); }
+.band--flush { padding: 0; }
+
+/* Full-bleed editorial figure (poster-style image band) */
+.editorial {
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+.editorial img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 92vh;
+  object-fit: contain;
+  background: var(--navy-deep);
+}
+@media (min-width: 900px) {
+  .editorial img { max-width: 1600px; margin: 0 auto; }
+}
 
 .band__head { max-width: 720px; }
 .band__head h2 { font-size: var(--text-2xl); letter-spacing: -0.02em; }

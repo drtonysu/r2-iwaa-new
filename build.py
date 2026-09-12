@@ -275,7 +275,7 @@ home = f"""    <section class="hero">
 
 iv_cards = [
     ("iv-anti-aging.html",       "01 &middot; Foundation", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-01-antiaging.webp", "Three amber ampoules on a brushed gold tray, warm side light on deep navy velvet"),
-    ("iv-premium-anti-aging.html", "02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-02-premium.webp", "A tall pearl-white amino acid vial with a gold cap on polished emerald marble"),
+    ("iv-premium-anti-aging.html", "02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-02-premium.webp", "A guest resting in a private R2 suite during a Premium Anti-Aging Drip session &mdash; a warm golden amino-acid infusion in a private suite"),
     ("iv-detox.html",             "03 &middot; Clearance", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "iv-03-detox.webp", "Amber fluid separating from emerald fluid through a translucent membrane, golden threads dispersing"),
     ("iv-advanced-detox.html",    "04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-04-advanced-detox.webp", "Golden intravenous drip chamber with a single amber droplet caught mid-fall in a warm treatment suite"),
     ("iv-vitamin-c.html",         "05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "iv-05-vitc.webp", "Sliced orange and lemon cross-sections on dark stone, translucent flesh catching golden light"),
@@ -808,7 +808,11 @@ iv_drips = {
         "label": "IVF0002 &middot; Foundation",
         "name": "Premium Anti-Aging Drip",
         "hero_img": "iv-02-premium.webp",
-        "hero_alt": "A tall pearl-white amino acid vial with a gold cap on polished emerald marble",
+        "hero_alt": "A guest resting in a private R2 suite during a Premium Anti-Aging Drip session &mdash; a warm golden amino-acid infusion above a linen-white recliner",
+        "editorial": {
+            "img": "iv-02-premium-editorial.webp",
+            "alt": "Science-for-a-younger-you editorial: the Premium Anti-Aging Drip beside a guest at rest, with each of the eight active ingredients &mdash; amino acids, vitamin C, B-complex, N-acetylcysteine, B12, B6, zinc and magnesium &mdash; labelled to the right",
+        },
         "aim": "A stronger, amino-acid-based version of our anti-aging foundation &mdash; for periods of depletion, recovery and heavier restoration.",
         "lead": "Built on a full 250 ml amino-acid base (Aminogen-X) rather than plain saline. Amino acids are the raw material the body uses to build enzymes, hormones, muscle and skin, so this formula gives both the antioxidants and the substrates cells need to rebuild.",
         "ingredients": [
@@ -1064,6 +1068,15 @@ def render_drip(spec):
     )
     note_html = f'<p class="drip__note"><em>{spec["note"]}</em></p>' if spec.get("note") else ""
     principle_html = render_principle(spec.get("principle"), band="navy")
+    editorial_html = ""
+    if spec.get("editorial"):
+        ed = spec["editorial"]
+        editorial_html = f'''    <section class="band band--navy band--flush">
+      <figure class="editorial reveal">
+        <img src="img/{ed['img']}" alt="{ed['alt']}" loading="lazy">
+      </figure>
+    </section>
+'''
     return f"""    <section class="hero hero--page hero--drip">
       <img class="hero__bg" src="img/{spec['hero_img']}" alt="{spec['hero_alt']}">
       <div class="hero__inner">
@@ -1105,6 +1118,7 @@ def render_drip(spec):
       </div>
     </section>
 
+{editorial_html}
 {principle_html}
 
     <section class="band band--ivory band--hair">
