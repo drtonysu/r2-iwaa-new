@@ -11,6 +11,7 @@ NAV_ITEMS = [
     ("iv-therapy.html", "IV Therapy"),
     ("locations.html", "Locations"),
     ("founder.html", "Dr. Tony Su"),
+    ("news.html", "News"),
 ]
 
 
@@ -55,6 +56,7 @@ FOOTER = """<footer class="footer">
           <h4>Visit</h4>
           <ul>
             <li><a href="locations.html">Taipei &middot; Yangon &middot; Ho Chi Minh City</a></li>
+            <li><a href="news.html">News from the network</a></li>
             <li><a href="consultation.html">Request a consultation</a></li>
             <li><a href="mailto:care@r2-iwaa.com">care@r2-iwaa.com</a></li>
           </ul>
@@ -1334,6 +1336,158 @@ def render_adv(spec):
 adv_bodies = {slug: render_adv(spec) for slug, spec in adv_pages.items()}
 
 
+# ---------------------------------------------------------------- news
+
+# Each item: (slug, category, date_display, date_iso, title, lede, hero_img, hero_alt, location)
+news_items = [
+    (
+        "news-mvita-opening.html",
+        "Cooperation \u00b7 Ho Chi Minh City",
+        "11 September 2026",
+        "2026-09-11",
+        "M VITA Clinic opens in Ho Chi Minh City",
+        "A new cooperating wellness clinic in central Ho Chi Minh City &mdash; standing beside our existing HCM partner and widening the network of physician-led rejuvenation care in the region.",
+        "news-mvita-opening.png",
+        "A gold ribbon stretched across a marble entryway with white orchids and champagne flutes, warm evening light of a clinic opening ceremony",
+        "Ho Chi Minh City",
+    ),
+]
+
+# Full-detail bodies for each news story
+news_pages = {
+    "news-mvita-opening.html": {
+        "category": "Cooperation \u00b7 Ho Chi Minh City",
+        "date_display": "11 September 2026",
+        "date_iso": "2026-09-11",
+        "title": "M VITA Clinic opens in Ho Chi Minh City",
+        "hero_img": "news-mvita-opening.png",
+        "hero_alt": "A gold ribbon stretched across a marble entryway with white orchids and champagne flutes, warm evening light of a clinic opening ceremony",
+        "dek": "A new cooperating wellness clinic in central Ho Chi Minh City &mdash; standing beside our existing HCM partner and widening the network of physician-led rejuvenation care in the region.",
+        "sections": [
+            ("A new home for wellness in the city",
+             ["M VITA Clinic &mdash; <em>Ph\u00f2ng Kh\u00e1m Tr\u1ebb H\u00f3a &amp; T\u00e1i T\u1ea1o To\u00e0n Di\u1ec7n</em>, a comprehensive rejuvenation &amp; regeneration clinic &mdash; opened its doors on 3/2 Street in central Ho Chi Minh City on 11 September 2026, in front of guests, patients and partners.",
+              "The clinic is positioned as a Wellness &amp; Beauty Center, with a medical-standard dermatology practice and a physician-led approach to whole-body rejuvenation. Its founding team brings more than ten years of clinical experience in the field."]),
+            ("What M VITA offers on day one",
+             ["The clinic opens with a considered wellness menu &mdash; magnetic-wave therapy, hyperbaric oxygen, active-healthcare programmes and targeted work for headache, neck and spine, and everyday recovery. A complimentary wellness assessment is offered to introduce the space to new visitors.",
+              "The interior follows the same visual language that patients across our network will recognise &mdash; warm gold, calm neutrals and quiet lighting, chosen so that clinical work happens in a room that already feels considered."]),
+            ("What it means for R2-IWAA",
+             ["M VITA joins us as a cooperating clinic in Ho Chi Minh City, alongside our existing partner care already offered in the city. The two settings serve different neighbourhoods and different patient needs; together they widen the map of places a patient can be seen without leaving the region.",
+              "As with every location we cooperate with, availability of individual therapies is confirmed at consultation and differs by site. The IV programme and materials standards authored in Taipei remain the reference; local teams apply them to the room they run."]),
+        ],
+        "visit": {
+            "name": "M VITA CLINIC \u00b7 Wellness &amp; Beauty Center",
+            "address": "572A \u0110\u01b0\u1eddng 3/2, Ph\u01b0\u1eddng Di\u00ean H\u1ed3ng, Ho Chi Minh City, Vietnam",
+            "hours": "Monday to Sunday, 09:00 \u2013 20:00",
+            "hotline": "+84 90 569 8888",
+            "website": ("mvitaclinic.vn", "https://mvitaclinic.vn/"),
+        },
+        "related": [
+            ("See our locations", "locations.html"),
+            ("Speak to the R2-IWAA team", "consultation.html"),
+        ],
+    },
+}
+
+
+def render_news_card(item):
+    slug, category, date_display, date_iso, title, lede, hero_img, hero_alt, _location = item
+    return f"""
+          <a class="card card--iv card--link" href="{slug}">
+            <div class="card__media"><img src="img/{hero_img}" alt="{hero_alt}" loading="lazy"></div>
+            <div class="card__body">
+              <span class="card__label">{category}</span>
+              <h3>{title}</h3>
+              <p><time datetime="{date_iso}">{date_display}</time> &middot; {lede}</p>
+              <span class="card__more">Read the story &rarr;</span>
+            </div>
+          </a>"""
+
+
+news_cards_html = "".join(render_news_card(item) for item in news_items)
+
+news = f"""    <section class="hero hero--page">
+      <img class="hero__bg" src="img/hero-taipei-dusk.webp" alt="Taipei skyline at deep dusk with warm city lights beneath a navy and emerald sky">
+      <div class="hero__inner">
+        <p class="eyebrow reveal">News from the network</p>
+        <h1 class="reveal">Clinics, cooperations, and moments <em>from the practice</em>.</h1>
+        <p class="lead reveal">Openings, partnerships and small moments across R2-IWAA and the clinics we cooperate with in Taipei, Yangon and Ho Chi Minh City.</p>
+      </div>
+    </section>
+
+    <section class="band band--ivory">
+      <div class="wrap">
+        <div class="band__head reveal">
+          <p class="eyebrow">Latest</p>
+          <h2>What&rsquo;s <em>happening</em>.</h2>
+        </div>
+        <div class="cards cards--iv reveal">{news_cards_html}
+        </div>
+      </div>
+    </section>
+{INVITE}
+"""
+
+
+def render_news(spec):
+    sections_html = ""
+    for i, (heading, paras) in enumerate(spec["sections"]):
+        paras_html = "".join(f"          <p>{p}</p>\n" for p in paras)
+        band_class = "band--ivory" if i % 2 == 0 else "band--navy"
+        sections_html += f"""
+    <section class="band {band_class} band--hair">
+      <div class="wrap wrap--reading reveal">
+        <h2>{heading}</h2>
+{paras_html}      </div>
+    </section>
+"""
+
+    visit = spec["visit"]
+    website_label, website_url = visit["website"]
+    visit_html = f"""
+    <section class="band band--ivory band--hair">
+      <div class="wrap wrap--reading reveal">
+        <p class="eyebrow">Visit</p>
+        <h3 class="story__visit-name">{visit['name']}</h3>
+        <dl class="story__visit">
+          <div><dt>Address</dt><dd>{visit['address']}</dd></div>
+          <div><dt>Hours</dt><dd>{visit['hours']}</dd></div>
+          <div><dt>Hotline</dt><dd><a href="tel:{visit['hotline'].replace(' ', '')}">{visit['hotline']}</a></dd></div>
+          <div><dt>Website</dt><dd><a href="{website_url}" target="_blank" rel="noopener">{website_label}</a></dd></div>
+        </dl>
+      </div>
+    </section>
+"""
+
+    related_html = "".join(
+        f'          <a class="arrowlink" href="{href}">{label} &rarr;</a>\n'
+        for label, href in spec["related"]
+    )
+    next_html = f"""
+    <section class="band band--ivory band--hair">
+      <div class="wrap wrap--reading reveal">
+        <p class="eyebrow">Next step</p>
+        <div class="story__related">
+{related_html}          <a class="arrowlink" href="news.html">Back to News &rarr;</a>
+        </div>
+      </div>
+    </section>
+"""
+
+    return f"""    <section class="hero hero--page hero--story">
+      <img class="hero__bg" src="img/{spec['hero_img']}" alt="{spec['hero_alt']}">
+      <div class="hero__inner">
+        <p class="eyebrow reveal">{spec['category']} &middot; <time datetime="{spec['date_iso']}">{spec['date_display']}</time></p>
+        <h1 class="reveal">{spec['title']}</h1>
+        <p class="lead reveal">{spec['dek']}</p>
+      </div>
+    </section>
+{sections_html}{visit_html}{next_html}{INVITE}
+"""
+
+
+news_bodies = {slug: render_news(spec) for slug, spec in news_pages.items()}
+
+
 pages = [
     ("index.html", "R2-IWAA &mdash; International Wellness &amp; Anti-Aging",
      "Physician-led regenerative and anti-aging medicine. IV therapy and advanced regenerative care in Taipei, Yangon and Ho Chi Minh City.", home, "index.html"),
@@ -1347,6 +1501,8 @@ pages = [
      "R2-IWAA clinics in Taipei, Yangon and Ho Chi Minh City, with clinical training and materials prepared at the Taipei centre.", locations, "locations.html"),
     ("consultation.html", "Request a Consultation &mdash; R2-IWAA",
      "Request a private one-to-one consultation with the R2-IWAA medical team in Mandarin, English or Myanmar.", consult, "consultation.html"),
+    ("news.html", "News from the network &mdash; R2-IWAA",
+     "Openings, cooperations and small moments across R2 International Wellness & Anti-Aging and the clinics we work with in Taipei, Yangon and Ho Chi Minh City.", news, "news.html"),
 ]
 
 # append each drip subpage
@@ -1369,6 +1525,18 @@ for slug, spec in adv_pages.items():
         spec["aim"].replace("&mdash;", "\u2014").replace("&nbsp;", " "),
         adv_bodies[slug],
         "advanced-care.html",
+    ))
+
+# append each news story detail page
+for slug, spec in news_pages.items():
+    display_title = spec["title"].replace("&rsquo;", "\u2019").replace("&amp;", "&")
+    display_dek = spec["dek"].replace("&mdash;", "\u2014").replace("&nbsp;", " ").replace("&amp;", "&")
+    pages.append((
+        slug,
+        f"{display_title} &mdash; R2-IWAA News",
+        display_dek,
+        news_bodies[slug],
+        "news.html",
     ))
 
 for slug, title, desc, body, cur in pages:
