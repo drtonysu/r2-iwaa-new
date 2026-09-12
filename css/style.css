@@ -1510,10 +1510,11 @@ p em { font-style: italic; color: var(--ivory-warm); }
   color: var(--gold);
   font-weight: 500;
 }
+.hero--story .hero__bg { object-position: 70% center; }
 .hero--story::after {
   background:
-    radial-gradient(120% 80% at 15% 100%, rgba(5, 16, 29, 0.96) 0%, rgba(5, 16, 29, 0.55) 45%, rgba(5, 16, 29, 0.3) 100%),
-    linear-gradient(to top, rgba(5, 16, 29, 0.98) 0%, rgba(5, 16, 29, 0.65) 55%, rgba(5, 16, 29, 0.3) 100%);
+    linear-gradient(100deg, rgba(5, 16, 29, 0.92) 0%, rgba(5, 16, 29, 0.78) 38%, rgba(5, 16, 29, 0.45) 62%, rgba(5, 16, 29, 0.35) 100%),
+    linear-gradient(to top, rgba(5, 16, 29, 0.75) 0%, rgba(5, 16, 29, 0.35) 55%, rgba(5, 16, 29, 0.25) 100%);
 }
 
 .wrap--reading {
