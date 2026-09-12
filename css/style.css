@@ -290,6 +290,14 @@ p em { font-style: italic; color: var(--ivory-warm); }
     linear-gradient(to top, rgba(5, 16, 29, 0.98) 0%, rgba(5, 16, 29, 0.5) 55%, rgba(5, 16, 29, 0.18) 100%),
     radial-gradient(ellipse at center, transparent 40%, rgba(3, 10, 19, 0.55) 100%);
 }
+@media (max-width: 720px) {
+  .hero::after {
+    background:
+      linear-gradient(to top, rgba(5, 16, 29, 0.96) 0%, rgba(5, 16, 29, 0.55) 40%, rgba(5, 16, 29, 0.15) 70%, rgba(5, 16, 29, 0.05) 100%),
+      radial-gradient(ellipse at 50% 30%, transparent 0%, rgba(3, 10, 19, 0.35) 100%);
+  }
+  .hero__bg { object-position: 50% 40%; }
+}
 .hero__inner { position: relative; z-index: 2; max-width: var(--maxw); margin: 0 auto; width: 100%; }
 .hero h1 {
   font-size: var(--text-editorial);

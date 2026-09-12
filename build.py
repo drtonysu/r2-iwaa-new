@@ -115,7 +115,10 @@ INVITE = """    <section class="band band--emerald">
 # ---------------------------------------------------------------- home
 
 home = f"""    <section class="hero">
-      <img class="hero__bg" src="img/hero-taipei-dusk.webp" alt="Taipei skyline at deep dusk with warm city lights beneath a navy and emerald sky">
+      <picture>
+        <source media="(max-width: 720px)" srcset="img/hero-taipei-dusk-portrait.webp">
+        <img class="hero__bg" src="img/hero-taipei-dusk.webp" alt="Taipei skyline at deep dusk with warm city lights beneath a navy and emerald sky">
+      </picture>
       <div class="hero__inner">
         <p class="eyebrow reveal">R2 International Wellness &amp; Anti-Aging</p>
         <h1 class="reveal">Longevity, <em>calibrated</em> to you.</h1>
@@ -1517,7 +1520,10 @@ def render_news_card(item):
 news_cards_html = "".join(render_news_card(item) for item in news_items)
 
 news = f"""    <section class="hero hero--page">
-      <img class="hero__bg" src="img/hero-taipei-dusk.webp" alt="Taipei skyline at deep dusk with warm city lights beneath a navy and emerald sky">
+      <picture>
+        <source media="(max-width: 720px)" srcset="img/hero-taipei-dusk-portrait.webp">
+        <img class="hero__bg" src="img/hero-taipei-dusk.webp" alt="Taipei skyline at deep dusk with warm city lights beneath a navy and emerald sky">
+      </picture>
       <div class="hero__inner">
         <p class="eyebrow reveal">News from the network</p>
         <h1 class="reveal">Clinics, cooperations, and moments <em>from the practice</em>.</h1>
