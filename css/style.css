@@ -1381,10 +1381,11 @@ p em { font-style: italic; color: var(--ivory-warm); }
   font-weight: 500;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: #5a3f0f;
+  color: var(--gold);
   transition: color 0.25s ease;
 }
-[data-theme="dark"] .card__more { color: var(--gold); }
+.band--ivory .card__more,
+[data-theme="light"] .card__more { color: #5a3f0f; }
 
 /* ---------- IV drip detail subpage ---------- */
 .drip {
