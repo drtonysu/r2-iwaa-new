@@ -530,16 +530,17 @@ p em { font-style: italic; color: var(--ivory-warm); }
 }
 .row h3 {
   font-family: 'Fraunces', 'Instrument Serif', serif;
-  font-weight: 700;
-  font-size: var(--text-2xl);
-  letter-spacing: -0.022em;
-  margin-bottom: 0.7rem;
+  font-weight: 600;
+  font-size: var(--text-3xl);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.9rem;
   color: var(--ivory);
-  font-variation-settings: 'opsz' 96, 'SOFT' 40;
+  font-variation-settings: 'opsz' 120, 'SOFT' 80;
 }
 .band--ivory .row h3 { color: var(--ink); }
 @media (max-width: 640px) {
-  .row h3 { font-size: var(--text-xl); }
+  .row h3 { font-size: var(--text-2xl); }
 }
 .row p { font-size: var(--text-sm); color: var(--muted); line-height: 1.7; }
 .row__what { margin-bottom: 0.9rem; }
