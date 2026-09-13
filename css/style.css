@@ -1787,8 +1787,11 @@ p em { font-style: italic; color: var(--ivory-warm); }
   .hero .lead { font-size: 1rem; line-height: 1.55; max-width: 24ch; }
 
   /* Pillar cards get a touch more internal padding + rhythm */
-  .pillars { gap: 1.15rem; }
-  .pillars .pillar { padding: 1.6rem 1.4rem; }
+  .pillars { gap: 1px; }
+  .pillars .pillar { padding: 1.4rem 1.4rem 1.5rem; }
+  .pillars .pillar svg { margin-bottom: 0.8rem; width: 24px; height: 24px; }
+  .pillars .pillar h3 { margin-bottom: 0.4rem; }
+  .pillars .pillar p { line-height: 1.5; }
 
   /* Editorial poster: allow the image itself to breathe more, less navy above/below */
   .band--flush { padding-block: 1.2rem; }

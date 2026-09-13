@@ -136,7 +136,7 @@ home = f"""    <section class="hero">
           <div class="pillar">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 3v6M9 9h6l-1.2 9a1.8 1.8 0 0 1-3.6 0L9 9Z"/></svg>
             <h3>IV Therapy</h3>
-            <p>Our foundation. Available at every R2 location.</p>
+            <p>Our foundation. Available at every R2 partners.</p>
           </div>
           <div class="pillar">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="8.4"/><circle cx="12" cy="12" r="3.2"/></svg>
