@@ -677,7 +677,7 @@ locations = f"""    <section class="hero hero--page">
       <img src="img/texture.webp" alt="Deep navy and emerald silk folds traced by a single thin line of gold light">
       <div class="statement__inner reveal">
         <p class="eyebrow">The network</p>
-        <h2>Trained in Taipei. Delivered where you live.</h2>
+        <h2>Prepared in Taipei. Delivered where you live.</h2>
         <p>Clinical training, protocols and prepared materials flow from Taipei to each clinic, so your care does not change with your city.</p>
       </div>
     </section>
