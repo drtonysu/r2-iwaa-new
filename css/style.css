@@ -529,10 +529,13 @@ p em { font-style: italic; color: var(--ivory-warm); }
   .row__media img { aspect-ratio: 4 / 3; }
 }
 .row h3 {
+  font-family: 'Fraunces', 'Instrument Serif', serif;
+  font-weight: 700;
   font-size: var(--text-2xl);
   letter-spacing: -0.022em;
   margin-bottom: 0.7rem;
   color: var(--ivory);
+  font-variation-settings: 'opsz' 96, 'SOFT' 40;
 }
 .band--ivory .row h3 { color: var(--ink); }
 @media (max-width: 640px) {
