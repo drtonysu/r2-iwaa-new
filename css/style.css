@@ -590,7 +590,7 @@ p em { font-style: italic; color: var(--ivory-warm); }
 .locs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line-soft); }
 .locs--two { grid-template-columns: repeat(2, 1fr); max-width: 960px; margin-inline: auto; border: 1px solid var(--line-soft); }
 .locs--two .loc { padding: clamp(2.2rem, 4vw, 3.4rem); }
-.loc__addr { color: var(--ivory); opacity: 0.94; margin: 0 0 0.35rem; font-size: var(--text-sm); line-height: 1.55; }
+.loc__addr { color: var(--ivory); opacity: 0.94; margin: 0.6rem 0 0.35rem; font-size: var(--text-sm); line-height: 1.55; }
 .loc { background: var(--navy); padding: clamp(1.8rem, 3.2vw, 2.8rem); }
 .loc__tag {
   font-size: var(--text-xs);
@@ -598,7 +598,7 @@ p em { font-style: italic; color: var(--ivory-warm); }
   text-transform: uppercase;
   color: var(--gold);
 }
-.loc h3 { font-size: var(--text-lg); margin: 0.75rem 0 0.55rem; line-height: 1.25; }
+.loc h3 { font-size: var(--text-lg); margin: 0.85rem 0 0.35rem; line-height: 1.3; min-height: 1.3em; word-break: break-word; }
 .loc p { font-size: var(--text-sm); color: var(--muted); line-height: 1.6; margin: 0 0 0.55rem; }
 .loc p:last-of-type { margin-bottom: 0; }
 .loc__meta { margin-top: 0.9rem; font-size: var(--text-sm); }
