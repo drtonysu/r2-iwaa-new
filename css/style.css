@@ -528,7 +528,16 @@ p em { font-style: italic; color: var(--ivory-warm); }
   .row { grid-template-columns: 1fr; gap: 1.4rem; }
   .row__media img { aspect-ratio: 4 / 3; }
 }
-.row h3 { font-size: var(--text-xl); margin-bottom: 0.55rem; }
+.row h3 {
+  font-size: var(--text-2xl);
+  letter-spacing: -0.022em;
+  margin-bottom: 0.7rem;
+  color: var(--ivory);
+}
+.band--ivory .row h3 { color: var(--ink); }
+@media (max-width: 640px) {
+  .row h3 { font-size: var(--text-xl); }
+}
 .row p { font-size: var(--text-sm); color: var(--muted); line-height: 1.7; }
 .row__what { margin-bottom: 0.9rem; }
 .row__who {
