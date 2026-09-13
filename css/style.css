@@ -939,6 +939,16 @@ p em { font-style: italic; color: var(--ivory-warm); }
   .nav:not(.is-open) > a,
   .nav:not(.is-open) > .btn { display: none; }
   .nav:not(.is-open) { display: none; }
+  /* When menu is open: neutralize header backdrop-filter so .nav.is-open (fixed)
+     can escape the header's containing block and cover the full viewport.
+     Uses BOTH :has() (modern) and .nav-open body class (fallback set by site.js). */
+  .header:has(.nav.is-open),
+  body.nav-open .header {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: var(--navy-deep) !important;
+    border-bottom-color: transparent !important;
+  }
   .nav.is-open {
     display: flex;
     flex-direction: column;
@@ -947,8 +957,11 @@ p em { font-style: italic; color: var(--ivory-warm); }
     position: fixed;
     inset: 0;
     background: var(--navy-deep);
+    background-color: #05101d;
     padding: 6rem var(--pad-x) 3rem;
     z-index: 70;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .nav.is-open a { font-size: var(--text-xl); font-family: var(--font-display); letter-spacing: 0; }
   .nav.is-open .btn { font-family: var(--font-body); font-size: var(--text-sm); margin-top: 1rem; }

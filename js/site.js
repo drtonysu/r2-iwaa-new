@@ -19,12 +19,14 @@
     burger.addEventListener('click', function () {
       var open = nav.classList.toggle('is-open');
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('nav-open', open);
       document.body.style.overflow = open ? 'hidden' : '';
     });
     nav.addEventListener('click', function (e) {
       if (e.target.tagName === 'A') {
         nav.classList.remove('is-open');
         burger.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
         document.body.style.overflow = '';
       }
     });
