@@ -95,6 +95,9 @@ def page(slug, title, desc, body, current=None):
 {body}
   </main>
   {FOOTER}
+  <button id="backToTop" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
   <script src="js/site.js" defer></script>
 </body>
 </html>

@@ -117,3 +117,31 @@
     });
   }
 })();
+
+
+/* Back-to-top button: reveal after scrolling past ~50% of viewport height. */
+(function () {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  var threshold = Math.max(400, window.innerHeight * 0.6);
+  var ticking = false;
+  function update() {
+    if (window.scrollY > threshold) btn.classList.add('is-visible');
+    else btn.classList.remove('is-visible');
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+  window.addEventListener('resize', function () {
+    threshold = Math.max(400, window.innerHeight * 0.6);
+    update();
+  });
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  update();
+})();
