@@ -1012,6 +1012,9 @@ p em { font-style: italic; color: var(--ivory-warm); }
   z-index: 0;
   pointer-events: none;
 }
+@media (max-width: 720px) {
+  .quote-band__photo::before { inset: 0.6rem -0.4rem -0.4rem 0.6rem; opacity: 0.35; }
+}
 .quote-band__photo img {
   position: relative;
   z-index: 1;
@@ -1771,4 +1774,36 @@ p em { font-style: italic; color: var(--ivory-warm); }
   }
   .story__visit > div + div { margin-top: 1rem; }
   .story__related { gap: 1rem 0; flex-direction: column; }
+}
+
+/* ─── Mobile refinements (≤ 640px) ─────────────────────────────────
+   Tighter vertical rhythm, better card breathing room. */
+@media (max-width: 640px) {
+  :root {
+    --pad-y: 3.2rem;                 /* was clamp 4rem min — pages felt too tall */
+  }
+  .hero { min-height: 82vh; padding-top: calc(var(--pad-y) + 3.6rem); }
+  .hero h1 { font-size: clamp(2.2rem, 8.5vw, 2.9rem); letter-spacing: -0.02em; }
+  .hero .lead { font-size: 1rem; line-height: 1.55; max-width: 24ch; }
+
+  /* Pillar cards get a touch more internal padding + rhythm */
+  .pillars { gap: 1.15rem; }
+  .pillars .pillar { padding: 1.6rem 1.4rem; }
+
+  /* Editorial poster: allow the image itself to breathe more, less navy above/below */
+  .band--flush { padding-block: 1.2rem; }
+  .editorial img { width: 100%; height: auto; display: block; }
+
+  /* Section heading rhythm on mobile */
+  .band__head { margin-bottom: 1.6rem; }
+  .band__head h2 { font-size: clamp(1.6rem, 6.4vw, 2.1rem); line-height: 1.14; }
+
+  /* Drip info card — tighter padding */
+  .drip__meta { padding: 1.25rem 1.4rem; gap: 1.15rem; }
+
+  /* Ingredient cards */
+  .ings { gap: 1rem; }
+
+  /* Location partner clinic cards */
+  .loc { padding: 1.4rem 1.3rem; }
 }
