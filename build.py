@@ -453,7 +453,7 @@ for slug, label, name, what, who, meta, img, alt in adv_rows:
               <p class="row__what">{what}</p>
               <p class="row__who"><span class="row__who-tag">Who it may suit</span> {who}</p>
               <div class="row__meta">{meta_items}</div>
-              <span class="row__more">Read how it works &rarr;</span>
+              <span class="row__more">Detail &rarr;</span>
             </div>
           </a>"""
 

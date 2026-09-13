@@ -1497,13 +1497,15 @@ p em { font-style: italic; color: var(--ivory-warm); }
   display: inline-block;
   margin-top: 1.2rem;
   font-family: var(--font-body);
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--gold-light);
+  color: var(--gold);
   transition: color 0.3s var(--ease);
 }
-[data-theme="light"] .row__more { color: var(--gold-ink); }
+.band--ivory .row__more,
+[data-theme="light"] .row__more { color: #5a3f0f; }
 
 /* ---------- advanced-care subpage: step list ---------- */
 .steps {
