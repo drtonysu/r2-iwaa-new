@@ -301,7 +301,7 @@ for slug, label, name, text, img, alt in iv_cards:
               <span class="card__label">{label}</span>
               <h3>{name}</h3>
               <p>{text}</p>
-              <span class="card__more">See the formula &rarr;</span>
+              <span class="card__more">Detail &rarr;</span>
             </div>
           </a>"""
 

@@ -1377,13 +1377,14 @@ p em { font-style: italic; color: var(--ivory-warm); }
   display: inline-block;
   margin-top: 0.9rem;
   font-family: var(--font-body);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--gold-ink);
+  color: #5a3f0f;
   transition: color 0.25s ease;
 }
-[data-theme="dark"] .card__more { color: var(--gold-light); }
+[data-theme="dark"] .card__more { color: var(--gold); }
 
 /* ---------- IV drip detail subpage ---------- */
 .drip {
