@@ -1134,7 +1134,7 @@ def render_drip(spec):
         <h2>See if this <em>fits you</em>.</h2>
         <hr class="rule">
         <p class="lead">Every drip we give is confirmed at consultation. Composition, dose and pace are set by your physician after reviewing your history and, where it changes the plan, your bloodwork.</p>
-        <p style="margin-top:1.8rem"><a class="btn btn--gold" href="consultation.html">Request a consultation</a> &nbsp; <a class="arrowlink" href="iv-therapy.html">Back to IV programmes &rarr;</a></p>
+        <div class="cta-row"><a class="btn btn--gold" href="consultation.html">Request a consultation</a><a class="arrowlink" href="iv-therapy.html">Back to IV programmes &rarr;</a></div>
       </div>
     </section>
 
@@ -1158,7 +1158,7 @@ def render_drip_stub(slug, label, name, hero_img, hero_alt):
         <h2>Speak with the <em>medical team</em>.</h2>
         <hr class="rule">
         <p class="lead">Every drip we give is confirmed at consultation. Composition, dose and pace are set by your physician after reviewing your history and, where it changes the plan, your bloodwork.</p>
-        <p style="margin-top:1.8rem"><a class="btn btn--gold" href="consultation.html">Request a consultation</a> &nbsp; <a class="arrowlink" href="iv-therapy.html">Back to IV programmes &rarr;</a></p>
+        <div class="cta-row"><a class="btn btn--gold" href="consultation.html">Request a consultation</a><a class="arrowlink" href="iv-therapy.html">Back to IV programmes &rarr;</a></div>
       </div>
     </section>
 
@@ -1427,7 +1427,7 @@ def render_adv(spec):
         <h2>See if this <em>fits you</em>.</h2>
         <hr class="rule">
         <p class="lead">Every advanced therapy is confirmed at consultation. Suitability, timing and any subsequent session are decided by your physician after reviewing your history and, where it changes the plan, your bloodwork.</p>
-        <p style="margin-top:1.8rem"><a class="btn btn--gold" href="consultation.html">Request a consultation</a> &nbsp; <a class="arrowlink" href="advanced-care.html">Back to Advanced Care &rarr;</a></p>
+        <div class="cta-row"><a class="btn btn--gold" href="consultation.html">Request a consultation</a><a class="arrowlink" href="advanced-care.html">Back to Advanced Care &rarr;</a></div>
       </div>
     </section>
 
