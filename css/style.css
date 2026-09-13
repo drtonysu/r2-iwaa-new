@@ -496,7 +496,14 @@ p em { font-style: italic; color: var(--ivory-warm); }
   flex-direction: column;
   justify-content: center;
 }
-.card--iv h3 { font-size: var(--text-lg); }
+.card--iv h3 {
+  font-family: 'Fraunces', 'Instrument Serif', serif;
+  font-weight: 600;
+  font-size: var(--text-xl);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  font-variation-settings: 'opsz' 96, 'SOFT' 80;
+}
 .card--iv p { font-size: var(--text-sm); line-height: 1.65; }
 @media (max-width: 900px) {
   .cards--iv { grid-template-columns: 1fr; }
