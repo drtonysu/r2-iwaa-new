@@ -539,6 +539,15 @@ p em { font-style: italic; color: var(--ivory-warm); }
   font-variation-settings: 'opsz' 120, 'SOFT' 80;
 }
 .band--ivory .row h3 { color: var(--ink); }
+.row h3 em {
+  font-family: 'Fraunces', 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--gold-light);
+  font-variation-settings: 'opsz' 144, 'SOFT' 100;
+  padding: 0 0.06em;
+}
+.band--ivory .row h3 em { color: var(--gold-ink); }
 @media (max-width: 640px) {
   .row h3 { font-size: var(--text-2xl); }
 }

@@ -85,7 +85,7 @@ def page(slug, title, desc, body, current=None):
   <link rel="icon" type="image/png" href="{FAVICON}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -364,7 +364,7 @@ adv_rows = [
     (
         "adv-blood-purification.html",
         "Apheresis",
-        "Therapeutic Plasma Exchange",
+        "Therapeutic <em>Plasma</em> Exchange",
         "Blood plasma is separated and replaced with sterile albumin and saline; your blood cells are returned to circulation. Used to lower circulating inflammatory and metabolic factors.",
         "Adults with chronic inflammatory burden, elevated cardiometabolic markers, or persistent post-viral fatigue &mdash; where laboratory workup supports it.",
         [
@@ -379,7 +379,7 @@ adv_rows = [
     (
         "adv-mesenchymal-cells.html",
         "Regenerative",
-        "Mesenchymal Cell Therapy",
+        "Mesenchymal <em>Cell</em> Therapy",
         "An intravenous cell therapy using mesenchymal cells prepared under laboratory conditions. Studied for immunomodulatory and tissue-support effects.",
         "Selected regenerative and inflammatory profiles, and only where local regulation permits treatment. Not a routine service in every location.",
         [
@@ -394,7 +394,7 @@ adv_rows = [
     (
         "adv-exosome-iv.html",
         "Regenerative",
-        "Exosome Intravenous Therapy",
+        "<em>Exosome</em> Intravenous Therapy",
         "An intravenous course of extracellular vesicles (exosomes) from mesenchymal cells. Given as a short, physician-directed series, usually layered onto an IV hydration plan.",
         "Adults seeking regenerative support alongside a wider wellness plan. Availability depends on your assessment and on local regulation.",
         [
@@ -409,7 +409,7 @@ adv_rows = [
     (
         "adv-exosome-knee.html",
         "Orthopaedic",
-        "Exosome Knee Programme",
+        "Exosome <em>Knee</em> Programme",
         "An in-joint (intra-articular) exosome course for knee osteoarthritis, paired with a structured rehabilitation and load-management plan.",
         "Adults with imaging-confirmed knee osteoarthritis, aiming to reduce symptoms and support function. Not a substitute for surgical care where indicated.",
         [
@@ -424,7 +424,7 @@ adv_rows = [
     (
         "adv-iv-laser.html",
         "Photomedicine",
-        "Intravenous Laser Therapy",
+        "Intravenous <em>Laser</em> Therapy",
         "Low-level intravascular light at specific wavelengths, delivered through a fine intravenous line. Used as an adjunct to IV protocols &mdash; not a stand-alone treatment.",
         "Adults on a planned IV course seeking additional support alongside hydration or recovery protocols.",
         [
