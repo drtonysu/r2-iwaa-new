@@ -847,6 +847,10 @@ iv_drips = {
         "name": "Detox Drip",
         "hero_img": "iv-03-detox.webp",
         "hero_alt": "Amber fluid separating from emerald fluid through a translucent membrane, golden threads dispersing",
+        "editorial": {
+            "img": "iv-03-detox-editorial.webp",
+            "alt": "Editorial poster of the R2 Clinic Detox IV Drip: cleanse, rebalance, renew &mdash; drip bag with fresh green leaves and morning light, key ingredients labelled (normal saline, B-complex, N-acetylcysteine, thiocan, glutathione), with potential benefits and suitable-for lists",
+        },
         "aim": "Metabolic and hepatic support &mdash; a clean, focused antioxidant infusion to help the body clear its own waste.",
         "lead": "A 250 ml saline infusion with B-complex, N-acetylcysteine and &alpha;-lipoic acid, closing with a slow glutathione IV push. This staged sequence protects the glutathione from oxidation, so the master antioxidant reaches the tissues intact.",
         "ingredients": [
