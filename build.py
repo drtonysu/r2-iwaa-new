@@ -281,7 +281,7 @@ home = f"""    <section class="hero">
 
 iv_cards = [
     ("iv-anti-aging.html",       "01 &middot; Foundation", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-01-antiaging.webp", "A guest reclining in a private R2 suite during an Anti-Aging Drip session &mdash; soft golden infusion in the morning light"),
-    ("iv-premium-anti-aging.html", "02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-02-premium.webp", "A guest resting in a private R2 suite during a Premium Anti-Aging Drip session &mdash; a warm golden amino-acid infusion in a private suite"),
+    ("iv-premium-anti-aging.html", "02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-02-premium.webp", "Close-up of a crystal IV drip chamber with a single amber droplet caught mid-fall, warm morning light, soft cream cashmere throw on a linen-white recliner behind"),
     ("iv-detox.html",             "03 &middot; Clearance", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "iv-03-detox.webp", "Amber fluid separating from emerald fluid through a translucent membrane, golden threads dispersing"),
     ("iv-advanced-detox.html",    "04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-04-advanced-detox.webp", "A golden amber IV drip bag on a polished gold stand, deep navy velvet backdrop, gold molecular clusters floating in the air beside a crystal apothecary bottle on dark marble"),
     ("iv-vitamin-c.html",         "05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "iv-05-vitc.webp", "Sliced orange and lemon cross-sections on dark stone, translucent flesh catching golden light"),
@@ -818,7 +818,7 @@ iv_drips = {
         "label": "IVF0002 &middot; Foundation",
         "name": "Premium Anti-Aging Drip",
         "hero_img": "iv-02-premium.webp",
-        "hero_alt": "A guest resting in a private R2 suite during a Premium Anti-Aging Drip session &mdash; a warm golden amino-acid infusion above a linen-white recliner",
+        "hero_alt": "Close-up of a crystal IV drip chamber with a single amber droplet caught mid-fall, warm morning light, soft cream cashmere throw on a linen-white recliner behind",
         "editorial": {
             "img": "iv-02-premium-editorial.webp",
             "alt": "Science-for-a-younger-you editorial: the Premium Anti-Aging Drip beside a guest at rest, with each of the eight active ingredients &mdash; amino acids, vitamin C, B-complex, N-acetylcysteine, B12, B6, zinc and magnesium &mdash; labelled to the right",
