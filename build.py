@@ -1473,6 +1473,17 @@ adv_bodies = {slug: render_adv(spec) for slug, spec in adv_pages.items()}
 # Each item: (slug, category, date_display, date_iso, title, lede, hero_img, hero_alt, location)
 news_items = [
     (
+        "news-beautybank-opening.html",
+        "Cooperation \u00b7 Yangon",
+        "14 September 2026",
+        "2026-09-14",
+        "Beauty Bank Wellness &amp; Cell Therapy Center opens in Yangon",
+        "A new cooperating clinic in Yangon &mdash; a wellness and cell-therapy setting that widens the network of physician-led rejuvenation care in Myanmar.",
+        "news/beautybank-01-team.jpg",
+        "The Beauty Bank Wellness &amp; Cell Therapy Center team lined up in front of the brand backdrop at the opening, with Dr. Tony Su and the founding principals at the centre.",
+        "Yangon",
+    ),
+    (
         "news-mvita-opening.html",
         "Cooperation \u00b7 Ho Chi Minh",
         "11 September 2026",
@@ -1487,6 +1498,46 @@ news_items = [
 
 # Full-detail bodies for each news story
 news_pages = {
+    "news-beautybank-opening.html": {
+        "category": "Cooperation \u00b7 Yangon",
+        "date_display": "14 September 2026",
+        "date_iso": "2026-09-14",
+        "title": "Beauty Bank Wellness &amp; Cell Therapy Center opens in Yangon",
+        "hero_img": "news/beautybank-01-team.jpg",
+        "hero_alt": "The Beauty Bank Wellness &amp; Cell Therapy Center team lined up in front of the brand backdrop at the opening in Yangon.",
+        "dek": "A new cooperating clinic in Yangon &mdash; a wellness and cell-therapy setting that widens the network of physician-led rejuvenation care in Myanmar.",
+        "sections": [
+            ("A new home for wellness in Yangon",
+             ["Beauty Bank Wellness &amp; Cell Therapy Center opened its doors in Yangon in front of guests, patients and partners &mdash; a considered wellness and regenerative-care setting positioned around IV wellness, aesthetic dermatology and cell-therapy programmes.",
+              "The interior echoes the visual language patients across our network will recognise &mdash; warm neutrals, calm lighting and quiet greenery, chosen so that clinical work happens in a room that already feels considered."]),
+            ("What Beauty Bank offers on day one",
+             ["The clinic opens with a curated menu of wellness and rejuvenation services &mdash; physician-supervised IV therapy, aesthetic dermatology and cell-therapy programmes, delivered by a resident clinical team supported by senior specialist advisers.",
+              "Every programme is offered after individual assessment; suitability, dose and course length are decided in consultation before treatment begins."]),
+            ("What it means for R2-IWAA",
+             ["Beauty Bank Wellness &amp; Cell Therapy Center joins us as a cooperating clinic in Yangon, widening the map of places where our patients across the region can be seen without leaving the country.",
+              "Dr. Tony Su supports the founding team as a visiting specialist consultant on regenerative and anti-aging programmes. As with every location we cooperate with, availability of individual therapies is confirmed at consultation and differs by site &mdash; the IV programme and materials standards authored in Taipei remain the reference; local teams apply them to the room they run."]),
+        ],
+        "gallery": {
+            "heading": "From the opening",
+            "note": "Photographs courtesy of Beauty Bank Wellness &amp; Cell Therapy Center.",
+            "images": [
+                ("news/beautybank-02-principals.jpg", "Dr. Tony Su with the Beauty Bank founding principals in front of the brand backdrop, holding presentation gifts from the ceremony."),
+                ("news/beautybank-01-team.jpg", "The full Beauty Bank Wellness &amp; Cell Therapy Center team on stage at the opening in Yangon."),
+            ],
+        },
+        "visit": {
+            "name": "Beauty Bank Wellness &amp; Cell Therapy Center",
+            "address": "Yangon, Myanmar",
+            "hours": "By appointment",
+            "hotline": "",
+            "website": ("facebook.com/beautybankwellnessmyanmar", "https://www.facebook.com/beautybankwellnessmyanmar"),
+        },
+        "related": [
+            ("See our locations", "locations.html"),
+            ("Speak to the R2-IWAA team", "consultation.html"),
+        ],
+    },
+
     "news-mvita-opening.html": {
         "category": "Cooperation \u00b7 Ho Chi Minh",
         "date_display": "11 September 2026",
@@ -1629,8 +1680,8 @@ def render_news(spec):
         <dl class="story__visit">
           <div><dt>Address</dt><dd>{visit['address']}</dd></div>
           <div><dt>Hours</dt><dd>{visit['hours']}</dd></div>
-          <div><dt>Hotline</dt><dd><a href="tel:{visit['hotline'].replace(' ', '')}">{visit['hotline']}</a></dd></div>
-          <div><dt>Website</dt><dd><a href="{website_url}" target="_blank" rel="noopener">{website_label}</a></dd></div>
+          {("<div><dt>Hotline</dt><dd><a href='tel:" + visit['hotline'].replace(' ', '') + "'>" + visit['hotline'] + "</a></dd></div>") if visit.get('hotline') else ""}
+          <div><dt>{'Facebook' if 'facebook.com' in website_url else 'Website'}</dt><dd><a href="{website_url}" target="_blank" rel="noopener">{website_label}</a></dd></div>
         </dl>
       </div>
     </section>
