@@ -284,7 +284,7 @@ iv_cards = [
     ("iv-premium-anti-aging.html", "02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-02-premium.webp", "Close-up of a crystal IV drip chamber with a single amber droplet caught mid-fall, warm morning light, soft cream cashmere throw on a linen-white recliner behind"),
     ("iv-detox.html",             "03 &middot; Clearance", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "iv-03-detox.webp", "Amber fluid separating from emerald fluid through a translucent membrane, golden threads dispersing"),
     ("iv-advanced-detox.html",    "04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-04-advanced-detox.webp", "A golden amber IV drip bag on a polished gold stand, deep navy velvet backdrop, gold molecular clusters floating in the air beside a crystal apothecary bottle on dark marble"),
-    ("iv-vitamin-c.html",         "05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "iv-05-vitc.webp", "Sliced orange and lemon cross-sections on dark stone, translucent flesh catching golden light"),
+    ("iv-vitamin-c.html",         "05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "iv-05-vitc.webp", "Editorial still-life on polished black marble against navy velvet: a split pomegranate with ruby seeds spilling, halved kiwi with emerald flesh, dew-fresh strawberries and dark camu-camu berries, warm golden rim light"),
     ("iv-myers.html",             "06 &middot; Foundation", "Myers&rsquo; Cocktail", "The classic B-vitamin, vitamin C, magnesium and zinc infusion.", "iv-06-myers.webp", "An amber, a clear and a gold-capped pharmaceutical vial resting on folded dark navy velvet"),
     ("iv-neuro.html",             "07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-07-neuro.webp", "Abstract golden neural filaments and glowing nodes suspended in dark navy fluid"),
     ("iv-sport.html",             "08 &middot; Recovery", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-08-sport.webp", "A single amber vial beside a folded ivory linen towel on dark stone with a deep navy background"),
@@ -911,7 +911,7 @@ iv_drips = {
         "label": "IVF0005 &middot; Foundation",
         "name": "High-Dose Vitamin C",
         "hero_img": "iv-05-vitc.webp",
-        "hero_alt": "Sliced orange and lemon cross-sections on dark stone, translucent flesh catching golden light",
+        "hero_alt": "Editorial still-life on polished black marble against navy velvet: a split pomegranate with ruby seeds spilling, halved kiwi with emerald flesh, dew-fresh strawberries and dark camu-camu berries, warm golden rim light",
         "editorial": {
             "img": "iv-05-vitc-editorial.webp",
             "img_portrait": "iv-05-vitc-editorial-portrait.webp",
