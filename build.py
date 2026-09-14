@@ -1522,6 +1522,8 @@ news_pages = {
             "note": "Photographs courtesy of Beauty Bank Wellness &amp; Cell Therapy Center.",
             "images": [
                 ("news/beautybank-02-principals.jpg", "Dr. Tony Su with the Beauty Bank founding principals in front of the brand backdrop, holding presentation gifts from the ceremony."),
+                ("news/beautybank-04-guests.jpg", "Founding partners and guests at the Beauty Bank Wellness &amp; Cell Therapy Center opening, in front of the illuminated brand wall and the reception&rsquo;s sculptural centrepiece."),
+                ("news/beautybank-03-brochure.jpg", "The bilingual English and Burmese IV Drip menu at Beauty Bank &mdash; from First Class Exosome IV and Brain Booster to Hormonal Balance and NMN &mdash; held up in front of the illuminated clinic sign."),
                 ("news/beautybank-01-team.jpg", "The full Beauty Bank Wellness &amp; Cell Therapy Center team on stage at the opening in Yangon."),
             ],
         },
