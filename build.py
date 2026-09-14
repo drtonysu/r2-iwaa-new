@@ -55,7 +55,7 @@ FOOTER = """<footer class="footer">
         <div>
           <h4>Visit</h4>
           <ul>
-            <li><a href="locations.html">Taipei &middot; Yangon &middot; Ho Chi Minh City</a></li>
+            <li><a href="locations.html">Taipei &middot; Yangon &middot; Ho Chi Minh</a></li>
             <li><a href="news.html">News from the network</a></li>
             <li><a href="consultation.html">Request a consultation</a></li>
             <li><a href="mailto:care@r2-iwaa.com">care@r2-iwaa.com</a></li>
@@ -125,7 +125,7 @@ home = f"""    <section class="hero">
       <div class="hero__inner">
         <p class="eyebrow reveal">Taiwan-based &middot; R2 International Wellness &amp; Anti-Aging</p>
         <h1 class="reveal">Longevity, <em>calibrated</em> to you.</h1>
-        <p class="lead reveal">Physician-led regenerative care across Taipei, Yangon and Ho Chi Minh City.</p>
+        <p class="lead reveal">Physician-led regenerative care across Taipei, Yangon and Ho Chi Minh.</p>
         <div class="hero__cta reveal">
           <a class="btn btn--solid" href="consultation.html">Request a consultation</a>
           <a class="btn" href="iv-therapy.html">IV therapy</a>
@@ -266,9 +266,9 @@ home = f"""    <section class="hero">
             <p>Kamaryut Township, Yangon. Assessment, IV therapy and procedures.</p>
           </div>
           <div class="loc">
-            <span class="loc__tag">Ho Chi Minh City</span>
+            <span class="loc__tag">Ho Chi Minh</span>
             <h3>Recover Health</h3>
-            <p>Xuân Hòa Ward, Ho Chi Minh City. Assessment, IV therapy and procedures.</p>
+            <p>Xuân Hòa Ward, Ho Chi Minh. Assessment, IV therapy and procedures.</p>
           </div>
         </div>
       </div>
@@ -310,7 +310,7 @@ iv = f"""    <section class="hero hero--page">
       <div class="hero__inner">
         <p class="eyebrow reveal">IV Therapy</p>
         <h1 class="reveal">Our foundation, <em>everywhere</em> we practise.</h1>
-        <p class="lead reveal">The same protocols, the same materials, the same standard in Taipei, Yangon and Ho Chi Minh City.</p>
+        <p class="lead reveal">The same protocols, the same materials, the same standard in Taipei, Yangon and Ho Chi Minh.</p>
       </div>
     </section>
 
@@ -593,7 +593,7 @@ founder = f"""    <section class="hero hero--page">
           <ul class="pair__lines">
             <li><strong>Taipei</strong><span>Main centre. Protocols are written and materials prepared here.</span></li>
             <li><strong>Yangon</strong><span>Partner care at Beauty Bank Wellness &amp; Cell Therapy Center.</span></li>
-            <li><strong>Ho Chi Minh City</strong><span>Partner care at Recover Health.</span></li>
+            <li><strong>Ho Chi Minh</strong><span>Partner care at Recover Health.</span></li>
           </ul>
         </div>
       </div>
@@ -663,9 +663,9 @@ locations = f"""    <section class="hero hero--page">
             <p class="loc__meta">Tel <a href="tel:09886234234">09&nbsp;886&nbsp;234&nbsp;234</a></p>
           </div>
           <div class="loc">
-            <span class="loc__tag">Ho Chi Minh City</span>
+            <span class="loc__tag">Ho Chi Minh</span>
             <h3>Recover Health</h3>
-            <p class="loc__addr">Xuân Hòa Ward, Ho Chi Minh City</p>
+            <p class="loc__addr">Xuân Hòa Ward, Ho Chi Minh</p>
             <p>Assessment, IV therapy and procedures.</p>
             <p class="loc__meta">Tel <a href="tel:0902766786">0902&nbsp;766&nbsp;786</a></p>
           </div>
@@ -716,7 +716,7 @@ consult = f"""    <section class="hero hero--page">
               <select id="city" name="city">
                 <option>Taipei</option>
                 <option>Yangon</option>
-                <option>Ho Chi Minh City</option>
+                <option>Ho Chi Minh</option>
                 <option>Not sure yet</option>
               </select>
             </div>
@@ -1474,36 +1474,36 @@ adv_bodies = {slug: render_adv(spec) for slug, spec in adv_pages.items()}
 news_items = [
     (
         "news-mvita-opening.html",
-        "Cooperation \u00b7 Ho Chi Minh City",
+        "Cooperation \u00b7 Ho Chi Minh",
         "11 September 2026",
         "2026-09-11",
-        "M VITA Clinic opens in Ho Chi Minh City",
-        "A new cooperating wellness clinic in central Ho Chi Minh City &mdash; standing beside our existing HCM partner and widening the network of physician-led rejuvenation care in the region.",
+        "M VITA Clinic opens in Ho Chi Minh",
+        "A new cooperating wellness clinic in central Ho Chi Minh &mdash; standing beside our existing HCM partner and widening the network of physician-led rejuvenation care in the region.",
         "news/mvita-02-partnership-signing.jpg",
         "Dr. Tony Su shaking hands with the M VITA founder in the M VITA consultation room in front of the clinic team, formalising the R2-IWAA \u00b7 M VITA cooperation.",
-        "Ho Chi Minh City",
+        "Ho Chi Minh",
     ),
 ]
 
 # Full-detail bodies for each news story
 news_pages = {
     "news-mvita-opening.html": {
-        "category": "Cooperation \u00b7 Ho Chi Minh City",
+        "category": "Cooperation \u00b7 Ho Chi Minh",
         "date_display": "11 September 2026",
         "date_iso": "2026-09-11",
-        "title": "M VITA Clinic opens in Ho Chi Minh City",
+        "title": "M VITA Clinic opens in Ho Chi Minh",
         "hero_img": "news/mvita-01-stage-toast.jpg",
         "hero_alt": "The M VITA founding team lined up on stage in front of the &lsquo;Grand Opening MVITA&rsquo; backdrop, raising champagne with sparklers on the floor.",
-        "dek": "A new cooperating wellness clinic in central Ho Chi Minh City &mdash; standing beside our existing HCM partner and widening the network of physician-led rejuvenation care in the region.",
+        "dek": "A new cooperating wellness clinic in central Ho Chi Minh &mdash; standing beside our existing HCM partner and widening the network of physician-led rejuvenation care in the region.",
         "sections": [
             ("A new home for wellness in the city",
-             ["M VITA Clinic &mdash; <em>Ph\u00f2ng Kh\u00e1m Tr\u1ebb H\u00f3a &amp; T\u00e1i T\u1ea1o To\u00e0n Di\u1ec7n</em>, a comprehensive rejuvenation &amp; regeneration clinic &mdash; opened its doors on 3/2 Street in central Ho Chi Minh City on 11 September 2026, in front of guests, patients and partners.",
+             ["M VITA Clinic &mdash; <em>Ph\u00f2ng Kh\u00e1m Tr\u1ebb H\u00f3a &amp; T\u00e1i T\u1ea1o To\u00e0n Di\u1ec7n</em>, a comprehensive rejuvenation &amp; regeneration clinic &mdash; opened its doors on 3/2 Street in central Ho Chi Minh on 11 September 2026, in front of guests, patients and partners.",
               "The clinic is positioned as a Wellness &amp; Beauty Center, with a medical-standard dermatology practice and a physician-led approach to whole-body rejuvenation. Its founding team brings more than ten years of clinical experience in the field."]),
             ("What M VITA offers on day one",
              ["The clinic opens with a considered wellness menu &mdash; magnetic-wave therapy, hyperbaric oxygen, active-healthcare programmes and targeted work for headache, neck and spine, and everyday recovery. A complimentary wellness assessment is offered to introduce the space to new visitors.",
               "The interior follows the same visual language that patients across our network will recognise &mdash; warm gold, calm neutrals and quiet lighting, chosen so that clinical work happens in a room that already feels considered."]),
             ("What it means for R2-IWAA",
-             ["M VITA joins us as a cooperating clinic in Ho Chi Minh City, alongside our existing partner care already offered in the city. The two settings serve different neighbourhoods and different patient needs; together they widen the map of places a patient can be seen without leaving the region.",
+             ["M VITA joins us as a cooperating clinic in Ho Chi Minh, alongside our existing partner care already offered in the city. The two settings serve different neighbourhoods and different patient needs; together they widen the map of places a patient can be seen without leaving the region.",
               "Dr. Tony Su joins M VITA as a visiting specialist consultant &mdash; <em>b\u00e1c s\u0129 c\u1ed1 v\u1ea5n chuy\u00ean khoa</em> &mdash; supporting the clinic&rsquo;s founding physicians on regenerative and anti-aging programmes.",
               "As with every location we cooperate with, availability of individual therapies is confirmed at consultation and differs by site. The IV programme and materials standards authored in Taipei remain the reference; local teams apply them to the room they run."]),
         ],
@@ -1520,7 +1520,7 @@ news_pages = {
         },
         "visit": {
             "name": "M VITA CLINIC \u00b7 Wellness &amp; Beauty Center",
-            "address": "572A \u0110\u01b0\u1eddng 3/2, Ph\u01b0\u1eddng Di\u00ean H\u1ed3ng, Ho Chi Minh City, Vietnam",
+            "address": "572A \u0110\u01b0\u1eddng 3/2, Ph\u01b0\u1eddng Di\u00ean H\u1ed3ng, Ho Chi Minh, Vietnam",
             "hours": "Monday to Sunday, 09:00 \u2013 20:00",
             "hotline": "+84 90 569 8888",
             "website": ("mvitaclinic.vn", "https://mvitaclinic.vn/"),
@@ -1557,7 +1557,7 @@ news = f"""    <section class="hero hero--page">
       <div class="hero__inner">
         <p class="eyebrow reveal">News from the network</p>
         <h1 class="reveal">Clinics, cooperations, and moments <em>from the practice</em>.</h1>
-        <p class="lead reveal">Openings, partnerships and small moments across R2-IWAA and the clinics we cooperate with in Taipei, Yangon and Ho Chi Minh City.</p>
+        <p class="lead reveal">Openings, partnerships and small moments across R2-IWAA and the clinics we cooperate with in Taipei, Yangon and Ho Chi Minh.</p>
       </div>
     </section>
 
@@ -1668,19 +1668,19 @@ news_bodies = {slug: render_news(spec) for slug, spec in news_pages.items()}
 
 pages = [
     ("index.html", "R2-IWAA &mdash; International Wellness &amp; Anti-Aging",
-     "Physician-led regenerative and anti-aging medicine. IV therapy and advanced regenerative care in Taipei, Yangon and Ho Chi Minh City.", home, "index.html"),
+     "Physician-led regenerative and anti-aging medicine. IV therapy and advanced regenerative care in Taipei, Yangon and Ho Chi Minh.", home, "index.html"),
     ("iv-therapy.html", "IV Therapy &mdash; R2-IWAA",
-     "Intravenous therapy programmes built from your history and bloodwork, delivered to one standard in Taipei, Yangon and Ho Chi Minh City.", iv, "iv-therapy.html"),
+     "Intravenous therapy programmes built from your history and bloodwork, delivered to one standard in Taipei, Yangon and Ho Chi Minh.", iv, "iv-therapy.html"),
     ("advanced-care.html", "Advanced Regenerative Care &mdash; R2-IWAA",
      "Selected advanced regenerative therapies at R2-IWAA, considered individually after full medical assessment.", adv, "advanced-care.html"),
     ("founder.html", "Dr. Tony Su &mdash; R2-IWAA",
      "Dr. Tony Su, founder and medical director of R2 International Wellness & Anti-Aging, practising in Mandarin, English and Myanmar.", founder, "founder.html"),
     ("locations.html", "Locations &mdash; R2-IWAA",
-     "R2-IWAA clinics in Taipei, Yangon and Ho Chi Minh City, with clinical training and materials prepared at the Taipei centre.", locations, "locations.html"),
+     "R2-IWAA clinics in Taipei, Yangon and Ho Chi Minh, with clinical training and materials prepared at the Taipei centre.", locations, "locations.html"),
     ("consultation.html", "Request a Consultation &mdash; R2-IWAA",
      "Request a private one-to-one consultation with the R2-IWAA medical team in Mandarin, English or Myanmar.", consult, "consultation.html"),
     ("news.html", "News from the network &mdash; R2-IWAA",
-     "Openings, cooperations and small moments across R2 International Wellness & Anti-Aging and the clinics we work with in Taipei, Yangon and Ho Chi Minh City.", news, "news.html"),
+     "Openings, cooperations and small moments across R2 International Wellness & Anti-Aging and the clinics we work with in Taipei, Yangon and Ho Chi Minh.", news, "news.html"),
 ]
 
 # append each drip subpage
