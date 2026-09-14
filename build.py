@@ -963,6 +963,11 @@ iv_drips = {
         "name": "NeuroVitality Drip",
         "hero_img": "iv-07-neuro.webp",
         "hero_alt": "Abstract golden neural filaments and glowing nodes suspended in dark navy fluid",
+        "editorial": {
+            "img": "iv-07-neuro-editorial.webp",
+            "img_portrait": "iv-07-neuro-editorial-portrait.webp",
+            "alt": "Editorial poster of R2 Clinic NeuroVitality IV Therapy &mdash; two-phase brain and nervous-system support, key ingredients labelled (normal saline, B-complex, vitamins B6 and B12, vitamin C, Ginkgo, Cerebrolysin) with potential benefits and suitable-for lists",
+        },
         "aim": "A two-stage neuro-support protocol &mdash; a B-complex and Ginkgo micro-circulation stage, followed by a Cerebrolysin stage for neurotrophic support.",
         "lead": "Given in two sequential 30-minute stages. The first stage delivers a taurine-based B-complex, vitamin C, B12, B6 and Ginkgo to support micro-circulation. The second stage delivers Cerebrolysin, a neuropeptide preparation used clinically for neurological support. Offered only after individual medical assessment.",
         "ingredients": [
