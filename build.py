@@ -283,7 +283,7 @@ iv_cards = [
     ("iv-anti-aging.html",       "01 &middot; Foundation", "Anti-Aging Drip", "Our entry formula for antioxidant support and everyday free-radical clearance.", "iv-01-antiaging.webp", "A guest reclining in a private R2 suite during an Anti-Aging Drip session &mdash; soft golden infusion in the morning light"),
     ("iv-premium-anti-aging.html", "02 &middot; Foundation", "Premium Anti-Aging Drip", "An amino-acid-based version of our foundation formula, for periods of depletion.", "iv-02-premium.webp", "A guest resting in a private R2 suite during a Premium Anti-Aging Drip session &mdash; a warm golden amino-acid infusion in a private suite"),
     ("iv-detox.html",             "03 &middot; Clearance", "Detox Drip", "Metabolic and hepatic support, closing with a slow, separately administered antioxidant infusion.", "iv-03-detox.webp", "Amber fluid separating from emerald fluid through a translucent membrane, golden threads dispersing"),
-    ("iv-advanced-detox.html",    "04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-04-advanced-detox.webp", "Golden intravenous drip chamber with a single amber droplet caught mid-fall in a warm treatment suite"),
+    ("iv-advanced-detox.html",    "04 &middot; Clearance", "Advanced Antioxidant &amp; Detox", "An escalated course for accumulated stress, sleep loss and prolonged fatigue.", "iv-04-advanced-detox.webp", "A golden amber IV drip bag on a polished gold stand, deep navy velvet backdrop, gold molecular clusters floating in the air beside a crystal apothecary bottle on dark marble"),
     ("iv-vitamin-c.html",         "05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "iv-05-vitc.webp", "Sliced orange and lemon cross-sections on dark stone, translucent flesh catching golden light"),
     ("iv-myers.html",             "06 &middot; Foundation", "Myers&rsquo; Cocktail", "The classic B-vitamin, vitamin C, magnesium and zinc infusion.", "iv-06-myers.webp", "An amber, a clear and a gold-capped pharmaceutical vial resting on folded dark navy velvet"),
     ("iv-neuro.html",             "07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-07-neuro.webp", "Abstract golden neural filaments and glowing nodes suspended in dark navy fluid"),
@@ -879,7 +879,11 @@ iv_drips = {
         "label": "IVF0004 &middot; Clearance",
         "name": "Advanced Antioxidant &amp; Detox",
         "hero_img": "iv-04-advanced-detox.webp",
-        "hero_alt": "Golden intravenous drip chamber with a single amber droplet caught mid-fall in a warm treatment suite",
+        "hero_alt": "A golden amber IV drip bag on a polished gold stand, deep navy velvet backdrop, gold molecular clusters floating in the air beside a crystal apothecary bottle on dark marble",
+        "editorial": {
+            "img": "iv-04-advanced-detox-editorial.webp",
+            "alt": "Editorial poster of the R2 Clinic Advanced Antioxidant &amp; Detox Therapy: cleanse, protect, recharge &mdash; drip bag with cellular protection imagery, key ingredients labelled (normal saline, vitamin C, thiocan, glutathione), with potential benefits and suitable-for lists",
+        },
         "aim": "An escalated antioxidant course &mdash; higher doses of vitamin C, &alpha;-lipoic acid and glutathione for periods of accumulated stress, sleep loss or prolonged fatigue.",
         "lead": "A three-bag infusion. Vitamin C and higher-dose &alpha;-lipoic acid are given first, followed by glutathione in a dedicated saline bag so the master antioxidant is delivered intact. This is the R2 protocol for guests who need to reinforce antioxidant defence rather than gentle maintenance.",
         "ingredients": [
