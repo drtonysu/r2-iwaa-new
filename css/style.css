@@ -359,6 +359,9 @@ p em { font-style: italic; color: var(--ivory-warm); }
 @media (min-width: 1700px) {
   .editorial img { max-width: 1700px; }
 }
+@media (max-width: 720px) {
+  .editorial img { max-height: none; }
+}
 
 .band__head { max-width: 720px; }
 .band__head h2 { font-size: var(--text-2xl); letter-spacing: -0.02em; }

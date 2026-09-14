@@ -914,6 +914,7 @@ iv_drips = {
         "hero_alt": "Sliced orange and lemon cross-sections on dark stone, translucent flesh catching golden light",
         "editorial": {
             "img": "iv-05-vitc-editorial.webp",
+            "img_portrait": "iv-05-vitc-editorial-portrait.webp",
             "alt": "Editorial poster of R2 Clinic High-Dose Vitamin C IV Therapy &mdash; supportive care in integrative oncology, key ingredients labelled (normal saline, vitamin C), with potential benefits and suitable-for lists",
         },
         "aim": "A concentrated vitamin C infusion, dosed and paced under physician supervision.",
@@ -1093,9 +1094,13 @@ def render_drip(spec):
     editorial_html = ""
     if spec.get("editorial"):
         ed = spec["editorial"]
+        portrait_src = f'<source media="(max-width: 720px)" srcset="img/{ed["img_portrait"]}">' if ed.get("img_portrait") else ""
         editorial_html = f'''    <section class="band band--navy band--flush">
       <figure class="editorial reveal">
-        <img src="img/{ed['img']}" alt="{ed['alt']}" loading="lazy">
+        <picture>
+          {portrait_src}
+          <img src="img/{ed['img']}" alt="{ed['alt']}" loading="lazy">
+        </picture>
       </figure>
     </section>
 '''
