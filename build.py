@@ -912,6 +912,10 @@ iv_drips = {
         "name": "High-Dose Vitamin C",
         "hero_img": "iv-05-vitc.webp",
         "hero_alt": "Sliced orange and lemon cross-sections on dark stone, translucent flesh catching golden light",
+        "editorial": {
+            "img": "iv-05-vitc-editorial.webp",
+            "alt": "Editorial poster of R2 Clinic High-Dose Vitamin C IV Therapy &mdash; supportive care in integrative oncology, key ingredients labelled (normal saline, vitamin C), with potential benefits and suitable-for lists",
+        },
         "aim": "A concentrated vitamin C infusion, dosed and paced under physician supervision.",
         "lead": "A physician-set dose of intravenous vitamin C in a 250 ml saline base. Because oral vitamin C is capped by gut absorption, an IV can reach plasma levels many times higher &mdash; useful for antioxidant support, collagen and immunity. Dose is determined at consultation.",
         "ingredients": [
