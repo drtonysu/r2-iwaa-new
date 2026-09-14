@@ -935,6 +935,11 @@ iv_drips = {
         "name": "Myers&rsquo; Cocktail",
         "hero_img": "iv-06-myers.webp",
         "hero_alt": "An amber, a clear and a gold-capped pharmaceutical vial resting on folded dark navy velvet",
+        "editorial": {
+            "img": "iv-06-myers-editorial.webp",
+            "img_portrait": "iv-06-myers-editorial-portrait.webp",
+            "alt": "Editorial poster of R2 Clinic Myers Cocktail Micronutrient Wellness IV Therapy &mdash; key ingredients labelled (normal saline, B-complex, vitamins B6 and B12, vitamin C, zinc, magnesium) with potential benefits and suitable-for lists",
+        },
         "aim": "The classic B-vitamin, magnesium, zinc and vitamin C infusion &mdash; a broad-spectrum restorative for fatigue and everyday depletion.",
         "lead": "A 250 ml saline base with a full B-complex, extra B6 and B12, magnesium, zinc and vitamin C. First developed by Dr. John Myers in the 1970s and refined for R2, this remains one of the most widely used maintenance drips worldwide.",
         "ingredients": [
