@@ -214,7 +214,7 @@ home = f"""    <section class="hero">
           <p class="eyebrow">Taipei</p>
           <h2>One standard, <em>three cities</em>.</h2>
           <hr class="rule">
-          <p class="lead">Our Taipei centre prepares the materials used in every clinic and trains the teams that deliver them — so your care does not change with your city.</p>
+          <p class="lead">Taipei centre prepares the materials for every partner clinic and deliver them — so your care does not change with your city.</p>
           <a class="arrowlink" href="locations.html">Our locations &rarr;</a>
         </div>
       </div>
