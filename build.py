@@ -593,7 +593,7 @@ founder = f"""    <section class="hero hero--page">
           <ul class="pair__lines">
             <li><strong>Taipei</strong><span>Main centre. Protocols are written and materials prepared here.</span></li>
             <li><strong>Yangon</strong><span>Partner care at Beauty Bank Wellness &amp; Cell Therapy Center.</span></li>
-            <li><strong>Ho Chi Minh</strong><span>Partner care at Recover Health.</span></li>
+            <li><strong>Ho Chi Minh</strong><span>Partner care at Recover Health and M&nbsp;VITA.</span></li>
           </ul>
         </div>
       </div>
@@ -654,7 +654,7 @@ locations = f"""    <section class="hero hero--page">
           <h2>Cared for <em>close to home</em>.</h2>
         </div>
         <hr class="rule">
-        <div class="locs locs--two reveal">
+        <div class="locs reveal">
           <div class="loc">
             <span class="loc__tag">Yangon</span>
             <h3>Beauty Bank Wellness &amp; Cell Therapy Center</h3>
@@ -668,6 +668,13 @@ locations = f"""    <section class="hero hero--page">
             <p class="loc__addr">Xuân Hòa Ward, Ho Chi Minh</p>
             <p>Assessment, IV therapy and procedures.</p>
             <p class="loc__meta">Tel <a href="tel:0902766786">0902&nbsp;766&nbsp;786</a></p>
+          </div>
+          <div class="loc">
+            <span class="loc__tag">Ho Chi Minh</span>
+            <h3>M VITA &mdash; Ph&ograve;ng Kh&aacute;m Tr&#7867; H&oacute;a &amp; T&aacute;i T&#7841;o To&agrave;n Di&#7879;n</h3>
+            <p class="loc__addr">572A 3/2 Street, Dien Hong Ward, Ho Chi Minh</p>
+            <p>Assessment, IV therapy and procedures.</p>
+            <p class="loc__meta">Tel <a href="tel:+84777193454">0777&nbsp;193&nbsp;454</a> &middot; <a href="https://mvitaclinic.vn" target="_blank" rel="noopener">mvitaclinic.vn</a></p>
           </div>
         </div>
       </div>
