@@ -971,9 +971,16 @@ iv_drips = {
         "hero_img": "iv-07-neuro.webp",
         "hero_alt": "Abstract golden neural filaments and glowing nodes suspended in dark navy fluid",
         "editorial": {
-            "img": "iv-07-neuro-editorial.webp",
-            "img_portrait": "iv-07-neuro-editorial-portrait.webp",
-            "alt": "Editorial poster of R2 Clinic NeuroVitality IV Therapy &mdash; two-phase brain and nervous-system support, key ingredients labelled (normal saline, B-complex, vitamins B6 and B12, vitamin C, Ginkgo, Cerebrolysin) with potential benefits and suitable-for lists",
+            "pair": [
+                {
+                    "img": "iv-07-neuro-phase1.webp",
+                    "alt": "Editorial poster &mdash; Phase 1: Neuro-Nutrient IV Infusion. Golden IV bag with ginkgo leaf against luminous brain neural network. Key ingredients: normal saline, B-complex (taurine, B1, B2, B3, methionine), vitamin C, B12, B6 (pyridoxine), Ginkgo. Benefits: cognitive support, nervous-system wellness, energy and focus, antioxidant defense, improved circulation.",
+                },
+                {
+                    "img": "iv-07-neuro-phase2.webp",
+                    "alt": "Editorial poster &mdash; Phase 2: Cerebrolysin IV Support. Blue IV bag with a luminous brain motif against a starlit neural field. Key ingredients: normal saline, Cerebrolysin (neuroregenerative support). Benefits: supports neuroregeneration, cognitive function, neural connectivity, brain circulation support, greater mental vitality.",
+                },
+            ],
         },
         "aim": "A two-stage neuro-support protocol &mdash; a B-complex and Ginkgo micro-circulation stage, followed by a Cerebrolysin stage for neurotrophic support.",
         "lead": "Given in two sequential 30-minute stages. The first stage delivers a taurine-based B-complex, vitamin C, B12, B6 and Ginkgo to support micro-circulation. The second stage delivers Cerebrolysin, a neuropeptide preparation used clinically for neurological support. Offered only after individual medical assessment.",
@@ -1111,8 +1118,20 @@ def render_drip(spec):
     editorial_html = ""
     if spec.get("editorial"):
         ed = spec["editorial"]
-        portrait_src = f'<source media="(max-width: 720px)" srcset="img/{ed["img_portrait"]}">' if ed.get("img_portrait") else ""
-        editorial_html = f'''    <section class="band band--navy band--flush">
+        if ed.get("pair"):
+            figures = "\n".join(
+                f'        <figure class="editorial__cell"><img src="img/{p["img"]}" alt="{p["alt"]}" loading="lazy"></figure>'
+                for p in ed["pair"]
+            )
+            editorial_html = f'''    <section class="band band--navy band--flush">
+      <div class="editorial editorial--pair reveal">
+{figures}
+      </div>
+    </section>
+'''
+        else:
+            portrait_src = f'<source media="(max-width: 720px)" srcset="img/{ed["img_portrait"]}">' if ed.get("img_portrait") else ""
+            editorial_html = f'''    <section class="band band--navy band--flush">
       <figure class="editorial reveal">
         <picture>
           {portrait_src}
