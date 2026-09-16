@@ -288,7 +288,7 @@ iv_cards = [
     ("iv-myers.html",             "06 &middot; Foundation", "Myers&rsquo; Cocktail", "The classic B-vitamin, vitamin C, magnesium and zinc infusion.", "iv-06-myers.webp", "Editorial still-life on polished black marble against navy velvet: raw almonds and cashews in their shells, fresh spinach leaves, ripe golden apricots, dark chard and a crystal jigger of amber liquid, warm golden rim light"),
     ("iv-neuro.html",             "07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-07-neuro.webp", "Abstract golden neural filaments and glowing nodes suspended in dark navy fluid"),
     ("iv-sport.html",             "08 &middot; Recovery", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-08-sport.webp", "Editorial still-life on polished black marble against navy velvet: a folded ivory linen towel, a smooth grey river stone, a crystal bowl of sea salt, fresh rosemary sprig and a small amber apothecary bottle, warm golden rim light"),
-    ("iv-hangover.html",          "09 &middot; Recovery", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-09-hangover.webp", "A crystal-cut carafe of amber liquid and lemon halves on a dark emerald marble slab"),
+    ("iv-hangover.html",          "09 &middot; Recovery", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-09-hangover.webp", "Editorial poster of R2-IWAA Post-Hangover Recovery IV Drip &mdash; a luminous blue IV bag with lemon slices, ice cubes and a sunlit ocean background"),
     ("iv-omega.html",             "10 &middot; Foundation", "Omega Drip", "An omega-3 emulsion with vitamin C and B-complex, for cerebral and cardiac support.", "iv-10-omega.webp", "A single golden omega oil droplet falling into a shallow crystal dish with warm gold bokeh"),
 ]
 
@@ -1029,10 +1029,15 @@ iv_drips = {
     },
 
     "iv-hangover.html": {
-        "label": "IVF009 &middot; Recovery",
+        "label": "IVF0009 &middot; Recovery",
         "name": "Post-Hangover Drip",
-        "hero_img": "iv-09-hangover.webp",
-        "hero_alt": "A crystal-cut carafe of amber liquid and lemon halves on a dark emerald marble slab",
+        "hero_img": "iv-09-hangover-hero.webp",
+        "hero_alt": "Editorial hero still-life on polished black marble against navy velvet: a luminous crystal-cut carafe of clear water with lemon slices, mint and crushed ice, warm golden rim light with deep shadows on the left for text overlay",
+        "editorial": {
+            "img": "iv-09-hangover-editorial.webp",
+            "img_portrait": "iv-09-hangover-editorial-portrait.webp",
+            "alt": "Editorial poster of R2-IWAA Post-Hangover Recovery IV Drip &mdash; IVF0009. Key ingredients: normal saline, B-complex, vitamin B12, vitamin B6, zinc, Thiocan. Benefits: hydration support, replenishes key micronutrients, supports energy metabolism, antioxidant and liver support, helps recovery from fatigue, promotes restored wellness. Suitable for busy professionals, social lifestyles, frequent travelers, those seeking hydration and recovery, and those wanting to feel restored after a late night. Commonly paired with ILIB.",
+        },
         "aim": "Full rehydration followed by slower antioxidant and hepatic support &mdash; a physician-built recovery drip after a heavy evening.",
         "lead": "Two 250 ml saline bags for full rehydration, a taurine-based B-complex, extra B12 and B6, zinc, and a slow &alpha;-lipoic acid infusion for hepatic support. Often paired with ILIB (intravascular laser) to help oxidative recovery.",
         "ingredients": [
