@@ -289,7 +289,7 @@ iv_cards = [
     ("iv-neuro.html",             "07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-07-neuro.webp", "Abstract golden neural filaments and glowing nodes suspended in dark navy fluid"),
     ("iv-sport.html",             "08 &middot; Recovery", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-08-sport.webp", "Editorial still-life on polished black marble against navy velvet: a folded ivory linen towel, a smooth grey river stone, a crystal bowl of sea salt, fresh rosemary sprig and a small amber apothecary bottle, warm golden rim light"),
     ("iv-hangover.html",          "09 &middot; Recovery", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-09-hangover.webp", "Editorial poster of R2-IWAA Post-Hangover Recovery IV Drip &mdash; a luminous blue IV bag with lemon slices, ice cubes and a sunlit ocean background"),
-    ("iv-omega.html",             "10 &middot; Foundation", "Omega Drip", "An omega-3 emulsion with vitamin C and B-complex, for cerebral and cardiac support.", "iv-10-omega.webp", "A single golden omega oil droplet falling into a shallow crystal dish with warm gold bokeh"),
+    ("iv-omega.html",             "10 &middot; Foundation", "Omega Drip", "An omega-3 emulsion with vitamin C and B-complex, for cerebral and cardiac support.", "iv-10-omega.webp", "Editorial poster of R2-IWAA Omega Vascular IV Drip &mdash; a luminous golden fish-oil IV bag with heart and vascular illustration on a bright wellness background"),
 ]
 
 cards_html = ""
@@ -1058,8 +1058,13 @@ iv_drips = {
     "iv-omega.html": {
         "label": "IVF0010 &middot; Foundation",
         "name": "Omega Drip",
-        "hero_img": "iv-10-omega.webp",
-        "hero_alt": "A single golden omega oil droplet falling into a shallow crystal dish with warm gold bokeh",
+        "hero_img": "iv-10-omega-hero.webp",
+        "hero_alt": "Editorial hero still-life on polished black marble against navy velvet: a shallow crystal dish holding a luminous golden omega oil droplet with soft ripples beside amber fish-oil capsules, warm golden rim light with deep shadows on the left for text overlay",
+        "editorial": {
+            "img": "iv-10-omega-editorial.webp",
+            "img_portrait": "iv-10-omega-editorial-portrait.webp",
+            "alt": "Editorial poster of R2-IWAA Omega Vascular IV Drip &mdash; IVF0010. Circulation, heart, vascular wellness. Key ingredients: omega / fish-oil infusion, normal saline, vitamin C, B-complex. Potential benefits: supports cardiovascular wellness, healthy vascular function, circulation, omega fatty-acid nutritional support, balanced inflammatory response, brain and heart wellness, overall metabolic and cellular wellness. Suitable for individuals seeking vascular wellness support, those focused on heart and circulation wellness, people seeking omega nutritional support, busy lifestyles under oxidative stress, and those pursuing proactive wellness and healthy aging. Clinician-supervised wellness therapy, infusion time 45 to 60 minutes.",
+        },
         "aim": "An omega-3 fish-oil infusion with vitamin C and B-complex &mdash; for brain and cardiac support, and to help calm systemic inflammation and allergic reactivity.",
         "lead": "A fish-oil emulsion delivered through a side line, alongside a saline bag with vitamin C and a taurine-based B-complex. Intravenous omega-3 delivers EPA and DHA directly to plasma, bypassing gut absorption limits.",
         "ingredients": [
