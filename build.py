@@ -287,7 +287,7 @@ iv_cards = [
     ("iv-vitamin-c.html",         "05 &middot; Foundation", "High-Dose Vitamin C", "A concentrated vitamin C infusion, dosed and paced under physician supervision.", "iv-05-vitc.webp", "Editorial still-life on polished black marble against navy velvet: a split pomegranate with ruby seeds spilling, halved kiwi with emerald flesh, dew-fresh strawberries and dark camu-camu berries, warm golden rim light"),
     ("iv-myers.html",             "06 &middot; Foundation", "Myers&rsquo; Cocktail", "The classic B-vitamin, vitamin C, magnesium and zinc infusion.", "iv-06-myers.webp", "Editorial still-life on polished black marble against navy velvet: raw almonds and cashews in their shells, fresh spinach leaves, ripe golden apricots, dark chard and a crystal jigger of amber liquid, warm golden rim light"),
     ("iv-neuro.html",             "07 &middot; Neurology", "NeuroVitality Drip", "A two-stage neuro-support protocol, offered after individual medical assessment.", "iv-07-neuro.webp", "Abstract golden neural filaments and glowing nodes suspended in dark navy fluid"),
-    ("iv-sport.html",             "08 &middot; Recovery", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-08-sport.webp", "A single amber vial beside a folded ivory linen towel on dark stone with a deep navy background"),
+    ("iv-sport.html",             "08 &middot; Recovery", "Sport Recovery Drip", "A fast amino-acid infusion for athletes and heavy training loads.", "iv-08-sport.webp", "Editorial poster of R2-IWAA Sport Recovery IV Drip &mdash; a runner and cyclist in motion beside a luminous blue IV bag on a mountain background"),
     ("iv-hangover.html",          "09 &middot; Recovery", "Post-Hangover Drip", "Fluid replacement followed by slower antioxidant support for hepatic recovery.", "iv-09-hangover.webp", "A crystal-cut carafe of amber liquid and lemon halves on a dark emerald marble slab"),
     ("iv-omega.html",             "10 &middot; Foundation", "Omega Drip", "An omega-3 emulsion with vitamin C and B-complex, for cerebral and cardiac support.", "iv-10-omega.webp", "A single golden omega oil droplet falling into a shallow crystal dish with warm gold bokeh"),
 ]
@@ -1005,7 +1005,12 @@ iv_drips = {
         "label": "IVF0008 &middot; Recovery",
         "name": "Sport Recovery Drip",
         "hero_img": "iv-08-sport.webp",
-        "hero_alt": "A single amber vial beside a folded ivory linen towel on dark stone with a deep navy background",
+        "hero_alt": "Editorial poster of R2-IWAA Sport Recovery IV Drip &mdash; a runner and cyclist in motion beside a luminous blue IV bag on a mountain background",
+        "editorial": {
+            "img": "iv-08-sport-editorial.webp",
+            "img_portrait": "iv-08-sport-editorial-portrait.webp",
+            "alt": "Editorial poster of R2-IWAA Sport Recovery IV Drip &mdash; IVF0008. Key ingredients: Aminogen, B-complex, vitamin B12, vitamin B6, zinc, magnesium. Benefits: post-exercise recovery, replenish key micronutrients, supports energy metabolism, muscle and nerve support, hydration and recovery support, restoration after physical exertion. Suitable for athletes, active lifestyles, frequent exercisers and those seeking faster recovery. Commonly paired with ILIB.",
+        },
         "aim": "A fast amino-acid infusion for athletes and heavy training loads &mdash; restores substrates for muscle repair, hydration and electrolyte balance.",
         "lead": "Built on a 250 ml amino-acid base (Aminogen) rather than plain saline, with a taurine-based B-complex, extra B6 and B12, zinc and magnesium. Often paired with ILIB (intravascular laser irradiation) for training-block recovery.",
         "ingredients": [
