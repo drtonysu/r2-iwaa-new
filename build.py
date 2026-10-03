@@ -49,10 +49,10 @@ def light_hero(name):
 
 NAV_ITEMS = [
     ("iv-therapy.html", "IV Therapy"),
-    ("r2exo.html", "R2Exo"),
     ("locations.html", "Locations"),
     ("founder.html", "Dr. Tony Su"),
     ("news.html", "News"),
+    ("r2exo.html", "R2Exo"),
 ]
 
 
