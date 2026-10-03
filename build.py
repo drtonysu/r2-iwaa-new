@@ -1856,10 +1856,6 @@ r2exo = f"""    <section class="hero hero--page">
             <li><strong>Room-temperature stable</strong><span>Integrity and biological function are kept without deep freezing.</span></li>
             <li><strong>Fresh-equivalent activity</strong><span>Cellular uptake and effect similar to freshly isolated exosomes.</span></li>
           </ul>
-          <figure class="exo-tem">
-            <img src="img/r2exo/tem.webp" alt="Electron micrographs of exosome vesicles at 50 micrometre and 100 nanometre scale">
-            <figcaption>Exosomes under electron microscopy. <em>Stem Cell Research &amp; Therapy</em> 15:453 (2024).</figcaption>
-          </figure>
         </div>
       </div>
     </section>
@@ -1922,7 +1918,7 @@ r2exo = f"""    <section class="hero hero--page">
             <div class="card__body">
               <span class="card__label">INCI certified</span>
               <h3>Exo-Reparo + HA Essence</h3>
-              <p><strong>Exo-Reparo:</strong> 50 billion pure exosomes, rich in EGF and FGF-7 for cell growth, tissue repair and wound healing, plus TIMP-1 against cell aging. <strong>HA Essence:</strong> hyaluronic acid, niacinamide and B5. Used with microneedling.</p>
+              <p><strong>Exo-Reparo:</strong> 50 billion pure exosomes, rich in EGF and FGF-7 for cell growth, tissue repair and wound healing, plus TIMP-1 against cell aging. Used with microneedling.</p>
             </div>
           </article>
           <article class="card card--iv">
@@ -1937,8 +1933,8 @@ r2exo = f"""    <section class="hero hero--page">
             <div class="card__media"><img src="img/r2exo/mask.webp" alt="The R2 Oriental Vesicles Tourmaline Black CICA-EXO mask sachet with its black sheet mask"></div>
             <div class="card__body">
               <span class="card__label">Home care &middot; 30 ml</span>
-              <h3>Tourmaline Black CICA-EXO Mask</h3>
-              <p>A double-exosome mask: Centella asiatica leaf vesicles for hydration, elasticity, barrier repair and calmer skin, with milk exosomes for collagen, firmness and brightness. With Ecocert-certified ALPAFLOR&reg; NECTAPURE PF for anti-pollution care.</p>
+              <h3>EXO Mask</h3>
+              <p>A double-exosome mask: Centella asiatica leaf vesicles for hydration, elasticity, barrier repair and calmer skin, with milk exosomes for collagen, firmness and brightness.</p>
             </div>
           </article>
         </div>
