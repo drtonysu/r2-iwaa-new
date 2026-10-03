@@ -2205,3 +2205,17 @@ p em { font-style: italic; color: var(--ivory-warm); }
 @media (max-width: 760px) {
   .bene--photo { grid-template-columns: 1fr; }
 }
+
+/* two-photo pair inside a benefit item */
+.bene--photo { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); }
+.bene__imgs--two { display: grid; grid-template-columns: 1.3fr 1fr; gap: 0.8rem; }
+.bene__imgs--two img { aspect-ratio: auto; height: clamp(300px, 30vw, 440px); width: 100%; object-fit: cover; }
+.bene__imgs--two img:first-child { object-position: 55% 50%; }
+.bene__imgs--two img:last-child { object-position: 50% 70%; }
+@media (max-width: 760px) {
+  .bene--photo { grid-template-columns: 1fr; }
+  .bene__imgs--two img { height: 250px; }
+}
+
+/* step numbers 01, 02 … — deep bronze, fully opaque */
+[data-theme="light"] .step__n { color: #5a3d0b; opacity: 1; font-weight: 500; }

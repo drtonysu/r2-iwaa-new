@@ -1308,7 +1308,7 @@ adv_pages = {
             ("Up to two hours per session", "Cyclic operation on the MCS+ keeps the session short and comfortable, under continuous physician supervision."),
             ("Continuous physician oversight", "Every session runs in the Taipei clinic under a supervising physician &mdash; not delegated to a technician."),
             ("Lower circulating burden", "Removes a portion of plasma-borne inflammatory and metabolic factors, so the load your liver, kidneys and immune system have to clear is reduced for a period after the session."),
-            ("What the bag color can tell us", "The color of the removed plasma is a visible signal we look at during the session. A deeper, cloudier or more turbid bag can point to a higher circulating load of lipids, inflammatory mediators or metabolic waste &mdash; useful context, always read alongside your bloodwork by the physician.", {"src": "adv-plasma-bags.webp", "alt": "Two plasma collection bags after a session: one deeper amber and clearer, the other paler, cloudier and foamy", "caption": "Two collected plasma bags from real sessions. The difference in depth of color, clarity and cloudiness is the kind of visual signal the physician notes &mdash; then reads together with your bloodwork."}),
+            ("What the bag color can tell us", "The color of the removed plasma is a visible signal we look at during the session. A deeper, cloudier or more turbid bag can point to a higher circulating load of lipids, inflammatory mediators or metabolic waste &mdash; useful context, always read alongside your bloodwork by the physician.", {"src": "adv-plasma-bags.webp", "alt": "Two plasma collection bags after a session: one deeper amber and clearer, the other paler, cloudier and foamy", "src2": "adv-plasma-bag-hanging.webp", "alt2": "A hanging plasma collection bag with a dense olive-amber layer at the bottom and pale foamy residue on the walls above", "caption": "Collected plasma bags from real sessions. The difference in depth of color, clarity and cloudiness is the kind of visual signal the physician notes &mdash; then reads together with your bloodwork."}),
         ],
         "note": "Blood purification is offered only at the Taipei clinic. Bag color is one visual signal used during the session &mdash; it is interpreted by the physician together with your laboratory results, not on its own.",
         "meta": [
@@ -1472,7 +1472,9 @@ def render_adv(spec):
             return f'''
               <li class="bene bene--photo">
                 <figure class="bene__fig">
-                  <img src="img/{img['src']}" alt="{img['alt']}" loading="lazy">
+                  <div class="bene__imgs{' bene__imgs--two' if img.get('src2') else ''}">
+                    <img src="img/{img['src']}" alt="{img['alt']}" loading="lazy">{f'<img src="img/{img["src2"]}" alt="{img["alt2"]}" loading="lazy">' if img.get('src2') else ''}
+                  </div>
                   <figcaption>{img['caption']}</figcaption>
                 </figure>
                 <div class="bene__body">
