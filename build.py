@@ -7,6 +7,46 @@ LOGO = """<img class="brand__mark" src="img/logo-512.png" alt="" width="512" hei
 
 FAVICON = "img/favicon.png"
 
+# Light-luxury detail heroes (independent of list thumbnails)
+LIGHT_HERO = {
+    "iv-01-antiaging.webp": "light/iv-01.webp",
+    "iv-02-premium.webp": "light/iv-02.webp",
+    "iv-03-detox.webp": "light/iv-03.webp",
+    "iv-04-advanced-detox.webp": "light/iv-04.webp",
+    "iv-05-vitc.webp": "light/iv-05.webp",
+    "iv-06-myers.webp": "light/iv-06.webp",
+    "iv-07-neuro.webp": "light/iv-07.webp",
+    "iv-08-sport-hero.webp": "light/iv-08.webp",
+    "iv-09-hangover-hero.webp": "light/iv-09.webp",
+    "iv-10-omega-hero.webp": "light/iv-10.webp",
+    "adv-blood-purification.webp": "light/adv-blood.webp",
+    "adv-stem-cells.webp": "light/adv-cells.webp",
+    "adv-exosomes.webp": "light/adv-exosome.webp",
+    "abstract-joint.webp": "light/adv-knee.webp",
+    "adv-iv-laser.webp": "light/adv-laser.webp",
+}
+LIGHT_ALT = {
+    "light/iv-01.webp": "A clear IV drip bag of pearly liquid with gold fittings beside cascading white orchids",
+    "light/iv-02.webp": "A crystal drip chamber with a golden droplet, gold-leaf flakes and white orchids on ivory marble",
+    "light/iv-03.webp": "A crystal carafe of water with mint and cucumber beside a jade stone and white orchids",
+    "light/iv-04.webp": "An amber apothecary bottle with a gold cap, pale jade stones and white orchids on cream marble",
+    "light/iv-05.webp": "Sliced oranges, lemons and pomegranate on cream marble with a gold dish and white orchids",
+    "light/iv-06.webp": "Crystal vials of golden liquid in a gold rack with almonds and white orchids on ivory linen",
+    "light/iv-07.webp": "Gold ginkgo leaves and a brass sphere on ivory travertine beneath white orchids",
+    "light/iv-08.webp": "Pale river stones, eucalyptus, sea salt in a gold bowl and folded linen beside white orchids",
+    "light/iv-09.webp": "A crystal carafe of sparkling water with lemon and mint beside white orchids on ivory marble",
+    "light/iv-10.webp": "A crystal dish of golden omega capsules beside a white orchid on cream marble",
+    "light/adv-blood.webp": "A crystal decanter of gently separating clear and pale golden layers beside white orchids",
+    "light/adv-cells.webp": "A glass petri dish with luminous pearls and a gold pipette on cream marble beside white orchids",
+    "light/adv-exosome.webp": "Pearl-like droplets on clear glass catching golden light beside white orchids",
+    "light/adv-knee.webp": "Smooth sculptural ivory stone forms with a gold accent and white orchids on travertine",
+    "light/adv-laser.webp": "A soft beam of rose-gold light through a crystal prism on ivory marble beside white orchids",
+}
+def light_alt(name, default):
+    return LIGHT_ALT.get(LIGHT_HERO.get(name, ""), default)
+def light_hero(name):
+    return LIGHT_HERO.get(name, name)
+
 NAV_ITEMS = [
     ("iv-therapy.html", "IV Therapy"),
     ("locations.html", "Locations"),
@@ -72,9 +112,8 @@ FOOTER = """<footer class="footer">
 
 def page(slug, title, desc, body, current=None):
     html = f"""<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
-  <script>(function(){{try{{var m=document.cookie.match(/(?:^|; )r2th=(light|dark)/);if(m){{document.documentElement.setAttribute('data-theme',m[1]);}}}}catch(e){{}}}})();</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{title}</title>
@@ -119,8 +158,8 @@ INVITE = """    <section class="band band--emerald">
 
 home = f"""    <section class="hero">
       <picture>
-        <source media="(max-width: 720px)" srcset="img/hero-taipei-dusk-portrait.webp">
-        <img class="hero__bg" src="img/hero-taipei-dusk.webp" alt="Taipei skyline at deep dusk with warm city lights beneath a navy and emerald sky">
+        <source media="(max-width: 720px)" srcset="img/light/home-portrait.webp">
+        <img class="hero__bg" src="img/light/home.webp" alt="A white phalaenopsis orchid in a gold vessel on an ivory travertine plinth in soft morning light">
       </picture>
       <div class="hero__inner">
         <p class="eyebrow reveal">Taiwan-based &middot; R2 International Wellness &amp; Anti-Aging</p>
@@ -197,7 +236,7 @@ home = f"""    <section class="hero">
     </section>
 
     <section class="statement">
-      <img src="img/abstract-cells.webp" alt="Abstract luminous cells connected by fine golden filaments">
+      <img src="img/light/statement-cells.webp" alt="White orchid petals and pearlescent spheres joined by fine golden filaments">
       <div class="statement__inner reveal">
         <p class="eyebrow">Advanced regenerative care</p>
         <h2>Selected therapies, <em>by consultation</em>.</h2>
@@ -306,7 +345,7 @@ for slug, label, name, text, img, alt in iv_cards:
           </a>"""
 
 iv = f"""    <section class="hero hero--page">
-      <img class="hero__bg" src="img/iv-detail.webp" alt="A golden droplet forming inside an intravenous drip chamber">
+      <img class="hero__bg" src="img/light/iv-therapy.webp" alt="A clear IV drip bag on a slim gold stand beside white orchids on cream marble">
       <div class="hero__inner">
         <p class="eyebrow reveal">IV Therapy</p>
         <h1 class="reveal">Our foundation, <em>everywhere</em> we practise.</h1>
@@ -458,7 +497,7 @@ for slug, label, name, what, who, meta, img, alt in adv_rows:
           </a>"""
 
 adv = f"""    <section class="hero hero--page">
-      <img class="hero__bg" src="img/abstract-purify.webp" alt="Abstract golden and emerald fluid separating through a translucent membrane">
+      <img class="hero__bg" src="img/light/advanced-care.webp" alt="Slender glass vials with gold caps on a cream marble tray beside white orchids">
       <div class="hero__inner">
         <p class="eyebrow reveal">Advanced regenerative care</p>
         <h1 class="reveal">Discussed <em>individually</em>.</h1>
@@ -496,7 +535,7 @@ adv = f"""    <section class="hero hero--page">
 # ---------------------------------------------------------------- founder
 
 founder = f"""    <section class="hero hero--page">
-      <img class="hero__bg" src="img/founder-desk.webp" alt="A physician's desk with a folded white coat, stethoscope, notebook and brass lamp">
+      <img class="hero__bg" src="img/light/founder.webp" alt="An ivory physician's desk with a folded white coat, gold stethoscope, notebook and a white orchid">
       <div class="hero__inner">
         <p class="eyebrow reveal">Founder &amp; Medical Director</p>
         <h1 class="reveal">Dr. Tony Su</h1>
@@ -627,10 +666,10 @@ founder = f"""    <section class="hero hero--page">
 # ---------------------------------------------------------------- locations
 
 locations = f"""    <section class="hero hero--page">
-      <img class="hero__bg" src="img/taipei-lab.webp" alt="A precise clinical laboratory with cryogenic storage and sterile preparation area">
+      <img class="hero__bg" src="img/light/locations.webp" alt="A serene ivory clinic lounge with a cream armchair and white orchid by an arched window">
       <div class="hero__inner">
         <p class="eyebrow reveal">Locations</p>
-        <h1 class="reveal">Taipei, Yangon, Ho&nbsp;Chi&nbsp;Minh&nbsp;City.</h1>
+        <h1 class="reveal">Taipei, Yangon, Ho&nbsp;Chi&nbsp;Minh.</h1>
         <p class="lead reveal">One clinical standard, prepared and trained in Taipei, delivered in all three cities.</p>
       </div>
     </section>
@@ -681,7 +720,7 @@ locations = f"""    <section class="hero hero--page">
     </section>
 
     <section class="statement">
-      <img src="img/texture.webp" alt="Deep navy and emerald silk folds traced by a single thin line of gold light">
+      <img src="img/light/statement-silk.webp" alt="Ivory silk folds traced by a single thin line of gold light">
       <div class="statement__inner reveal">
         <p class="eyebrow">The network</p>
         <h2>Prepared in Taipei. Delivered where you live.</h2>
@@ -695,7 +734,7 @@ locations = f"""    <section class="hero hero--page">
 # ---------------------------------------------------------------- consultation
 
 consult = f"""    <section class="hero hero--page">
-      <img class="hero__bg" src="img/consultation.webp" alt="A private consultation room with two emerald green armchairs facing a walnut table">
+      <img class="hero__bg" src="img/light/consultation.webp" alt="Two cream armchairs facing a travertine table with a white orchid in a light consultation room">
       <div class="hero__inner">
         <p class="eyebrow reveal">VIP consultation</p>
         <h1 class="reveal">One to one, <em>before anything</em> else.</h1>
@@ -1156,7 +1195,7 @@ def render_drip(spec):
     </section>
 '''
     return f"""    <section class="hero hero--page hero--drip">
-      <img class="hero__bg" src="img/{spec['hero_img']}" alt="{spec['hero_alt']}">
+      <img class="hero__bg" src="img/{light_hero(spec['hero_img'])}" alt="{light_alt(spec['hero_img'], spec['hero_alt'])}">
       <div class="hero__inner">
         <p class="eyebrow reveal">{spec['label']}</p>
         <h1 class="reveal">{spec['name']}.</h1>
@@ -1215,7 +1254,7 @@ def render_drip(spec):
 
 def render_drip_stub(slug, label, name, hero_img, hero_alt):
     return f"""    <section class="hero hero--page hero--drip">
-      <img class="hero__bg" src="img/{hero_img}" alt="{hero_alt}">
+      <img class="hero__bg" src="img/{light_hero(hero_img)}" alt="{light_alt(hero_img, hero_alt)}">
       <div class="hero__inner">
         <p class="eyebrow reveal">{label}</p>
         <h1 class="reveal">{name}.</h1>
@@ -1441,7 +1480,7 @@ def render_adv(spec):
     note_html = f'<p class="drip__note"><em>{spec["note"]}</em></p>' if spec.get("note") else ""
     principle_html = render_principle(spec.get("principle"), band="navy")
     return f"""    <section class="hero hero--page hero--drip">
-      <img class="hero__bg" src="img/{spec['hero_img']}" alt="{spec['hero_alt']}">
+      <img class="hero__bg" src="img/{light_hero(spec['hero_img'])}" alt="{light_alt(spec['hero_img'], spec['hero_alt'])}">
       <div class="hero__inner">
         <p class="eyebrow reveal">{spec['label']}</p>
         <h1 class="reveal">{spec['name']}.</h1>
@@ -1646,8 +1685,8 @@ news_cards_html = "".join(render_news_card(item) for item in news_items)
 
 news = f"""    <section class="hero hero--page">
       <picture>
-        <source media="(max-width: 720px)" srcset="img/hero-taipei-dusk-portrait.webp">
-        <img class="hero__bg" src="img/hero-taipei-dusk.webp" alt="Taipei skyline at deep dusk with warm city lights beneath a navy and emerald sky">
+        <source media="(max-width: 720px)" srcset="img/light/news.webp">
+        <img class="hero__bg" src="img/light/news.webp" alt="An ivory journal and gold letter opener on cream marble beside a white orchid">
       </picture>
       <div class="hero__inner">
         <p class="eyebrow reveal">News from the network</p>
