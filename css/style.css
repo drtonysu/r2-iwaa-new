@@ -2068,3 +2068,111 @@ p em { font-style: italic; color: var(--ivory-warm); }
   [data-theme="light"] .header:has(.nav.is-open) .brand-sub { color: var(--ink-soft) !important; }
   [data-theme="light"] .header:has(.nav.is-open) .burger { color: var(--ink) !important; }
 }
+
+/* ═══════════════════════════════════════════════════════════════════
+   READABILITY PASS — stronger contrast + larger text on ivory/pearl grounds
+   ═══════════════════════════════════════════════════════════════════ */
+[data-theme="light"] {
+  --ink: #0b1724;
+  --ink-soft: #2a3642;
+  --gold-ink: #6a4a10;
+  --text-base: 1.14rem;
+  --text-sm: 1.04rem;
+  --text-xs: 0.86rem;
+  --text-lg: 1.3rem;
+}
+[data-theme="light"] body { line-height: 1.74; }
+
+/* body copy: darker ink, normal weight, full opacity */
+[data-theme="light"] main p,
+[data-theme="light"] main li,
+[data-theme="light"] main figcaption,
+[data-theme="light"] main dd,
+[data-theme="light"] main td { color: var(--ink-soft); opacity: 1; }
+[data-theme="light"] main .lead { color: #1f2a35; font-weight: 400; }
+[data-theme="light"] .muted,
+[data-theme="light"] .band--ivory .muted,
+[data-theme="light"] .band--ivory .form__note,
+[data-theme="light"] .band--ivory .form__alt { color: #3a4550; }
+[data-theme="light"] .ing__effect,
+[data-theme="light"] .step__body p,
+[data-theme="light"] .bene p,
+[data-theme="light"] .story__credit { opacity: 1; color: var(--ink-soft); }
+[data-theme="light"] .principle__attrib { color: var(--ink-soft); }
+
+/* small gold labels: bigger, bolder, deeper bronze, no fading */
+[data-theme="light"] .eyebrow,
+[data-theme="light"] .card__label,
+[data-theme="light"] .loc__tag,
+[data-theme="light"] .fact__k,
+[data-theme="light"] .row__who-tag,
+[data-theme="light"] .row__meta-key,
+[data-theme="light"] .drip__k,
+[data-theme="light"] .field label,
+[data-theme="light"] .contactlist span,
+[data-theme="light"] .band--ivory .eyebrow,
+[data-theme="light"] .band--ivory .card__label,
+[data-theme="light"] .band--ivory .loc__tag,
+[data-theme="light"] .band--ivory .field label,
+[data-theme="light"] .band--ivory .contactlist span {
+  color: var(--gold-ink);
+  opacity: 1;
+  font-weight: 600;
+}
+[data-theme="light"] .eyebrow { font-size: 0.86rem; letter-spacing: 0.22em; }
+[data-theme="light"] .ing__name,
+[data-theme="light"] .pubs__tag,
+[data-theme="light"] .quote-band__name,
+[data-theme="light"] .founder__meta { color: var(--gold-ink); }
+[data-theme="light"] .ing__dose,
+[data-theme="light"] .pubs__place,
+[data-theme="light"] .quote-band__role { color: var(--ink-soft); }
+[data-theme="light"] .row__meta-val,
+[data-theme="light"] .drip__v { color: var(--ink); }
+
+/* links and buttons: deeper bronze, slightly heavier */
+[data-theme="light"] .arrowlink,
+[data-theme="light"] .card__more { color: #5a3d0b; font-weight: 600; }
+[data-theme="light"] .btn { color: #5a3d0b; font-weight: 600; }
+[data-theme="light"] .btn--solid { color: #0b1724; }
+[data-theme="light"] .nav a { font-weight: 500; }
+
+/* headings: full ink */
+[data-theme="light"] main h1,
+[data-theme="light"] main h2,
+[data-theme="light"] main h3 { color: var(--ink); }
+
+/* hero: stronger ivory wash behind the copy, larger lead */
+[data-theme="light"] .hero:not(.hero--story)::after {
+  background:
+    linear-gradient(90deg, rgba(251, 248, 241, 0.97) 0%, rgba(251, 248, 241, 0.9) 36%, rgba(251, 248, 241, 0.45) 58%, rgba(251, 248, 241, 0) 78%),
+    linear-gradient(to top, rgba(251, 248, 241, 0.8) 0%, rgba(251, 248, 241, 0) 45%);
+}
+[data-theme="light"] .hero:not(.hero--story) .lead { color: #1f2a35; font-size: 1.36rem; font-weight: 400; }
+@media (max-width: 720px) {
+  [data-theme="light"] .hero:not(.hero--story)::after {
+    background: linear-gradient(to top, rgba(251, 248, 241, 0.99) 0%, rgba(251, 248, 241, 0.94) 45%, rgba(251, 248, 241, 0.55) 66%, rgba(251, 248, 241, 0.08) 100%);
+  }
+  [data-theme="light"] .hero:not(.hero--story) .lead { font-size: 1.1rem; max-width: 30ch; }
+}
+
+/* statement bands: denser pearl wash, upright readable text */
+[data-theme="light"] .statement::after {
+  background: radial-gradient(ellipse at center, rgba(251, 248, 241, 0.94) 0%, rgba(251, 248, 241, 0.8) 55%, rgba(251, 248, 241, 0.45) 100%);
+}
+[data-theme="light"] .statement p { color: #1f2a35; font-size: 1.5rem; }
+
+/* champagne invite band */
+[data-theme="light"] .band--emerald p { color: #1f2a35; }
+[data-theme="light"] .band--emerald .eyebrow { color: #5a3d0b; }
+
+/* cards on ivory: crisp edge so they separate from the pearl ground */
+[data-theme="light"] .card,
+[data-theme="light"] .loc { box-shadow: 0 1px 0 rgba(106, 74, 16, 0.08); }
+[data-theme="light"] .loc p,
+[data-theme="light"] .loc__addr { color: var(--ink-soft); opacity: 1; }
+[data-theme="light"] .drip__v,
+[data-theme="light"] .ing__effect,
+[data-theme="light"] .ing__dose { font-size: 1.06rem; }
+[data-theme="light"] .fact p,
+[data-theme="light"] .fact__v { font-size: 1.08rem; color: var(--ink-soft); }
