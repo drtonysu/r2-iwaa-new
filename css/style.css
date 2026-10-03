@@ -2176,3 +2176,32 @@ p em { font-style: italic; color: var(--ivory-warm); }
 [data-theme="light"] .ing__dose { font-size: 1.06rem; }
 [data-theme="light"] .fact p,
 [data-theme="light"] .fact__v { font-size: 1.08rem; color: var(--ink-soft); }
+
+/* benefit item with a supporting photo (e.g. plasma bag color) */
+.bene--photo {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(1.4rem, 3.5vw, 3rem);
+  align-items: center;
+}
+.bene__fig { margin: 0; }
+.bene__fig img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid rgba(106, 74, 16, 0.22);
+  box-shadow: 0 10px 28px rgba(60, 42, 10, 0.12);
+}
+.bene__fig figcaption {
+  margin-top: 0.7rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  font-style: italic;
+}
+.bene--photo .bene__body h4 { font-size: 1.5rem; }
+[data-theme="light"] .bene h4 { color: var(--ink); }
+[data-theme="light"] .bene p { font-size: 1.06rem; }
+@media (max-width: 760px) {
+  .bene--photo { grid-template-columns: 1fr; }
+}
