@@ -8,6 +8,10 @@
 # To correct a Myanmar translation: open i18n/my.json, find the English text
 # (left side) and edit the Myanmar text (right side). Commit, and Vercel rebuilds.
 # Any English text that has no entry yet simply stays in English on /my/ pages.
+#
+# Page-specific wording: when the same English text appears on several pages but
+# needs different Myanmar on one page, add a key "page.html::English text".
+# Example: "adv-blood-purification.html::What this <em>therapy is</em>."
 import glob
 import json
 import os
@@ -107,7 +111,7 @@ def _translate_attrs(tok, d, missing, pages):
     return tok
 
 
-def translate_html(html, d, pages, missing):
+def translate_html(html, d, pages, missing, slug=""):
     parts = TOK.split(html)
     out, run = [], []
     skip = None
@@ -118,10 +122,11 @@ def translate_html(html, d, pages, missing):
         s = "".join(run)
         core = s.strip()
         if core and LETTER.search(re.sub(r"<[^>]+>|&[a-zA-Z#0-9]+;", "", core)):
-            if core in d:
+            val = d.get(f"{slug}::{core}", d.get(core))
+            if val is not None:
                 lead = s[: len(s) - len(s.lstrip())]
                 trail = s[len(s.rstrip()):]
-                s = lead + d[core] + trail
+                s = lead + val + trail
             else:
                 missing.add(core)
         out.append(s)
@@ -171,7 +176,7 @@ def build_all(out_dir):
         with open(path, "w", encoding="utf-8") as f:
             f.write(en)
 
-        my = translate_html(en, d, pages, missing)
+        my = translate_html(en, d, pages, missing, slug)
         my = my.replace(_switch(slug, "en"), _switch(slug, "my"))
         my = my.replace('<html lang="en"', '<html lang="my"', 1)
         my = my.replace("</head>", f"  {MY_FONT}\n</head>", 1)
