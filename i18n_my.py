@@ -171,8 +171,8 @@ def build_all(out_dir):
         with open(path, "w", encoding="utf-8") as f:
             f.write(en)
 
-        my = en.replace(_switch(slug, "en"), _switch(slug, "my"))
-        my = translate_html(my, d, pages, missing)
+        my = translate_html(en, d, pages, missing)
+        my = my.replace(_switch(slug, "en"), _switch(slug, "my"))
         my = my.replace('<html lang="en"', '<html lang="my"', 1)
         my = my.replace("</head>", f"  {MY_FONT}\n</head>", 1)
         with open(os.path.join(my_dir, slug), "w", encoding="utf-8") as f:
