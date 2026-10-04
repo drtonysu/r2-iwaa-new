@@ -840,6 +840,8 @@ p em { font-style: italic; color: var(--ivory-warm); }
 }
 .contactlist a, .contactlist p { font-size: var(--text-lg); }
 .contactlist a:hover { color: var(--gold-light); }
+.contactlist div > a[href^="mailto:"] { display: block; width: fit-content; }
+.contactlist div > a[href^="mailto:"] + a[href^="mailto:"] { margin-top: 0.35rem; }
 .contact__icons { display: flex; gap: 0.8rem; margin-top: 0.35rem; }
 .contact__icon {
   display: inline-flex; align-items: center; justify-content: center;

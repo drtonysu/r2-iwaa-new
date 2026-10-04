@@ -101,6 +101,7 @@ FOOTER = """<footer class="footer">
             <li><a href="news.html">News from the network</a></li>
             <li><a href="consultation.html">Request a consultation</a></li>
             <li><a href="mailto:care@r2-iwaa.com">care@r2-iwaa.com</a></li>
+            <li><a href="mailto:drtony@r2iwaa.com">drtony@r2iwaa.com</a></li>
           </ul>
         </div>
       </div>
@@ -807,6 +808,7 @@ consult = f"""    <section class="hero hero--page">
             <div>
               <span>Email</span>
               <a href="mailto:care@r2-iwaa.com">care@r2-iwaa.com</a>
+              <a href="mailto:drtony@r2iwaa.com">drtony@r2iwaa.com</a>
             </div>
             <div>
               <span>Main centre</span>
