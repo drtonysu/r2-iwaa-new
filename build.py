@@ -2036,3 +2036,7 @@ for slug, spec in news_pages.items():
 for slug, title, desc, body, cur in pages:
     page(slug, title, desc, body, cur)
     print("wrote", slug)
+
+# Myanmar (second language): adds the language switch and writes /my/*.html
+import i18n_my
+i18n_my.build_all(OUT)
