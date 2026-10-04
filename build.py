@@ -633,7 +633,7 @@ founder = f"""    <section class="hero hero--page">
           <p class="eyebrow">Training network</p>
           <ul class="pair__lines">
             <li><strong>Taipei</strong><span>Main centre. Protocols are written and materials prepared here.</span></li>
-            <li><strong>Yangon</strong><span>Partner care at Beauty Bank Wellness &amp; Cell Therapy Center.</span></li>
+            <li><strong>Yangon</strong><span>Partner care at Beauty Bank Wellness &amp; Cell Therapy.</span></li>
             <li><strong>Ho Chi Minh</strong><span>Partner care at Recover Health and M&nbsp;VITA.</span></li>
           </ul>
         </div>
@@ -698,7 +698,7 @@ locations = f"""    <section class="hero hero--page">
         <div class="locs reveal">
           <div class="loc">
             <span class="loc__tag">Yangon</span>
-            <h3>Beauty Bank Wellness &amp; Cell Therapy Center</h3>
+            <h3>Beauty Bank Wellness &amp; Cell Therapy</h3>
             <p class="loc__addr">Kamaryut Township, Yangon</p>
             <p>Assessment, IV therapy and procedures.</p>
             <p class="loc__meta">Tel <a href="tel:09886234234">09&nbsp;886&nbsp;234&nbsp;234</a></p>
@@ -1574,10 +1574,10 @@ news_items = [
         "Cooperation \u00b7 Yangon",
         "14 September 2026",
         "2026-09-14",
-        "Beauty Bank Wellness &amp; Cell Therapy Center opens in Yangon",
+        "Beauty Bank Wellness &amp; Cell Therapy opens in Yangon",
         "A new cooperating clinic in Yangon &mdash; a wellness and cell-therapy setting that widens the network of physician-led rejuvenation care in Myanmar.",
         "news/beautybank-01-team.jpg",
-        "The Beauty Bank Wellness &amp; Cell Therapy Center team lined up in front of the brand backdrop at the opening, with Dr. Tony Su and the founding principals at the centre.",
+        "The Beauty Bank Wellness &amp; Cell Therapy team lined up in front of the brand backdrop at the opening, with Dr. Tony Su and the founding principals at the centre.",
         "Yangon",
     ),
     (
@@ -1599,34 +1599,34 @@ news_pages = {
         "category": "Cooperation \u00b7 Yangon",
         "date_display": "14 September 2026",
         "date_iso": "2026-09-14",
-        "title": "Beauty Bank Wellness &amp; Cell Therapy Center opens in Yangon",
+        "title": "Beauty Bank Wellness &amp; Cell Therapy opens in Yangon",
         "hero_img": "news/beautybank-01-team.jpg",
-        "hero_alt": "The Beauty Bank Wellness &amp; Cell Therapy Center team lined up in front of the brand backdrop at the opening in Yangon.",
+        "hero_alt": "The Beauty Bank Wellness &amp; Cell Therapy team lined up in front of the brand backdrop at the opening in Yangon.",
         "dek": "A new cooperating clinic in Yangon &mdash; a wellness and cell-therapy setting that widens the network of physician-led rejuvenation care in Myanmar.",
         "sections": [
             ("A new home for wellness in Yangon",
-             ["Beauty Bank Wellness &amp; Cell Therapy Center opened its doors in Yangon in front of guests, patients and partners &mdash; a considered wellness and regenerative-care setting positioned around IV wellness, aesthetic dermatology and cell-therapy programmes.",
+             ["Beauty Bank Wellness &amp; Cell Therapy opened its doors in Yangon in front of guests, patients and partners &mdash; a considered wellness and regenerative-care setting positioned around IV wellness, aesthetic dermatology and cell-therapy programmes.",
               "The interior echoes the visual language patients across our network will recognise &mdash; warm neutrals, calm lighting and quiet greenery, chosen so that clinical work happens in a room that already feels considered."]),
             ("What Beauty Bank offers on day one",
              ["The clinic opens with a curated menu of wellness and rejuvenation services &mdash; physician-supervised IV therapy, aesthetic dermatology and cell-therapy programmes, delivered by a resident clinical team supported by senior specialist advisers.",
               "Every programme is offered after individual assessment; suitability, dose and course length are decided in consultation before treatment begins."]),
             ("What it means for R2-IWAA",
-             ["Beauty Bank Wellness &amp; Cell Therapy Center joins us as a cooperating clinic in Yangon, widening the map of places where our patients across the region can be seen without leaving the country.",
+             ["Beauty Bank Wellness &amp; Cell Therapy joins us as a cooperating clinic in Yangon, widening the map of places where our patients across the region can be seen without leaving the country.",
               "Dr. Tony Su supports the founding team as a visiting specialist consultant on regenerative and anti-aging programmes. As with every location we cooperate with, availability of individual therapies is confirmed at consultation and differs by site &mdash; the IV programme and materials standards authored in Taipei remain the reference; local teams apply them to the room they run."]),
         ],
         "gallery": {
             "heading": "From the opening",
-            "note": "Photographs courtesy of Beauty Bank Wellness &amp; Cell Therapy Center; reception portrait by Alex Photography.",
+            "note": "Photographs courtesy of Beauty Bank Wellness &amp; Cell Therapy; reception portrait by Alex Photography.",
             "images": [
                 ("news/beautybank-02-principals.jpg", "Dr. Tony Su with the Beauty Bank founding principals in front of the brand backdrop, holding presentation gifts from the ceremony."),
                 ("news/beautybank-05-reception.jpg", "The Beauty Bank founding principals at the reception counter on opening day, framed by the illuminated clinic sign and a floral welcome."),
-                ("news/beautybank-04-guests.jpg", "Founding partners and guests at the Beauty Bank Wellness &amp; Cell Therapy Center opening, in front of the illuminated brand wall and the reception&rsquo;s sculptural centrepiece."),
+                ("news/beautybank-04-guests.jpg", "Founding partners and guests at the Beauty Bank Wellness &amp; Cell Therapy opening, in front of the illuminated brand wall and the reception&rsquo;s sculptural centrepiece."),
                 ("news/beautybank-03-brochure.jpg", "The bilingual English and Burmese IV Drip menu at Beauty Bank &mdash; from First Class Exosome IV and Brain Booster to Hormonal Balance and NMN &mdash; held up in front of the illuminated clinic sign."),
-                ("news/beautybank-01-team.jpg", "The full Beauty Bank Wellness &amp; Cell Therapy Center team on stage at the opening in Yangon."),
+                ("news/beautybank-01-team.jpg", "The full Beauty Bank Wellness &amp; Cell Therapy team on stage at the opening in Yangon."),
             ],
         },
         "visit": {
-            "name": "Beauty Bank Wellness &amp; Cell Therapy Center",
+            "name": "Beauty Bank Wellness &amp; Cell Therapy",
             "address": "Yangon, Myanmar",
             "hours": "By appointment",
             "hotline": "",
