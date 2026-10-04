@@ -2235,3 +2235,8 @@ p em { font-style: italic; color: var(--ivory-warm); }
 .cards--exo .card--iv .card__body { justify-content: flex-start; padding: 1.6rem 1.6rem 1.9rem; }
 .cards--exo .card--iv h3 { margin: 0.4rem 0 0.7rem; }
 .cards--exo .card--iv .card__media { min-height: 0; flex: none; }
+
+/* news story sections on the (now ivory) navy band — dark readable text */
+[data-theme="light"] .band--navy .wrap--reading h2 { color: var(--ink); }
+[data-theme="light"] .band--navy .wrap--reading p { color: var(--ink-soft); }
+[data-theme="light"] .band--navy .wrap--reading p em { color: var(--gold-ink); }
