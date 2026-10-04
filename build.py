@@ -100,7 +100,6 @@ FOOTER = """<footer class="footer">
             <li><a href="locations.html">Taipei &middot; Yangon &middot; Ho Chi Minh</a></li>
             <li><a href="news.html">News from the network</a></li>
             <li><a href="consultation.html">Request a consultation</a></li>
-            <li><a href="mailto:care@r2-iwaa.com">care@r2-iwaa.com</a></li>
             <li><a href="mailto:drtony@r2iwaa.com">drtony@r2iwaa.com</a></li>
           </ul>
         </div>
@@ -785,7 +784,7 @@ consult = f"""    <section class="hero hero--page">
             <p class="form__note">Your request opens in WhatsApp so it reaches our team directly &mdash; press send there and we reply within one working day. Please do not include detailed medical records; we collect those securely once your consultation is arranged.</p>
             <div class="form__ok">
               <p>Thank you. Your request has been prepared in WhatsApp &mdash; press send there and our team will be in touch within one working day.</p>
-              <p class="form__alt">WhatsApp did not open? <a class="form__fallback" href="mailto:care@r2-iwaa.com">Send it by email instead</a>.</p>
+              <p class="form__alt">WhatsApp did not open? <a class="form__fallback" href="mailto:drtony@r2iwaa.com">Send it by email instead</a>.</p>
             </div>
           </form>
         </div>
@@ -807,7 +806,6 @@ consult = f"""    <section class="hero hero--page">
             </div>
             <div>
               <span>Email</span>
-              <a href="mailto:care@r2-iwaa.com">care@r2-iwaa.com</a>
               <a href="mailto:drtony@r2iwaa.com">drtony@r2iwaa.com</a>
             </div>
             <div>
