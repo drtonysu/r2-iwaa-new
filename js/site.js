@@ -68,7 +68,7 @@
   }
 
   // Consultation request — delivered to the clinic over WhatsApp, with an email fallback
-  var WHATSAPP = '886916196333';
+  var WHATSAPP = '886979399863';
   var EMAIL = 'drtony@r2iwaa.com';
 
   var form = document.querySelector('.form');

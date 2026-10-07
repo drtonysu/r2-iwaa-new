@@ -75,8 +75,8 @@ def _insert_switch(html, slug, lang):
 
 
 def _rewrite_url(url, pages):
-    if not url or url.startswith(("#", "/", "http:", "https:", "mailto:", "tel:", "data:", "//", "javascript:")):
-        return url
+    if not url or url.startswith(("#", "/")) or re.match(r"^[a-zA-Z][a-zA-Z0-9+.-]*:", url):
+        return url  # anchors, absolute paths and any scheme (https:, mailto:, tel:, viber:, ...)
     m = re.match(r"([^#?]*)(.*)", url, re.S)
     path, rest = m.group(1), m.group(2)
     if path in pages:
