@@ -145,3 +145,14 @@
   });
   update();
 })();
+
+
+/* Viber: phones need the "+" encoded (%2B); Viber Desktop needs a plain "+". */
+(function () {
+  var mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  Array.prototype.forEach.call(document.querySelectorAll('a[data-viber]'), function (a) {
+    var n = a.getAttribute('data-viber');
+    a.setAttribute('href', mobile ? 'viber://chat?number=%2B' + n : 'viber://chat?number=+' + n);
+  });
+})();
